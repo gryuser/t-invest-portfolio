@@ -2029,11 +2029,16 @@
         let isTelegramAuthorized = false;
         let currentTgUser = null;
 
-        if (window.Telegram && window.Telegram.WebApp) {
+        const tg = window.Telegram?.WebApp;
+        if (tg) {
           try {
-            window.Telegram.WebApp.ready();
-            window.Telegram.WebApp.expand();
-            const user = window.Telegram.WebApp.initDataUnsafe?.user;
+            tg.ready();
+            tg.expand();
+            // In Telegram, platform is e.g. 'ios', 'android', 'tdesktop', 'macos', etc.
+            if (tg.platform && tg.platform !== 'unknown') {
+              isTelegramUser = true;
+            }
+            const user = tg.initDataUnsafe?.user;
             if (user) {
               isTelegramUser = true;
               currentTgUser = user;
@@ -2075,6 +2080,13 @@
           if (pinInput.value.length < 4) {
             pinInput.value += digit.toString();
             if (pinInput.value.length === 4) {
+              // If opened in Telegram by unauthorized account, PIN 0000 DOES NOT WORK!
+              if (isTelegramUser && !isTelegramAuthorized) {
+                pinError.value = true;
+                setTimeout(() => { pinInput.value = ''; }, 400);
+                return;
+              }
+
               if (pinInput.value === CORRECT_PIN) {
                 isUnlocked.value = true;
                 localStorage.setItem('portfolio_unlock_timestamp', Date.now().toString());
