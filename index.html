@@ -453,6 +453,7 @@
                       {{ stock.plPercent >= 0 ? '+' : '' }}{{ stock.plPercent.toFixed(1) }}% <span class="hidden sm:inline">({{ stock.totalPlRub >= 0 ? '+' : '' }}{{ formatMoney(stock.totalPlRub) }})</span>
                     </div>
                   </div>
+                </div>
               </div>
             </div>
 
@@ -503,12 +504,13 @@
                   <img v-if="getCompanyLogo(item.ticker)" :src="getCompanyLogo(item.ticker)" class="w-full h-full object-contain p-0.5" />
                   <span v-else class="text-[9px] font-bold font-mono text-slate-500">{{ item.ticker.slice(0, 2) }}</span>
                 </div>
-                <div>
+                <div class="min-w-0">
                   <button @click="openCompanyModal(item)" type="button" class="font-semibold text-slate-900 dark:text-white text-xs hover:text-amber-600 dark:hover:text-amber-400 cursor-pointer transition flex items-center gap-1 group text-left">
                     <span class="underline decoration-dotted decoration-slate-300 dark:decoration-slate-700 underline-offset-2 group-hover:decoration-amber-500">{{ tCompanyName(item) }}</span>
                     <span class="text-[10px] text-slate-400 group-hover:text-amber-500 opacity-60 group-hover:opacity-100 transition">ℹ️</span>
                   </button>
-                <div class="text-[11px] text-slate-500 dark:text-slate-400 font-mono">{{ item.ticker }} • {{ formatMoney(item.totalValue) }}</div>
+                  <div class="text-[11px] text-slate-500 dark:text-slate-400 font-mono">{{ item.ticker }} • {{ formatMoney(item.totalValue) }}</div>
+                </div>
               </div>
               <div class="text-right">
                 <div class="text-xs font-mono font-bold text-emerald-600 dark:text-emerald-400">+{{ item.plPercent.toFixed(2) }}%</div>
@@ -533,12 +535,13 @@
                   <img v-if="getCompanyLogo(item.ticker)" :src="getCompanyLogo(item.ticker)" class="w-full h-full object-contain p-0.5" />
                   <span v-else class="text-[9px] font-bold font-mono text-slate-500">{{ item.ticker.slice(0, 2) }}</span>
                 </div>
-                <div>
+                <div class="min-w-0">
                   <button @click="openCompanyModal(item)" type="button" class="font-semibold text-slate-900 dark:text-white text-xs hover:text-amber-600 dark:hover:text-amber-400 cursor-pointer transition flex items-center gap-1 group text-left">
                     <span class="underline decoration-dotted decoration-slate-300 dark:decoration-slate-700 underline-offset-2 group-hover:decoration-amber-500">{{ tCompanyName(item) }}</span>
                     <span class="text-[10px] text-slate-400 group-hover:text-amber-500 opacity-60 group-hover:opacity-100 transition">ℹ️</span>
                   </button>
-                <div class="text-[11px] text-slate-500 dark:text-slate-400 font-mono">{{ item.ticker }} • {{ formatMoney(item.totalValue) }}</div>
+                  <div class="text-[11px] text-slate-500 dark:text-slate-400 font-mono">{{ item.ticker }} • {{ formatMoney(item.totalValue) }}</div>
+                </div>
               </div>
               <div class="text-right">
                 <div class="text-xs font-mono font-bold text-rose-600 dark:text-rose-400">{{ item.plPercent.toFixed(2) }}%</div>
