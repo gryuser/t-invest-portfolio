@@ -111,8 +111,21 @@
 <body class="min-h-screen text-slate-900 dark:text-slate-100 antialiased custom-scrollbar">
   <div id="app" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
 
+  <!-- Telegram Forbidden Screen -->
+  <div v-if="isTgForbidden" style="position:fixed;top:0;left:0;right:0;bottom:0;z-index:9999999;background:#090d16;display:flex;align-items:center;justify-content:center;padding:16px;text-align:center;">
+    <div style="width:100%;max-width:320px;background:#111827;border:1px solid #1f2937;padding:36px 24px;border-radius:24px;box-shadow:0 25px 50px -12px rgba(0,0,0,0.5);">
+      <div style="width:64px;height:64px;border-radius:20px;background:rgba(239,68,68,0.15);color:#ef4444;font-size:32px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px auto;border:1px solid rgba(239,68,68,0.3);">
+        🔒
+      </div>
+      <h2 style="font-size:20px;font-weight:800;color:#f3f4f6;margin-bottom:8px;font-family:Inter,sans-serif;">Доступ закрыт</h2>
+      <p style="font-size:12px;color:#9ca3af;line-height:1.6;margin-bottom:20px;font-family:Inter,sans-serif;">
+        Этот инвестиционный портфель является приватным. Ваш Telegram аккаунт не авторизован.
+      </p>
+    </div>
+  </div>
+
   <!-- Security PIN Lock Screen -->
-  <div v-if="!isUnlocked" style="position:fixed;top:0;left:0;right:0;bottom:0;z-index:999999;background:#090d16;display:flex;align-items:center;justify-content:center;padding:16px;">
+  <div v-if="!isUnlocked && !isTgForbidden" style="position:fixed;top:0;left:0;right:0;bottom:0;z-index:999999;background:#090d16;display:flex;align-items:center;justify-content:center;padding:16px;">
     <div style="width:100%;max-width:320px;background:#111827;border:1px solid #1f2937;padding:32px 24px;border-radius:24px;text-align:center;box-shadow:0 25px 50px -12px rgba(0,0,0,0.5);">
       <div style="width:64px;height:64px;border-radius:20px;background:rgba(251,191,36,0.15);color:#fbbf24;font-size:32px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px auto;border:1px solid rgba(251,191,36,0.3);">
         🔐
@@ -2004,47 +2017,58 @@
         const CORRECT_PIN = '0000';
         const hostname = window.location.hostname;
         const isLocalHost = hostname === 'localhost' || hostname === '127.0.0.1' || hostname.startsWith('192.168.');
-        const isInsideTelegram = !!(window.Telegram && window.Telegram.WebApp && (window.Telegram.WebApp.initData || window.Telegram.WebApp.initDataUnsafe?.user));
         
-        // Check 30-minute session timeout in localStorage
-        const TIMEOUT_MS = 30 * 60 * 1000; // 30 minutes
-        const lastUnlockTime = parseInt(localStorage.getItem('portfolio_unlock_timestamp') || '0', 10);
-        const isSessionValid = (Date.now() - lastUnlockTime) < TIMEOUT_MS;
-
-        // Auto-unlock unconditionally for localhost/Wi-Fi, Telegram Mini App, or valid 30-min browser session
-        const shouldBypassPin = isLocalHost || isInsideTelegram || isSessionValid;
-        const isUnlocked = ref(shouldBypassPin);
-        const pinInput = ref('');
-        const pinError = ref(false);
-
-        // Telegram Security Whitelist
+        // Whitelist of allowed Telegram users
         const ALLOWED_TELEGRAM_USERS = [
           919927871, 
           'tod_wills', 
           's_girl98'
         ];
 
-        let isTgUnauthorized = false;
+        let isTelegramUser = false;
+        let isTelegramAuthorized = false;
+        let currentTgUser = null;
+
         if (window.Telegram && window.Telegram.WebApp) {
           try {
             window.Telegram.WebApp.ready();
             window.Telegram.WebApp.expand();
             const user = window.Telegram.WebApp.initDataUnsafe?.user;
             if (user) {
+              isTelegramUser = true;
+              currentTgUser = user;
               const uId = user.id;
               const uName = (user.username || '').toLowerCase();
-              const isMatch = ALLOWED_TELEGRAM_USERS.includes(uId) || ALLOWED_TELEGRAM_USERS.includes(uName);
-              if (!isMatch) {
-                isTgUnauthorized = true;
+              if (ALLOWED_TELEGRAM_USERS.includes(uId) || ALLOWED_TELEGRAM_USERS.includes(uName)) {
+                isTelegramAuthorized = true;
               }
             }
           } catch(e) {}
         }
 
-        // If unauthorized Telegram user tries to open, block immediately
-        if (isTgUnauthorized) {
-          isUnlocked.value = false;
+        // Check 30-minute browser session timeout
+        const TIMEOUT_MS = 30 * 60 * 1000;
+        const lastUnlockTime = parseInt(localStorage.getItem('portfolio_unlock_timestamp') || '0', 10);
+        const isSessionValid = (Date.now() - lastUnlockTime) < TIMEOUT_MS;
+
+        // Determination of unlock state:
+        // 1. Localhost always unlocked
+        // 2. Authorized Telegram user always unlocked
+        // 3. Regular browser with active 30-min session unlocked
+        // 4. Unauthorized Telegram user is BLOCKED (no PIN bypass)
+        let initialUnlocked = false;
+        if (isLocalHost) {
+          initialUnlocked = true;
+        } else if (isTelegramUser) {
+          initialUnlocked = isTelegramAuthorized; // ONLY true if on whitelist!
+        } else if (isSessionValid) {
+          initialUnlocked = true;
         }
+
+        const isUnlocked = ref(initialUnlocked);
+        const isTgForbidden = ref(isTelegramUser && !isTelegramAuthorized);
+        const pinInput = ref('');
+        const pinError = ref(false);
 
         function enterPinDigit(digit) {
           pinError.value = false;
@@ -2578,6 +2602,7 @@
           selectedCompanyModal,
           openCompanyModal,
           isUnlocked,
+          isTgForbidden,
           pinInput,
           pinError,
           enterPinDigit,
