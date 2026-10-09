@@ -2006,17 +2006,44 @@
         const isLocalHost = hostname === 'localhost' || hostname === '127.0.0.1' || hostname.startsWith('192.168.');
         const isInsideTelegram = !!(window.Telegram && window.Telegram.WebApp && (window.Telegram.WebApp.initData || window.Telegram.WebApp.initDataUnsafe?.user));
         
-        // Auto-unlock unconditionally for localhost/Wi-Fi and Telegram Mini App
-        const shouldBypassPin = isLocalHost || isInsideTelegram;
-        const isUnlocked = ref(shouldBypassPin || sessionStorage.getItem('portfolio_unlocked') === 'true');
+        // Check 30-minute session timeout in localStorage
+        const TIMEOUT_MS = 30 * 60 * 1000; // 30 minutes
+        const lastUnlockTime = parseInt(localStorage.getItem('portfolio_unlock_timestamp') || '0', 10);
+        const isSessionValid = (Date.now() - lastUnlockTime) < TIMEOUT_MS;
+
+        // Auto-unlock unconditionally for localhost/Wi-Fi, Telegram Mini App, or valid 30-min browser session
+        const shouldBypassPin = isLocalHost || isInsideTelegram || isSessionValid;
+        const isUnlocked = ref(shouldBypassPin);
         const pinInput = ref('');
         const pinError = ref(false);
 
+        // Telegram Security Whitelist
+        const ALLOWED_TELEGRAM_USERS = [
+          919927871, 
+          'tod_wills', 
+          's_girl98'
+        ];
+
+        let isTgUnauthorized = false;
         if (window.Telegram && window.Telegram.WebApp) {
           try {
             window.Telegram.WebApp.ready();
             window.Telegram.WebApp.expand();
+            const user = window.Telegram.WebApp.initDataUnsafe?.user;
+            if (user) {
+              const uId = user.id;
+              const uName = (user.username || '').toLowerCase();
+              const isMatch = ALLOWED_TELEGRAM_USERS.includes(uId) || ALLOWED_TELEGRAM_USERS.includes(uName);
+              if (!isMatch) {
+                isTgUnauthorized = true;
+              }
+            }
           } catch(e) {}
+        }
+
+        // If unauthorized Telegram user tries to open, block immediately
+        if (isTgUnauthorized) {
+          isUnlocked.value = false;
         }
 
         function enterPinDigit(digit) {
@@ -2026,7 +2053,7 @@
             if (pinInput.value.length === 4) {
               if (pinInput.value === CORRECT_PIN) {
                 isUnlocked.value = true;
-                localStorage.setItem('portfolio_unlocked', 'true');
+                localStorage.setItem('portfolio_unlock_timestamp', Date.now().toString());
                 pinInput.value = '';
               } else {
                 pinError.value = true;
