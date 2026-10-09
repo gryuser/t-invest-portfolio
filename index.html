@@ -2002,20 +2002,20 @@
         
         // Security PIN Logic (PIN: 0000)
         const CORRECT_PIN = '0000';
-        const isUnlocked = ref(sessionStorage.getItem('portfolio_unlocked') === 'true');
+        const hostname = window.location.hostname;
+        const isLocalHost = hostname === 'localhost' || hostname === '127.0.0.1' || hostname.startsWith('192.168.');
+        const isInsideTelegram = !!(window.Telegram && window.Telegram.WebApp && (window.Telegram.WebApp.initData || window.Telegram.WebApp.initDataUnsafe?.user));
+        
+        // Auto-unlock unconditionally for localhost/Wi-Fi and Telegram Mini App
+        const shouldBypassPin = isLocalHost || isInsideTelegram;
+        const isUnlocked = ref(shouldBypassPin || sessionStorage.getItem('portfolio_unlocked') === 'true');
         const pinInput = ref('');
         const pinError = ref(false);
 
-        // Auto unlock if opened inside authorized Telegram account
         if (window.Telegram && window.Telegram.WebApp) {
           try {
             window.Telegram.WebApp.ready();
             window.Telegram.WebApp.expand();
-            const user = window.Telegram.WebApp.initDataUnsafe?.user;
-            if (user && (user.id === 919927871 || (user.username && user.username.toLowerCase() === 'tod_wills'))) {
-              isUnlocked.value = true;
-              sessionStorage.setItem('portfolio_unlocked', 'true');
-            }
           } catch(e) {}
         }
 
