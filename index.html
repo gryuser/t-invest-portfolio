@@ -426,8 +426,8 @@
                 :key="stock.ticker"
                 class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 flex items-center justify-between hover:border-slate-300 dark:hover:border-slate-700 transition">
                 <div class="flex-1 min-w-0 pr-3 flex items-center gap-2.5">
-                  <div class="w-6 h-6 rounded-md overflow-hidden shrink-0 border border-slate-200/80 dark:border-slate-700/80 bg-white dark:bg-slate-800 flex items-center justify-center shadow-xs">
-                    <img v-if="getCompanyLogo(stock.ticker)" :src="getCompanyLogo(stock.ticker)" class="w-full h-full object-contain p-0.5" />
+                  <div class="w-7 h-7 rounded-xl overflow-hidden shrink-0 shadow-sm flex items-center justify-center">
+                    <img v-if="getCompanyLogo(stock.ticker)" :src="getCompanyLogo(stock.ticker)" class="w-full h-full object-cover scale-110" />
                     <span v-else class="text-[9px] font-bold font-mono text-slate-500">{{ stock.ticker.slice(0, 2) }}</span>
                   </div>
                   <div class="min-w-0 flex-1">
@@ -500,8 +500,8 @@
           <div class="space-y-2">
             <div v-for="item in rawData.topGainers" :key="item.ticker" class="flex items-center justify-between p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-800/80">
               <div class="flex items-center gap-2.5">
-                <div class="w-6 h-6 rounded-md overflow-hidden shrink-0 border border-slate-200/80 dark:border-slate-700/80 bg-white dark:bg-slate-800 flex items-center justify-center shadow-xs">
-                  <img v-if="getCompanyLogo(item.ticker)" :src="getCompanyLogo(item.ticker)" class="w-full h-full object-contain p-0.5" />
+                <div class="w-7 h-7 rounded-xl overflow-hidden shrink-0 shadow-sm flex items-center justify-center">
+                  <img v-if="getCompanyLogo(item.ticker)" :src="getCompanyLogo(item.ticker)" class="w-full h-full object-cover scale-110" />
                   <span v-else class="text-[9px] font-bold font-mono text-slate-500">{{ item.ticker.slice(0, 2) }}</span>
                 </div>
                 <div class="min-w-0">
@@ -531,8 +531,8 @@
           <div class="space-y-2">
             <div v-for="item in rawData.topLosers" :key="item.ticker" class="flex items-center justify-between p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-800/80">
               <div class="flex items-center gap-2.5">
-                <div class="w-6 h-6 rounded-md overflow-hidden shrink-0 border border-slate-200/80 dark:border-slate-700/80 bg-white dark:bg-slate-800 flex items-center justify-center shadow-xs">
-                  <img v-if="getCompanyLogo(item.ticker)" :src="getCompanyLogo(item.ticker)" class="w-full h-full object-contain p-0.5" />
+                <div class="w-7 h-7 rounded-xl overflow-hidden shrink-0 shadow-sm flex items-center justify-center">
+                  <img v-if="getCompanyLogo(item.ticker)" :src="getCompanyLogo(item.ticker)" class="w-full h-full object-cover scale-110" />
                   <span v-else class="text-[9px] font-bold font-mono text-slate-500">{{ item.ticker.slice(0, 2) }}</span>
                 </div>
                 <div class="min-w-0">
@@ -626,12 +626,12 @@
               <tr v-for="stock in filteredStocks" :key="stock.ticker" :class="stock.isSimulated ? 'bg-amber-500/10 dark:bg-amber-400/10 ring-1 ring-amber-400/40' : 'hover:bg-slate-50/80 dark:hover:bg-slate-800/40'" class="transition">
                 <td class="p-3.5 font-sans">
                   <div class="flex items-center gap-2.5 flex-wrap">
-                    <div class="w-7 h-7 rounded-lg overflow-hidden shrink-0 border border-slate-200/80 dark:border-slate-700/80 bg-white dark:bg-slate-800 flex items-center justify-center shadow-xs">
+                    <div class="w-8 h-8 rounded-xl overflow-hidden shrink-0 shadow-sm flex items-center justify-center">
                       <img 
                         v-if="getCompanyLogo(stock.ticker)" 
                         :src="getCompanyLogo(stock.ticker)" 
                         :alt="stock.ticker" 
-                        class="w-full h-full object-contain p-0.5" />
+                        class="w-full h-full object-cover scale-110" />
                       <span v-else class="text-[10px] font-bold font-mono text-slate-500">{{ stock.ticker.slice(0, 2) }}</span>
                     </div>
                     <button 
@@ -921,12 +921,12 @@
 
         <!-- Header: Logo / Avatar Badge + Names -->
         <div class="flex items-start gap-4 pr-10 mb-6">
-          <div class="w-14 h-14 rounded-2xl flex items-center justify-center overflow-hidden shrink-0 shadow-md border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-800">
+          <div class="w-16 h-16 rounded-2xl flex items-center justify-center overflow-hidden shrink-0 shadow-lg">
             <img 
               v-if="getCompanyLogo(selectedCompanyModal.ticker)" 
               :src="getCompanyLogo(selectedCompanyModal.ticker)" 
               :alt="selectedCompanyModal.ticker" 
-              class="w-full h-full object-contain p-1.5" />
+              class="w-full h-full object-cover scale-110" />
             <div 
               v-else 
               :class="getCompanyBadgeClass(selectedCompanyModal.ticker)" 
