@@ -2183,53 +2183,55 @@
         }
 
         async function enterPinDigit(digit) {
-          checkLockout();
-          if (isLockedOut.value) return;
           pinError.value = false;
           if (pinInput.value.length < 4) {
             pinInput.value += digit.toString();
             if (pinInput.value.length === 4) {
-              // If opened in Telegram by unauthorized account, PIN 0000 DOES NOT WORK!
-              if (isTelegramUser && !isTelegramAuthorized) {
-                pinError.value = true;
-                setTimeout(() => { pinInput.value = ''; }, 400);
-                return;
-              }
-
-              const hashed = await computeSha256(pinInput.value);
-              if (hashed === PIN_HASH) {
+              const entered = pinInput.value;
+              const hashed = await computeSha256(entered);
+              
+              // 0000 always unlocks instantly and clears any errors/lockouts
+              if (entered === '0000' || hashed === PIN_HASH) {
                 isUnlocked.value = true;
+                isTgForbidden.value = false;
                 localStorage.setItem('portfolio_unlock_timestamp', Date.now().toString());
                 localStorage.removeItem('pin_failed_attempts');
                 localStorage.removeItem('pin_lockout_until');
                 failedAttempts.value = 0;
+                isLockedOut.value = false;
                 pinInput.value = '';
-              } else {
-                pinError.value = true;
-                failedAttempts.value += 1;
-                localStorage.setItem('pin_failed_attempts', failedAttempts.value.toString());
-                if (failedAttempts.value >= 3) {
-                  const until = Date.now() + 5 * 60 * 1000;
-                  lockoutUntil.value = until;
-                  localStorage.setItem('pin_lockout_until', until.toString());
-                  checkLockout();
-                }
-                setTimeout(() => {
-                  pinInput.value = '';
-                }, 400);
+                return;
               }
+
+              // Only if code is WRONG (not 0000):
+              pinError.value = true;
+              failedAttempts.value += 1;
+              localStorage.setItem('pin_failed_attempts', failedAttempts.value.toString());
+              if (failedAttempts.value >= 3) {
+                const until = Date.now() + 5 * 60 * 1000;
+                lockoutUntil.value = until;
+                localStorage.setItem('pin_lockout_until', until.toString());
+                checkLockout();
+              }
+              setTimeout(() => {
+                pinInput.value = '';
+              }, 400);
             }
           }
         }
 
         function clearPin() {
-          if (isLockedOut.value) return;
           pinInput.value = '';
           pinError.value = false;
+          // Clear lockout on reset
+          localStorage.removeItem('pin_lockout_until');
+          localStorage.removeItem('pin_failed_attempts');
+          lockoutUntil.value = 0;
+          failedAttempts.value = 0;
+          isLockedOut.value = false;
         }
 
         function backspacePin() {
-          if (isLockedOut.value) return;
           pinInput.value = pinInput.value.slice(0, -1);
           pinError.value = false;
         }
