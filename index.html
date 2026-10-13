@@ -788,7 +788,7 @@
             </div>
             <div class="text-xs text-slate-500 dark:text-slate-400 mt-1 flex items-center justify-between">
               <span>{{ t('divTotalPassiveSub') }}</span>
-              <span class="font-mono font-bold text-slate-700 dark:text-slate-300">~{{ formatMoney(dividendStats.monthlyIncome) }}/мес</span>
+              <span class="font-mono font-bold text-slate-700 dark:text-slate-300">~{{ formatMoney(dividendStats.monthlyIncome) }}{{ t('divPerMonth') }}</span>
             </div>
           </div>
           <div class="absolute -right-6 -bottom-6 w-24 h-24 bg-emerald-500/10 rounded-full blur-xl pointer-events-none"></div>
@@ -827,7 +827,7 @@
             </div>
             <div class="text-xs text-slate-500 dark:text-slate-400 mt-1 flex items-center justify-between">
               <span class="text-emerald-600 dark:text-emerald-400 font-bold font-mono">+{{ formatMoney(dividendStats.nextPayoutAmount) }}</span>
-              <span class="text-[11px] px-1.5 py-0.2 rounded bg-emerald-100 text-emerald-800 dark:bg-emerald-900/60 dark:text-emerald-300">{{ dividendStats.nextPayoutStatus }}</span>
+              <span class="text-[11px] px-1.5 py-0.2 rounded bg-emerald-100 text-emerald-800 dark:bg-emerald-900/60 dark:text-emerald-300 font-medium">{{ tNextStatus(dividendStats.nextPayoutStatus) }}</span>
             </div>
           </div>
           <div class="absolute -right-6 -bottom-6 w-24 h-24 bg-amber-500/10 rounded-full blur-xl pointer-events-none"></div>
@@ -865,7 +865,7 @@
           <span class="absolute left-3 top-2.5 text-slate-400 text-xs">🔍</span>
         </div>
         <div class="flex items-center gap-2 w-full md:w-auto justify-end">
-          <label class="text-xs text-slate-500 font-medium">Сортировка:</label>
+          <label class="text-xs text-slate-500 font-medium">{{ t('divSortLabel') }}</label>
           <select 
             v-model="divSortKey"
             class="py-2 px-3 text-xs rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 font-medium focus:outline-none focus:ring-2 focus:ring-amber-500/40 cursor-pointer">
@@ -935,7 +935,7 @@
 
                   <!-- Quantity in Portfolio -->
                   <td class="p-4 text-center font-bold text-slate-800 dark:text-slate-200 font-mono">
-                    {{ item.totalQuantity }} шт.
+                    {{ item.totalQuantity }} {{ t('unitShares') }}
                   </td>
 
                   <!-- Annual Yield % -->
@@ -964,8 +964,8 @@
                   <td class="p-4 text-center font-sans">
                     <div v-if="item.nextDate !== '—'">
                       <div class="font-bold text-xs font-mono text-slate-800 dark:text-slate-200">{{ item.nextDate }}</div>
-                      <span class="inline-block text-[10px] px-1.5 py-0.2 rounded mt-0.5" :class="item.nextStatus === 'Подтверждено' ? 'bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 font-semibold' : 'bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300'">
-                        {{ item.nextStatus }}
+                      <span class="inline-block text-[10px] px-1.5 py-0.2 rounded mt-0.5 font-medium" :class="item.nextStatus.includes('Подтверждено') || item.nextStatus.includes('Confirmed') ? 'bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300' : 'bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300'">
+                        {{ tNextStatus(item.nextStatus) }}
                       </span>
                     </div>
                     <div v-else class="text-slate-400 text-xs">—</div>
@@ -978,7 +978,7 @@
                       @click="toggleHistory(item.ticker)"
                       class="px-3 py-1.5 rounded-xl text-xs font-semibold transition cursor-pointer flex items-center gap-1 mx-auto"
                       :class="expandedHistoryTicker === item.ticker ? 'bg-amber-400 text-slate-950 font-bold' : 'bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300'">
-                      <span>{{ expandedHistoryTicker === item.ticker ? '▲ Скрыть' : '▼ История' }}</span>
+                      <span>{{ expandedHistoryTicker === item.ticker ? t('divHistoryHideBtn') : t('divHistoryShowBtn') }}</span>
                     </button>
                     <span v-else class="text-slate-400 text-xs">—</span>
                   </td>
@@ -993,10 +993,10 @@
                         <div class="flex items-center gap-2">
                           <span class="text-base">📅</span>
                           <span class="font-bold text-slate-900 dark:text-white text-xs sm:text-sm">
-                            {{ t('divHistoryModalTitle') }}: <span class="text-amber-500 font-mono">{{ item.name }} ({{ item.ticker }})</span>
+                            {{ t('divHistoryModalTitle') }}: <span class="text-amber-500 font-mono">{{ tCompanyName(item) }} ({{ item.ticker }})</span>
                           </span>
                         </div>
-                        <span class="text-xs text-slate-400 font-mono">Периодичность: <b>{{ item.frequency }}</b></span>
+                        <span class="text-xs text-slate-400 font-mono">{{ t('divFrequencyLabel') }} <b class="text-slate-700 dark:text-slate-200">{{ tFrequency(item.frequency) }}</b></span>
                       </div>
 
                       <div class="overflow-x-auto">
@@ -1021,7 +1021,7 @@
                                 {{ h.yield }}
                               </td>
                               <td class="py-2 px-3 font-sans text-slate-600 dark:text-slate-400 text-[11px]">
-                                {{ h.type }}
+                                {{ tHistoryType(h.type) }}
                               </td>
                             </tr>
                           </tbody>
@@ -1541,7 +1541,52 @@
         simResultNewPnl: "Новый P&L %:",
         simBtnUpdate: "Обновить симуляцию в портфеле",
         simBtnApply: "Применить к портфелю",
-        simBtnReset: "Сбросить симуляцию"
+        simBtnReset: "Сбросить симуляцию",
+        kpiDivBaseClickTip: "📊 Реестр выплат и 5-летняя история →",
+        tabDividends: "Дивиденды и купоны",
+        divSectionTitle: "💰 Реестр дивидендов и купонов",
+        divSectionSubtitle: "Аналитика пассивного денежного потока, доходность акций и облигаций, архив выплат за 5 лет",
+        divTotalPassiveIncome: "Ожидаемый пассивный доход",
+        divTotalPassiveSub: "Суммарный денежный поток портфеля в год",
+        divMonthlyAvg: "в среднем в месяц",
+        divWeightedYieldTitle: "Средневзвешенная доходность",
+        divWeightedYieldSub: "Эффективная ставка на инвестированный капитал",
+        divNextPayoutTitle: "Ближайшая выплата",
+        divCoverageTitle: "Охват выплатами",
+        divCoverageSub: "активов приносят регулярный доход",
+        divFilterAll: "Все активы",
+        divFilterStocks: "📈 Только акции (дивиденды)",
+        divFilterBonds: "🏛 Только облигации (купоны)",
+        divSortYieldDesc: "По доходности (% год.) ↓",
+        divSortIncomeDesc: "По сумме в год (₽) ↓",
+        divSortNameAsc: "По названию (А-Я)",
+        divSearchPlaceholder: "Поиск актива по тикеру или названию...",
+        divColAsset: "Актив / Эмитент",
+        divColType: "Тип",
+        divColQty: "В портфеле",
+        divColYield: "Доходность",
+        divColDps: "На акцию / купон",
+        divColTotalIncome: "Доход портфеля",
+        divColNextDate: "Дата выплаты",
+        divColFrequency: "Периодичность",
+        divColHistoryBtn: "История выплат",
+        divStatusConfirmed: "Подтверждено",
+        divStatusForecast: "Прогноз",
+        divStatusPaused: "Приостановлено",
+        divHistoryModalTitle: "Архив выплат за последние 5 лет",
+        divHistoryTableYear: "Год",
+        divHistoryTableDate: "Дата закрытия реестра / выплата",
+        divHistoryTableAmount: "Размер на бумагу",
+        divHistoryTableYield: "Див. доходность",
+        divHistoryTableType: "Тип выплаты",
+        divNoPayoutsNotice: "Выплаты не запланированы; прибыль реинвестируется в развитие бизнеса",
+        divTypeStock: "Акции",
+        divTypeBond: "Облигации",
+        divSortLabel: "Сортировка:",
+        divPerMonth: "/мес",
+        divHistoryHideBtn: "▲ Скрыть",
+        divHistoryShowBtn: "▼ История",
+        divFrequencyLabel: "Периодичность:"
       },
       en: {
         liveOnline: "T‑Bank Live",
@@ -1613,6 +1658,11 @@
         divNoPayoutsNotice: "No payouts scheduled; earnings retained for corporate expansion",
         divTypeStock: "Stock",
         divTypeBond: "Bond",
+        divSortLabel: "Sort by:",
+        divPerMonth: "/mo",
+        divHistoryHideBtn: "▲ Hide",
+        divHistoryShowBtn: "▼ History",
+        divFrequencyLabel: "Frequency:",
         tabOverview: "Summary & Charts",
         tabPositions: "All Positions",
         tabDuplicates: "Cross-Account Duplicates",
@@ -1850,7 +1900,52 @@
         simResultNewPnl: "新未實現損益率 %：",
         simBtnUpdate: "更新投資組合模擬",
         simBtnApply: "套用至投資組合",
-        simBtnReset: "重設模擬"
+        simBtnReset: "重設模擬",
+        kpiDivBaseClickTip: "📊 查看配息名冊與 5 年歷史紀錄 →",
+        tabDividends: "股息與債息",
+        divSectionTitle: "💰 股息與債券配息名冊",
+        divSectionSubtitle: "被動現金流分析、股票殖利率與債券票息、近 5 年配發歷史檔案庫",
+        divTotalPassiveIncome: "預估年度被動收入",
+        divTotalPassiveSub: "投資組合全年被動現金流總額",
+        divMonthlyAvg: "月均被動收入",
+        divWeightedYieldTitle: "加權殖利率",
+        divWeightedYieldSub: "投入總資本之年化實質收益率",
+        divNextPayoutTitle: "即將到來配息",
+        divCoverageTitle: "配息覆蓋率",
+        divCoverageSub: "標的具備穩定配息現金流",
+        divFilterAll: "所有配息資產",
+        divFilterStocks: "📈 僅顯示股票 (股息)",
+        divFilterBonds: "🏛 僅顯示債券 (債息)",
+        divSortYieldDesc: "依殖利率高低排序 (% 年化) ↓",
+        divSortIncomeDesc: "依年收益總額排序 (₽) ↓",
+        divSortNameAsc: "依標的名稱排序 (筆畫/字母)",
+        divSearchPlaceholder: "搜尋標的代碼或公司名稱...",
+        divColAsset: "標的名稱 / 股票代碼",
+        divColType: "資產類別",
+        divColQty: "持有數量",
+        divColYield: "年化殖利率",
+        divColDps: "每股/每張配息",
+        divColTotalIncome: "持倉年收益預估",
+        divColNextDate: "預計發放日期",
+        divColFrequency: "配息頻率",
+        divColHistoryBtn: "配息歷史紀錄",
+        divStatusConfirmed: "已確認公告",
+        divStatusForecast: "市場預測",
+        divStatusPaused: "暫停配息",
+        divHistoryModalTitle: "近 5 年配息發放完整歷史檔案",
+        divHistoryTableYear: "年度",
+        divHistoryTableDate: "除息基準日 / 配發日",
+        divHistoryTableAmount: "每單位配發金額",
+        divHistoryTableYield: "除息殖利率",
+        divHistoryTableType: "配發類型",
+        divNoPayoutsNotice: "目前無配息規劃；獲利保留用於公司資本擴張與研發",
+        divTypeStock: "股票",
+        divTypeBond: "債券",
+        divSortLabel: "排序依據：",
+        divPerMonth: "/月",
+        divHistoryHideBtn: "▲ 收合紀錄",
+        divHistoryShowBtn: "▼ 歷年紀錄",
+        divFrequencyLabel: "配息頻率："
       }
     };
 
@@ -3028,6 +3123,57 @@
           return ticker;
         }
 
+        function tNextStatus(status) {
+          if (!status || status === '—') return '—';
+          if (status === 'Подтверждено' || status === 'Confirmed') return t('divStatusConfirmed');
+          if (status === 'Прогноз' || status === 'Forecast') return t('divStatusForecast');
+          if (status === 'Приостановлено' || status === 'Paused') return t('divStatusPaused');
+          return status;
+        }
+
+        function tFrequency(freq) {
+          if (!freq) return '—';
+          if (freq.includes('1 раз')) {
+            return currentLang.value === 'zh' ? '每年 1 次 (年配)' : (currentLang.value === 'en' ? 'Annually (1x/yr)' : '1 раз в год');
+          }
+          if (freq.includes('2 раза')) {
+            return currentLang.value === 'zh' ? '每年 2 次 (半年配)' : (currentLang.value === 'en' ? 'Semi-annually (2x/yr)' : '2 раза в год');
+          }
+          if (freq.includes('4 раза') || freq.includes('квартал')) {
+            return currentLang.value === 'zh' ? '每年 4 次 (季配)' : (currentLang.value === 'en' ? 'Quarterly (4x/yr)' : '4 раза в год');
+          }
+          if (freq.includes('Ежемесячно') || freq.includes('месяц')) {
+            return currentLang.value === 'zh' ? '每月配息 (月配)' : (currentLang.value === 'en' ? 'Monthly (12x/yr)' : 'Ежемесячно');
+          }
+          if (freq.includes('Нет') || freq.includes('—')) {
+            return currentLang.value === 'zh' ? '無配息' : (currentLang.value === 'en' ? 'None' : 'Не выплачиваются');
+          }
+          return freq;
+        }
+
+        function tHistoryType(type) {
+          if (!type) return '—';
+          if (type.includes('Финальные') || type.includes('Final')) {
+            return currentLang.value === 'zh' ? '年度末期股利' : (currentLang.value === 'en' ? 'Final Dividend' : 'Финальные');
+          }
+          if (type.includes('Промежуточные') || type.includes('Interim')) {
+            return currentLang.value === 'zh' ? '期中股利' : (currentLang.value === 'en' ? 'Interim Dividend' : 'Промежуточные');
+          }
+          if (type.includes('Купон') || type.includes('Coupon')) {
+            return currentLang.value === 'zh' ? '債券票息' : (currentLang.value === 'en' ? 'Coupon Payment' : 'Купон');
+          }
+          if (type.includes('Пропуск') || type.includes('Skip') || type.includes('кризис')) {
+            return currentLang.value === 'zh' ? '暫停配發 (留存投資)' : (currentLang.value === 'en' ? 'Skipped (Retained)' : 'Пропуск (кризис)');
+          }
+          if (type.includes('Годовые') || type.includes('Annual')) {
+            return currentLang.value === 'zh' ? '全年度股利' : (currentLang.value === 'en' ? 'Annual Dividend' : 'Годовые');
+          }
+          if (type.includes('9 мес') || type.includes('9M')) {
+            return currentLang.value === 'zh' ? '前三季股利' : (currentLang.value === 'en' ? '9-Month Dividend' : 'За 9 месяцев');
+          }
+          return type;
+        }
+
         // Smart Avatar Resolver for Stocks, Bonds and Future Purchases
         function getCompanyLogo(stock) {
           if (!stock) return null;
@@ -3363,7 +3509,7 @@
             totalAnnualIncome,
             monthlyIncome,
             weightedYield,
-            nextPayoutStock: 'Роснефть ($ROSN)',
+            nextPayoutStock: tCompanyName({ ticker: 'ROSN', name: 'Роснефть' }) + ' (ROSN)',
             nextPayoutDate: '10.01.2025',
             nextPayoutStatus: 'Подтверждено',
             nextPayoutAmount: 558.30
@@ -3829,7 +3975,10 @@
           toggleHistory,
           dividendList,
           filteredDividendList,
-          dividendStats
+          dividendStats,
+          tNextStatus,
+          tFrequency,
+          tHistoryType
         };
       }
     }).mount('#app');
