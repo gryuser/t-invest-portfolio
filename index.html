@@ -867,7 +867,8 @@
         <div class="flex items-center gap-2 w-full md:w-auto justify-end">
           <label class="text-xs text-slate-500 font-medium">{{ t('divSortLabel') }}</label>
           <select 
-            v-model="divSortKey"
+            v-model="divSortCol"
+            @change="divSortDir = (divSortCol === 'name' ? 'asc' : 'desc')"
             class="py-2 px-3 text-xs rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 font-medium focus:outline-none focus:ring-2 focus:ring-amber-500/40 cursor-pointer">
             <option value="yield">{{ t('divSortYieldDesc') }}</option>
             <option value="income">{{ t('divSortIncomeDesc') }}</option>
@@ -882,13 +883,27 @@
           <table class="w-full text-left border-collapse">
             <thead>
               <tr class="border-b border-slate-200 dark:border-slate-800 text-[11px] font-bold text-slate-400 uppercase tracking-wider bg-slate-50/70 dark:bg-slate-900/60 font-sans">
-                <th class="p-4">{{ t('divColAsset') }}</th>
-                <th class="p-4">{{ t('divColType') }}</th>
-                <th class="p-4 text-center">{{ t('divColQty') }}</th>
-                <th class="p-4 text-right">{{ t('divColYield') }}</th>
-                <th class="p-4 text-right">{{ t('divColDps') }}</th>
-                <th class="p-4 text-right">{{ t('divColTotalIncome') }}</th>
-                <th class="p-4 text-center">{{ t('divColNextDate') }}</th>
+                <th class="p-4 cursor-pointer hover:text-slate-900 dark:hover:text-white transition select-none" @click="sortDividendBy('name')">
+                  {{ t('divColAsset') }}<span class="ml-1 text-[10px]">{{ divSortCol === 'name' ? (divSortDir === 'asc' ? '↑' : '↓') : '↕' }}</span>
+                </th>
+                <th class="p-4 cursor-pointer hover:text-slate-900 dark:hover:text-white transition select-none" @click="sortDividendBy('type')">
+                  {{ t('divColType') }}<span class="ml-1 text-[10px]">{{ divSortCol === 'type' ? (divSortDir === 'asc' ? '↑' : '↓') : '↕' }}</span>
+                </th>
+                <th class="p-4 text-center cursor-pointer hover:text-slate-900 dark:hover:text-white transition select-none" @click="sortDividendBy('qty')">
+                  {{ t('divColQty') }}<span class="ml-1 text-[10px]">{{ divSortCol === 'qty' ? (divSortDir === 'asc' ? '↑' : '↓') : '↕' }}</span>
+                </th>
+                <th class="p-4 text-right cursor-pointer hover:text-slate-900 dark:hover:text-white transition select-none" @click="sortDividendBy('yield')">
+                  {{ t('divColYield') }}<span class="ml-1 text-[10px]">{{ divSortCol === 'yield' ? (divSortDir === 'asc' ? '↑' : '↓') : '↕' }}</span>
+                </th>
+                <th class="p-4 text-right cursor-pointer hover:text-slate-900 dark:hover:text-white transition select-none" @click="sortDividendBy('dps')">
+                  {{ t('divColDps') }}<span class="ml-1 text-[10px]">{{ divSortCol === 'dps' ? (divSortDir === 'asc' ? '↑' : '↓') : '↕' }}</span>
+                </th>
+                <th class="p-4 text-right cursor-pointer hover:text-slate-900 dark:hover:text-white transition select-none" @click="sortDividendBy('income')">
+                  {{ t('divColTotalIncome') }}<span class="ml-1 text-[10px]">{{ divSortCol === 'income' ? (divSortDir === 'asc' ? '↑' : '↓') : '↕' }}</span>
+                </th>
+                <th class="p-4 text-center cursor-pointer hover:text-slate-900 dark:hover:text-white transition select-none" @click="sortDividendBy('date')">
+                  {{ t('divColNextDate') }}<span class="ml-1 text-[10px]">{{ divSortCol === 'date' ? (divSortDir === 'asc' ? '↑' : '↓') : '↕' }}</span>
+                </th>
                 <th class="p-4 text-center">{{ t('divColHistoryBtn') }}</th>
               </tr>
             </thead>
@@ -915,7 +930,7 @@
                           <span class="font-mono text-[10px] px-1.5 py-0.2 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">{{ item.ticker }}</span>
                         </div>
                         <div class="text-[11px] text-slate-500 dark:text-slate-400 font-mono mt-0.5">
-                          {{ item.sector }}
+                          {{ tSector(item.sector) }}
                         </div>
                       </div>
                     </div>
@@ -2536,8 +2551,53 @@
 
     COMPANY_LOGOS['RU000A10DS74'] = COMPANY_LOGOS['SBER'];
     COMPANY_LOGOS['RU000A10BGJ4'] = COMPANY_LOGOS['AFLT'];
+    COMPANY_LOGOS['RU000A10B6J4'] = COMPANY_LOGOS['AFLT'];
+    DIVIDEND_DB['RU000A10B6J4'] = DIVIDEND_DB['RU000A10BGJ4'];
 
     const COMPANY_DATA = {
+      'RU000A10DS74': {
+        ru: 'Сбербанк 001P-SBER51',
+        en: 'Sberbank Bond 001P-SBER51',
+        zh: '聯邦儲蓄銀行債券 001P-SBER51',
+        sector: 'Финансовый сектор',
+        badge: 'bg-emerald-600 text-white',
+        wiki: {
+          ru: 'Биржевые облигации ПАО Сбербанк серии 001P-SBER51 с плавающим купоном, привязанным к ключевой ставке Банка России.',
+          en: 'Exchange-traded floating-rate bond series 001P-SBER51 issued by Sberbank, linked to the Bank of Russia key interest rate.',
+          zh: '俄羅斯聯邦儲蓄銀行發行之浮動利率交易所債券（001P-SBER51系列），票息緊密掛鉤俄羅斯央行基準利率。'
+        }
+      },
+      'RU000A10DS74_CYR': {
+        ru: 'Сбербанк 001Р-SBER51',
+        en: 'Sberbank Bond 001P-SBER51',
+        zh: '聯邦儲蓄銀行債券 001P-SBER51',
+        sector: 'Финансовый сектор',
+        badge: 'bg-emerald-600 text-white'
+      },
+      'RU000A10BGJ4': {
+        ru: 'Аэрофлот П02-БО-01',
+        en: 'Aeroflot Bond P02-BO-01',
+        zh: '俄羅斯航空債券 P02-БО-01',
+        sector: 'Транспорт',
+        badge: 'bg-sky-600 text-white',
+        wiki: {
+          ru: 'Биржевые облигации ПАО «Аэрофлот» серии П02-БО-01 с квартальной выплатой купона.',
+          en: 'Exchange-traded bond series P02-BO-01 issued by PJSC Aeroflot with quarterly coupon distributions.',
+          zh: '俄羅斯航空發行之交易所公司債（P02-БО-01系列），享有每季度定期派發之票息收益。'
+        }
+      },
+      'RU000A10B6J4': {
+        ru: 'Аэрофлот П02-БО-01',
+        en: 'Aeroflot Bond P02-BO-01',
+        zh: '俄羅斯航空債券 P02-БО-01',
+        sector: 'Транспорт',
+        badge: 'bg-sky-600 text-white',
+        wiki: {
+          ru: 'Биржевые облигации ПАО «Аэрофлот» серии П02-БО-01 с квартальной выплатой купона.',
+          en: 'Exchange-traded bond series P02-BO-01 issued by PJSC Aeroflot with quarterly coupon distributions.',
+          zh: '俄羅斯航空發行之交易所公司債（P02-БО-01系列），享有每季度定期派發之票息收益。'
+        }
+      },
       'SBER': {
         ru: 'Сбербанк',
         en: 'Sberbank',
@@ -3109,16 +3169,37 @@
           if (!stock) return '';
           const ticker = typeof stock === 'string' ? stock : (stock.ticker || '');
           const lang = currentLang.value;
+          if (ticker === 'RU000A10DS74') {
+            if (lang === 'zh') return '聯邦儲蓄銀行債券 001P-SBER51';
+            if (lang === 'en') return 'Sberbank Bond 001P-SBER51';
+            return (typeof stock === 'object' && stock.name) ? stock.name : 'Сбербанк 001P-SBER51';
+          }
+          if (ticker === 'RU000A10BGJ4' || ticker === 'RU000A10B6J4') {
+            if (lang === 'zh') return '俄羅斯航空債券 P02-БО-01';
+            if (lang === 'en') return 'Aeroflot Bond P02-BO-01';
+            return (typeof stock === 'object' && stock.name) ? stock.name : 'Аэрофлот П02-БО-01';
+          }
           if (COMPANY_DATA[ticker] && COMPANY_DATA[ticker][lang]) {
             return COMPANY_DATA[ticker][lang];
           }
           if (typeof stock === 'object' && stock.name) {
+            const rawName = stock.name;
+            if (rawName.includes('SBER51') || (rawName.includes('Сбербанк') && rawName.includes('001'))) {
+              if (lang === 'zh') return '聯邦儲蓄銀行債券 001P-SBER51';
+              if (lang === 'en') return 'Sberbank Bond 001P-SBER51';
+              return rawName;
+            }
+            if (rawName.includes('Аэрофлот') && (rawName.includes('БО-01') || rawName.includes('П02') || rawName.includes('P02') || rawName.includes('02-'))) {
+              if (lang === 'zh') return '俄羅斯航空債券 P02-БО-01';
+              if (lang === 'en') return 'Aeroflot Bond P02-BO-01';
+              return rawName;
+            }
             for (const k in COMPANY_DATA) {
-              if (COMPANY_DATA[k].ru === stock.name) {
-                return COMPANY_DATA[k][lang] || stock.name;
+              if (COMPANY_DATA[k].ru === rawName) {
+                return COMPANY_DATA[k][lang] || rawName;
               }
             }
-            return stock.name;
+            return rawName;
           }
           return ticker;
         }
@@ -3419,9 +3500,33 @@
 
         // Dividends & Coupons reactive state
         const divTypeFilter = ref('ALL'); // 'ALL' | 'STOCKS' | 'BONDS'
-        const divSortKey = ref('yield');  // 'yield' | 'income' | 'name'
+        const divSortCol = ref('yield');
+        const divSortDir = ref('desc');
+        const divSortKey = divSortCol;
         const divSearchQuery = ref('');
         const expandedHistoryTicker = ref(null);
+
+        function sortDividendBy(col) {
+          if (divSortCol.value === col) {
+            divSortDir.value = divSortDir.value === 'asc' ? 'desc' : 'asc';
+          } else {
+            divSortCol.value = col;
+            divSortDir.value = col === 'name' ? 'asc' : 'desc';
+          }
+        }
+
+        function parsePayoutDate(d) {
+          if (!d || d === '—' || typeof d !== 'string') return 0;
+          const parts = d.trim().split('.');
+          if (parts.length === 3) {
+            const day = parseInt(parts[0], 10);
+            const month = parseInt(parts[1], 10) - 1;
+            const year = parseInt(parts[2], 10);
+            const dt = new Date(year, month, day);
+            return isNaN(dt.getTime()) ? 0 : dt.getTime();
+          }
+          return 0;
+        }
 
         function toggleHistory(ticker) {
           if (expandedHistoryTicker.value === ticker) {
@@ -3483,13 +3588,36 @@
           }
 
           // Sorting
-          if (divSortKey.value === 'yield') {
-            list.sort((a, b) => b.annualYield - a.annualYield);
-          } else if (divSortKey.value === 'income') {
-            list.sort((a, b) => b.portfolioAnnualIncome - a.portfolioAnnualIncome);
-          } else if (divSortKey.value === 'name') {
-            list.sort((a, b) => a.name.localeCompare(b.name, 'ru'));
-          }
+          list.sort((a, b) => {
+            if (divSortCol.value === 'date') {
+              const dateA = parsePayoutDate(a.nextDate);
+              const dateB = parsePayoutDate(b.nextDate);
+              if (!dateA && dateB) return 1;
+              if (dateA && !dateB) return -1;
+              if (!dateA && !dateB) return 0;
+              const diff = dateA - dateB;
+              return divSortDir.value === 'asc' ? diff : -diff;
+            }
+
+            let diff = 0;
+            if (divSortCol.value === 'name') {
+              const nameA = tCompanyName(a) || a.name || a.ticker || '';
+              const nameB = tCompanyName(b) || b.name || b.ticker || '';
+              diff = nameA.localeCompare(nameB, currentLang.value === 'ru' ? 'ru' : (currentLang.value === 'zh' ? 'zh' : 'en'));
+            } else if (divSortCol.value === 'type') {
+              diff = (a.isBond ? 1 : 0) - (b.isBond ? 1 : 0);
+            } else if (divSortCol.value === 'qty') {
+              diff = (a.totalQuantity || 0) - (b.totalQuantity || 0);
+            } else if (divSortCol.value === 'yield') {
+              diff = (a.annualYield || 0) - (b.annualYield || 0);
+            } else if (divSortCol.value === 'dps') {
+              diff = (a.dps || 0) - (b.dps || 0);
+            } else if (divSortCol.value === 'income') {
+              diff = (a.portfolioAnnualIncome || 0) - (b.portfolioAnnualIncome || 0);
+            }
+
+            return divSortDir.value === 'asc' ? diff : -diff;
+          });
 
           return list;
         });
@@ -3970,6 +4098,9 @@
           onAvatarError,
           divTypeFilter,
           divSortKey,
+          divSortCol,
+          divSortDir,
+          sortDividendBy,
           divSearchQuery,
           expandedHistoryTicker,
           toggleHistory,
