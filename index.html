@@ -2797,38 +2797,30 @@
               } catch(e) {}
             }
           }
-          // Hash fallback (tgWebAppData)
+          // Hash or search fallback (tgWebAppData)
           try {
-            const h = window.location.hash.slice(1);
-            if (h) {
-              const sp = new URLSearchParams(h);
+            const sources = [window.location.hash.slice(1), window.location.search.slice(1)];
+            for (const src of sources) {
+              if (!src) continue;
+              const sp = new URLSearchParams(src);
               const data = sp.get('tgWebAppData');
               if (data) {
                 const sp2 = new URLSearchParams(data);
                 const raw = sp2.get('user');
                 if (raw) return JSON.parse(raw);
               }
+              const directUser = sp.get('user');
+              if (directUser) {
+                return JSON.parse(directUser);
+              }
             }
           } catch(e) {}
           return null;
         }
 
-        let isTelegramUser = false;
-        let isTelegramAuthorized = false;
+        let isTgForbiddenInitial = false;
+        let initialUnlocked = false;
         let currentTgUser = getTgUser();
-
-        if (window.Telegram?.WebApp) {
-          const p = window.Telegram.WebApp.platform;
-          if (p && p !== 'unknown') {
-            isTelegramUser = true;
-          }
-        }
-        if (currentTgUser) {
-          isTelegramUser = true;
-          if (checkUserAuth(currentTgUser)) {
-            isTelegramAuthorized = true;
-          }
-        }
 
         // Check 30-minute browser session timeout
         const TIMEOUT_MS = 30 * 60 * 1000;
@@ -2837,20 +2829,30 @@
 
         // Determination of unlock state:
         // 1. Localhost always unlocked
-        // 2. Authorized Telegram user always unlocked
-        // 3. Regular browser with active 30-min session unlocked
-        // 4. Unauthorized Telegram user is BLOCKED (no PIN bypass)
-        let initialUnlocked = false;
+        // 2. Telegram whitelist user (919927871, 1381237071) always unlocked instantly
+        // 3. Telegram alien user (not in whitelist) -> BLOCKED (isTgForbidden = true)
+        // 4. Regular browser or Telegram without user in initData -> Show PIN screen (0000), NOT blocked!
         if (isLocalHost) {
           initialUnlocked = true;
-        } else if (isTelegramUser) {
-          initialUnlocked = isTelegramAuthorized; // ONLY true if on whitelist!
-        } else if (isSessionValid) {
-          initialUnlocked = true;
+          isTgForbiddenInitial = false;
+        } else if (currentTgUser) {
+          if (checkUserAuth(currentTgUser)) {
+            initialUnlocked = true;
+            isTgForbiddenInitial = false;
+          } else {
+            // Alien Telegram account
+            initialUnlocked = false;
+            isTgForbiddenInitial = true;
+          }
+        } else {
+          // No Telegram user info yet (or normal browser)
+          // DO NOT block with isTgForbidden! Allow PIN unlock (0000) or valid session
+          isTgForbiddenInitial = false;
+          initialUnlocked = isSessionValid;
         }
 
         const isUnlocked = ref(initialUnlocked);
-        const isTgForbidden = ref(isTelegramUser && !isTelegramAuthorized);
+        const isTgForbidden = ref(isTgForbiddenInitial);
         const pinInput = ref('');
         const pinError = ref(false);
 
@@ -3715,9 +3717,14 @@
         onMounted(() => {
           // Instant Telegram user re-check on mount
           const user = getTgUser();
-          if (user && checkUserAuth(user)) {
-            isUnlocked.value = true;
-            isTgForbidden.value = false;
+          if (user) {
+            if (checkUserAuth(user)) {
+              isUnlocked.value = true;
+              isTgForbidden.value = false;
+            } else {
+              isTgForbidden.value = true;
+              isUnlocked.value = false;
+            }
           }
           applyTheme(theme.value);
           const initialLang = currentLang.value;
