@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <script src="https://telegram.org/js/telegram-web-app.js" defer></script>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>T-Investments Portfolio Analytics | Аналитика Портфеля</title>
@@ -2061,35 +2061,66 @@
         
         // Whitelist of allowed Telegram users
         const ALLOWED_TELEGRAM_USERS = [
-          919927871, 
-          'tod_wills', 
+          '919927871',
+          919927871,
+          '1381237071',
+          1381237071,
+          'tod_wills',
           's_girl98'
         ];
 
-        let isTelegramUser = false;
-        let isTelegramAuthorized = false;
-        let currentTgUser = null;
+        function checkUserAuth(user) {
+          if (!user) return false;
+          const uId = String(user.id || '');
+          const uName = String(user.username || '').replace('@', '').toLowerCase();
+          return ALLOWED_TELEGRAM_USERS.map(String).includes(uId) || 
+                 ALLOWED_TELEGRAM_USERS.map(u => String(u).toLowerCase()).includes(uName);
+        }
 
-        const tg = window.Telegram?.WebApp;
-        if (tg) {
-          try {
-            tg.ready();
-            tg.expand();
-            // In Telegram, platform is e.g. 'ios', 'android', 'tdesktop', 'macos', etc.
-            if (tg.platform && tg.platform !== 'unknown') {
-              isTelegramUser = true;
+        function getTgUser() {
+          const tg = window.Telegram?.WebApp;
+          if (tg) {
+            try { tg.ready(); tg.expand(); } catch(e) {}
+            if (tg.initDataUnsafe?.user) return tg.initDataUnsafe.user;
+            if (tg.initData) {
+              try {
+                const sp = new URLSearchParams(tg.initData);
+                const raw = sp.get('user');
+                if (raw) return JSON.parse(raw);
+              } catch(e) {}
             }
-            const user = tg.initDataUnsafe?.user;
-            if (user) {
-              isTelegramUser = true;
-              currentTgUser = user;
-              const uId = user.id;
-              const uName = (user.username || '').toLowerCase();
-              if (ALLOWED_TELEGRAM_USERS.includes(uId) || ALLOWED_TELEGRAM_USERS.includes(uName)) {
-                isTelegramAuthorized = true;
+          }
+          // Hash fallback (tgWebAppData)
+          try {
+            const h = window.location.hash.slice(1);
+            if (h) {
+              const sp = new URLSearchParams(h);
+              const data = sp.get('tgWebAppData');
+              if (data) {
+                const sp2 = new URLSearchParams(data);
+                const raw = sp2.get('user');
+                if (raw) return JSON.parse(raw);
               }
             }
           } catch(e) {}
+          return null;
+        }
+
+        let isTelegramUser = false;
+        let isTelegramAuthorized = false;
+        let currentTgUser = getTgUser();
+
+        if (window.Telegram?.WebApp) {
+          const p = window.Telegram.WebApp.platform;
+          if (p && p !== 'unknown') {
+            isTelegramUser = true;
+          }
+        }
+        if (currentTgUser) {
+          isTelegramUser = true;
+          if (checkUserAuth(currentTgUser)) {
+            isTelegramAuthorized = true;
+          }
         }
 
         // Check 30-minute browser session timeout
@@ -2794,6 +2825,12 @@
 
         let autoSyncInterval = null;
         onMounted(() => {
+          // Instant Telegram user re-check on mount
+          const user = getTgUser();
+          if (user && checkUserAuth(user)) {
+            isUnlocked.value = true;
+            isTgForbidden.value = false;
+          }
           applyTheme(theme.value);
           const initialLang = currentLang.value;
           document.documentElement.setAttribute('lang', initialLang === 'zh' ? 'zh-TW' : initialLang);
