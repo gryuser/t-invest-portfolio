@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Environment variables & secrets
+.env
+*.env
+.env.local
+.env.*.local
+
+# Build & deployment artifacts
+deploy_dist/
+temp_repo/
+repo_invest/
+dist/
+.vercel/
+
+# Logs & temporary files
+*.log
+npm-debug.log*
+yarn-debug.log*
+
+# User sensitive configs & cached data
+user_config.json
+gcm-diagnose.log

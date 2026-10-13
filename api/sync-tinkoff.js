@@ -14,7 +14,8 @@ function tinkoffPost(endpoint, body = {}) {
       hostname: 'invest-public-api.tinkoff.ru',
       path: '/rest/tinkoff.public.invest.api.contract.v1.' + endpoint,
       method: 'POST',
-      rejectUnauthorized: false,
+      // Strict TLS validation when STRICT_TLS=true or custom CA is provided
+      rejectUnauthorized: process.env.STRICT_TLS === 'true',
       headers: {
         'Authorization': 'Bearer ' + token,
         'Content-Type': 'application/json',

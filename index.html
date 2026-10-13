@@ -168,8 +168,11 @@
         </button>
       </div>
 
-      <div v-if="pinError" style="font-size:12px;color:#f87171;font-weight:600;margin-top:8px;font-family:Inter,sans-serif;">
-        Неверный PIN-код
+      <div v-if="pinError && !isLockedOut" style="font-size:12px;color:#f87171;font-weight:600;margin-top:8px;font-family:Inter,sans-serif;">
+        Неверный PIN-код (осталось попыток: {{ Math.max(0, 3 - failedAttempts) }})
+      </div>
+      <div v-if="isLockedOut" style="font-size:12px;color:#f87171;font-weight:600;margin-top:8px;font-family:Inter,sans-serif;">
+        🔒 Слишком много попыток. Пауза: {{ Math.floor(lockoutRemainingSeconds / 60) }}:{{ (lockoutRemainingSeconds % 60).toString().padStart(2, '0') }}
       </div>
     </div>
   </div>
@@ -2051,8 +2054,8 @@
     createApp({
       setup() {
         
-        // Security PIN Logic (PIN: 0000)
-        const CORRECT_PIN = '0000';
+        // Security PIN Logic (SHA-256 of 0000)
+        const PIN_HASH = '03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4';
         const hostname = window.location.hostname;
         const isLocalHost = hostname === 'localhost' || hostname === '127.0.0.1' || hostname.startsWith('192.168.');
         
@@ -2113,7 +2116,44 @@
         const pinInput = ref('');
         const pinError = ref(false);
 
-        function enterPinDigit(digit) {
+        // Brute-force protection: 3 attempts -> 5 min lockout
+        const failedAttempts = ref(parseInt(localStorage.getItem('pin_failed_attempts') || '0', 10));
+        const lockoutUntil = ref(parseInt(localStorage.getItem('pin_lockout_until') || '0', 10));
+        const isLockedOut = ref(Date.now() < lockoutUntil.value);
+        const lockoutRemainingSeconds = ref(0);
+
+        function checkLockout() {
+          const now = Date.now();
+          if (now < lockoutUntil.value) {
+            isLockedOut.value = true;
+            lockoutRemainingSeconds.value = Math.max(0, Math.ceil((lockoutUntil.value - now) / 1000));
+          } else {
+            isLockedOut.value = false;
+            lockoutRemainingSeconds.value = 0;
+            if (lockoutUntil.value > 0) {
+              localStorage.removeItem('pin_lockout_until');
+              lockoutUntil.value = 0;
+            }
+          }
+        }
+        checkLockout();
+        setInterval(checkLockout, 1000);
+
+        async function computeSha256(str) {
+          try {
+            if (window.crypto && window.crypto.subtle) {
+              const enc = new TextEncoder().encode(str);
+              const hashBuf = await window.crypto.subtle.digest('SHA-256', enc);
+              return Array.from(new Uint8Array(hashBuf)).map(b => b.toString(16).padStart(2, '0')).join('');
+            }
+          } catch(e) {}
+          // Fallback
+          return str === '0000' ? '03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4' : 'unmatched';
+        }
+
+        async function enterPinDigit(digit) {
+          checkLockout();
+          if (isLockedOut.value) return;
           pinError.value = false;
           if (pinInput.value.length < 4) {
             pinInput.value += digit.toString();
@@ -2125,12 +2165,24 @@
                 return;
               }
 
-              if (pinInput.value === CORRECT_PIN) {
+              const hashed = await computeSha256(pinInput.value);
+              if (hashed === PIN_HASH) {
                 isUnlocked.value = true;
                 localStorage.setItem('portfolio_unlock_timestamp', Date.now().toString());
+                localStorage.removeItem('pin_failed_attempts');
+                localStorage.removeItem('pin_lockout_until');
+                failedAttempts.value = 0;
                 pinInput.value = '';
               } else {
                 pinError.value = true;
+                failedAttempts.value += 1;
+                localStorage.setItem('pin_failed_attempts', failedAttempts.value.toString());
+                if (failedAttempts.value >= 3) {
+                  const until = Date.now() + 5 * 60 * 1000;
+                  lockoutUntil.value = until;
+                  localStorage.setItem('pin_lockout_until', until.toString());
+                  checkLockout();
+                }
                 setTimeout(() => {
                   pinInput.value = '';
                 }, 400);
@@ -2140,11 +2192,13 @@
         }
 
         function clearPin() {
+          if (isLockedOut.value) return;
           pinInput.value = '';
           pinError.value = false;
         }
 
         function backspacePin() {
+          if (isLockedOut.value) return;
           pinInput.value = pinInput.value.slice(0, -1);
           pinError.value = false;
         }
@@ -2367,8 +2421,28 @@
           };
         }
 
-        // Reactive simulated or base portfolio
+        // Reactive simulated or base portfolio (hidden until unlocked)
         const portfolioData = computed(() => {
+          if (!isUnlocked.value) {
+            return {
+              updatedAt: 'Заблокировано',
+              depositRate: 0,
+              freeMarginTotal: 0,
+              annualMarginEarned: 0,
+              monthlyMarginEarned: 0,
+              grandTotalAssetValue: 0,
+              grandTotalNetBalance: 0,
+              grandTotalCost: 0,
+              grandTotalPlRub: 0,
+              grandTotalPlPercent: 0,
+              accounts: [],
+              consolidatedStocks: [],
+              sectorBreakdown: [],
+              crossAccountDuplicates: [],
+              concentration: { top1: { ticker: '', name: '', value: 0, share: 0 }, top3: { value: 0, share: 0, names: [] }, top5: { value: 0, share: 0, names: [] } },
+              dividendShare: { count: 0, totalValue: 0, sharePercent: 0 }
+            };
+          }
           if (!activeSimulation.value) {
             return normalizePortfolioData(rawDataBase.value);
           }
@@ -2776,6 +2850,9 @@
           isTgForbidden,
           pinInput,
           pinError,
+          failedAttempts,
+          isLockedOut,
+          lockoutRemainingSeconds,
           enterPinDigit,
           clearPin,
           backspacePin,

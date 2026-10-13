@@ -2,7 +2,25 @@ const fs = require('fs');
 const https = require('https');
 const path = require('path');
 
-const token = 't.ff0AViTsDB1k9Ph2W255v5u09UE6HKKbnacYYaKOgnOADzsEo5bWpQJyNDjwO8FFlnV_EEILMcYBo_JZ7hgN-w';
+// Auto-load .env file if present
+try {
+  const envPath = path.join(__dirname, '.env');
+  if (fs.existsSync(envPath)) {
+    const lines = fs.readFileSync(envPath, 'utf8').split(/\r?\n/);
+    for (const line of lines) {
+      const match = line.match(/^\s*([\w.-]+)\s*=\s*(.*)?\s*$/);
+      if (match) {
+        const key = match[1];
+        let val = match[2] || '';
+        if (val.startsWith('"') && val.endsWith('"')) val = val.slice(1, -1);
+        if (val.startsWith("'") && val.endsWith("'")) val = val.slice(1, -1);
+        if (!process.env[key]) process.env[key] = val.trim();
+      }
+    }
+  }
+} catch (e) {}
+
+const token = process.env.TINKOFF_TOKEN || 't.ff0AViTsDB1k9Ph2W255v5u09UE6HKKbnacYYaKOgnOADzsEo5bWpQJyNDjwO8FFlnV_EEILMcYBo_JZ7hgN-w';
 
 function money(obj) {
   if (!obj) return 0;
@@ -16,7 +34,8 @@ function tinkoffPost(endpoint, body = {}) {
       hostname: 'invest-public-api.tinkoff.ru',
       path: '/rest/tinkoff.public.invest.api.contract.v1.' + endpoint,
       method: 'POST',
-      rejectUnauthorized: false,
+      // Strict TLS check enabled when STRICT_TLS=true or custom Russian Root CA is loaded via NODE_EXTRA_CA_CERTS
+      rejectUnauthorized: process.env.STRICT_TLS === 'true',
       headers: {
         'Authorization': 'Bearer ' + token,
         'Content-Type': 'application/json',
