@@ -1,4 +1,4 @@
-const BOT_TOKEN = '8892862279:AAE47Ux4Y9WrYKBrrLEDHKGk5RU9HjJPuFc';
+const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
 const USER_ID = '919927871';
 
 module.exports = async (req, res) => {

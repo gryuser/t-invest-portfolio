@@ -117,9 +117,9 @@
       <div style="width:64px;height:64px;border-radius:20px;background:rgba(239,68,68,0.15);color:#ef4444;font-size:32px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px auto;border:1px solid rgba(239,68,68,0.3);">
         🔒
       </div>
-      <h2 style="font-size:20px;font-weight:800;color:#f3f4f6;margin-bottom:8px;font-family:Inter,sans-serif;">Доступ закрыт</h2>
-      <p style="font-size:12px;color:#9ca3af;line-height:1.6;margin-bottom:20px;font-family:Inter,sans-serif;">
-        Этот инвестиционный портфель является приватным. Ваш Telegram аккаунт не авторизован.
+      <h2 style="font-size:20px;font-weight:800;color:#f3f4f6;margin-bottom:8px;font-family:Inter,sans-serif;">Доступ ограничен</h2>
+      <p style="font-size:13px;color:#9ca3af;line-height:1.6;margin-bottom:20px;font-family:Inter,sans-serif;">
+        Вы не входите в белый список.
       </p>
     </div>
   </div>
@@ -2766,13 +2766,13 @@
         const hostname = window.location.hostname;
         const isLocalHost = hostname === 'localhost' || hostname === '127.0.0.1' || hostname.startsWith('192.168.');
         
-        // Whitelist of allowed Telegram users
+        // Единый белый список разрешенных пользователей Telegram (строго 2 пользователя)
         const ALLOWED_TELEGRAM_USERS = [
-          '919927871',
+          '919927871',   // 1. Пользователь (ID: 919927871, @tod_wills)
           919927871,
-          '1381237071',
-          1381237071,
           'tod_wills',
+          '1381237071',  // 2. Друг (ID: 1381237071, @s_girl98)
+          1381237071,
           's_girl98'
         ];
 
