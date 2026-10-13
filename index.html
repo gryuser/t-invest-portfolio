@@ -1894,19 +1894,6 @@
           const sharePercent = grandTotalAssetValue > 0 ? (totalValue / grandTotalAssetValue) * 100 : 0;
 
           return {
-          OFZ_LOGO_SVG,
-          DIVIDEND_DB,
-          getAvatarClass,
-          getAvatarMonogram,
-          onAvatarError,
-          divTypeFilter,
-          divSortKey,
-          divSearchQuery,
-          expandedHistoryTicker,
-          toggleHistory,
-          dividendList,
-          filteredDividendList,
-          dividendStats,
             ...stock,
             totalQuantity,
             totalCost,
@@ -3829,7 +3816,20 @@
           currentSectorSummary,
           viewSectorInTable,
           formatMoney,
-          formatNumber
+          formatNumber,
+          OFZ_LOGO_SVG,
+          DIVIDEND_DB,
+          getAvatarClass,
+          getAvatarMonogram,
+          onAvatarError,
+          divTypeFilter,
+          divSortKey,
+          divSearchQuery,
+          expandedHistoryTicker,
+          toggleHistory,
+          dividendList,
+          filteredDividendList,
+          dividendStats
         };
       }
     }).mount('#app');
