@@ -1,0 +1,2278 @@
+{
+  "updatedAt": "13.10.2026 13:19:27",
+  "depositRate": 15.5,
+  "freeMarginTotal": 15000,
+  "annualMarginEarned": 2325,
+  "monthlyMarginEarned": 193.75,
+  "grandTotalAssetValue": 68872.46,
+  "grandTotalNetBalance": 53872.46,
+  "grandTotalCost": 71898.2,
+  "grandTotalPlRub": -3025.74,
+  "grandTotalPlPercent": -4.21,
+  "accounts": [
+    {
+      "accountKey": "G_ACC",
+      "accountTitle": "G ACC",
+      "totalAssetValue": 30346.78,
+      "totalStockValue": 30096.78,
+      "totalCurrencyValue": 250,
+      "debtRub": -5000,
+      "netAccountBalance": 25346.78,
+      "totalStockCost": 31812.56,
+      "totalPlRub": -1715.78,
+      "totalPlPercent": -5.39,
+      "positions": [
+        {
+          "accountKey": "G_ACC",
+          "accountTitle": "G ACC",
+          "ticker": "DATA",
+          "name": "Группа Аренадата",
+          "type": "stock",
+          "sector": "IT и технологии",
+          "industry": "Корпоративное ПО и СУБД",
+          "divPayer": true,
+          "quantity": 1,
+          "buyPrice": 92.62,
+          "currentPrice": 98.28,
+          "totalValue": 98.28,
+          "totalCost": 92.62,
+          "plRub": 5.66,
+          "plPercent": 6.11
+        },
+        {
+          "accountKey": "G_ACC",
+          "accountTitle": "G ACC",
+          "ticker": "NVTK",
+          "name": "НОВАТЭК",
+          "type": "stock",
+          "sector": "Нефть и газ",
+          "industry": "Добыча СПГ и природного газа",
+          "divPayer": true,
+          "quantity": 1,
+          "buyPrice": 1088.4,
+          "currentPrice": 1074.6,
+          "totalValue": 1074.6,
+          "totalCost": 1088.4,
+          "plRub": -13.8,
+          "plPercent": -1.27
+        },
+        {
+          "accountKey": "G_ACC",
+          "accountTitle": "G ACC",
+          "ticker": "PLZL",
+          "name": "Полюс",
+          "type": "stock",
+          "sector": "Металлургия и добыча",
+          "industry": "Добыча золота",
+          "divPayer": true,
+          "quantity": 1,
+          "buyPrice": 1856,
+          "currentPrice": 1073.6,
+          "totalValue": 1073.6,
+          "totalCost": 1856,
+          "plRub": -782.4,
+          "plPercent": -42.16
+        },
+        {
+          "accountKey": "G_ACC",
+          "accountTitle": "G ACC",
+          "ticker": "SNGS",
+          "name": "Сургутнефтегаз",
+          "type": "stock",
+          "sector": "Нефть и газ",
+          "industry": "Добыча нефти и газа",
+          "divPayer": true,
+          "quantity": 100,
+          "buyPrice": 21.95,
+          "currentPrice": 16.48,
+          "totalValue": 1648,
+          "totalCost": 2195,
+          "plRub": -547,
+          "plPercent": -24.92
+        },
+        {
+          "accountKey": "G_ACC",
+          "accountTitle": "G ACC",
+          "ticker": "TRNFP",
+          "name": "Транснефть - прив.",
+          "type": "stock",
+          "sector": "Нефть и газ",
+          "industry": "Транспортировка нефти",
+          "divPayer": true,
+          "quantity": 3,
+          "buyPrice": 1141.2,
+          "currentPrice": 1086,
+          "totalValue": 3258,
+          "totalCost": 3423.6,
+          "plRub": -165.6,
+          "plPercent": -4.84
+        },
+        {
+          "accountKey": "G_ACC",
+          "accountTitle": "G ACC",
+          "ticker": "T",
+          "name": "Т-Технологии",
+          "type": "stock",
+          "sector": "Финансовый сектор",
+          "industry": "Финтех и экосистема",
+          "divPayer": true,
+          "quantity": 5,
+          "buyPrice": 286.18,
+          "currentPrice": 270.72,
+          "totalValue": 1353.6,
+          "totalCost": 1430.9,
+          "plRub": -77.3,
+          "plPercent": -5.4
+        },
+        {
+          "accountKey": "G_ACC",
+          "accountTitle": "G ACC",
+          "ticker": "TATN",
+          "name": "Татнефть",
+          "type": "stock",
+          "sector": "Нефть и газ",
+          "industry": "Нефтедобыча и нефтехимия",
+          "divPayer": true,
+          "quantity": 9,
+          "buyPrice": 632.8,
+          "currentPrice": 666.3,
+          "totalValue": 5996.7,
+          "totalCost": 5695.2,
+          "plRub": 301.5,
+          "plPercent": 5.29
+        },
+        {
+          "accountKey": "G_ACC",
+          "accountTitle": "G ACC",
+          "ticker": "SIBN",
+          "name": "Газпром нефть",
+          "type": "stock",
+          "sector": "Нефть и газ",
+          "industry": "Нефтепереработка и добыча",
+          "divPayer": true,
+          "quantity": 4,
+          "buyPrice": 549,
+          "currentPrice": 608.3,
+          "totalValue": 2433.2,
+          "totalCost": 2196,
+          "plRub": 237.2,
+          "plPercent": 10.8
+        },
+        {
+          "accountKey": "G_ACC",
+          "accountTitle": "G ACC",
+          "ticker": "SNGSP",
+          "name": "Сургутнефтегаз - прив.",
+          "type": "stock",
+          "sector": "Нефть и газ",
+          "industry": "Добыча нефти / валютная кубышка",
+          "divPayer": true,
+          "quantity": 20,
+          "buyPrice": 49.23,
+          "currentPrice": 41.16,
+          "totalValue": 823.2,
+          "totalCost": 984.66,
+          "plRub": -161.46,
+          "plPercent": -16.4
+        },
+        {
+          "accountKey": "G_ACC",
+          "accountTitle": "G ACC",
+          "ticker": "OZPH",
+          "name": "Озон Фармацевтика",
+          "type": "stock",
+          "sector": "Здравоохранение",
+          "industry": "Фармацевтика и дженерики",
+          "divPayer": true,
+          "quantity": 20,
+          "buyPrice": 46.92,
+          "currentPrice": 46.23,
+          "totalValue": 924.6,
+          "totalCost": 938.4,
+          "plRub": -13.8,
+          "plPercent": -1.47
+        },
+        {
+          "accountKey": "G_ACC",
+          "accountTitle": "G ACC",
+          "ticker": "AQUA",
+          "name": "ИНАРКТИКА",
+          "type": "stock",
+          "sector": "Потребительский сектор",
+          "industry": "Аквакультура (лосось/форель)",
+          "divPayer": true,
+          "quantity": 2,
+          "buyPrice": 605,
+          "currentPrice": 324.6,
+          "totalValue": 649.2,
+          "totalCost": 1210,
+          "plRub": -560.8,
+          "plPercent": -46.35
+        },
+        {
+          "accountKey": "G_ACC",
+          "accountTitle": "G ACC",
+          "ticker": "SBER",
+          "name": "Сбербанк",
+          "type": "stock",
+          "sector": "Финансовый сектор",
+          "industry": "Банки и экосистемы",
+          "divPayer": true,
+          "quantity": 30,
+          "buyPrice": 284.08,
+          "currentPrice": 287.31,
+          "totalValue": 8619.3,
+          "totalCost": 8522.4,
+          "plRub": 96.9,
+          "plPercent": 1.14
+        },
+        {
+          "accountKey": "G_ACC",
+          "accountTitle": "G ACC",
+          "ticker": "TATNP",
+          "name": "Татнефть - прив.",
+          "type": "stock",
+          "sector": "Нефть и газ",
+          "industry": "Нефтедобыча и нефтехимия",
+          "divPayer": true,
+          "quantity": 1,
+          "buyPrice": 520.5,
+          "currentPrice": 637.5,
+          "totalValue": 637.5,
+          "totalCost": 520.5,
+          "plRub": 117,
+          "plPercent": 22.48
+        },
+        {
+          "accountKey": "G_ACC",
+          "accountTitle": "G ACC",
+          "ticker": "ROSN",
+          "name": "Роснефть",
+          "type": "stock",
+          "sector": "Нефть и газ",
+          "industry": "Интегрированная нефтегазовая компания",
+          "divPayer": true,
+          "quantity": 4,
+          "buyPrice": 414.72,
+          "currentPrice": 376.75,
+          "totalValue": 1507,
+          "totalCost": 1658.88,
+          "plRub": -151.88,
+          "plPercent": -9.16
+        }
+      ]
+    },
+    {
+      "accountKey": "S_ACC",
+      "accountTitle": "S ACC",
+      "totalAssetValue": 21369.47,
+      "totalStockValue": 21369.47,
+      "totalCurrencyValue": 0,
+      "debtRub": -5000,
+      "netAccountBalance": 16369.47,
+      "totalStockCost": 20926.41,
+      "totalPlRub": 443.06,
+      "totalPlPercent": 2.12,
+      "positions": [
+        {
+          "accountKey": "S_ACC",
+          "accountTitle": "S ACC",
+          "ticker": "LKOH",
+          "name": "ЛУКОЙЛ",
+          "type": "stock",
+          "sector": "Нефть и газ",
+          "industry": "Интегрированная нефтегазовая компания",
+          "divPayer": true,
+          "quantity": 1,
+          "buyPrice": 5359,
+          "currentPrice": 6002.5,
+          "totalValue": 6002.5,
+          "totalCost": 5359,
+          "plRub": 643.5,
+          "plPercent": 12.01
+        },
+        {
+          "accountKey": "S_ACC",
+          "accountTitle": "S ACC",
+          "ticker": "PLZL",
+          "name": "Полюс",
+          "type": "stock",
+          "sector": "Металлургия и добыча",
+          "industry": "Добыча золота",
+          "divPayer": true,
+          "quantity": 3,
+          "buyPrice": 1001.9,
+          "currentPrice": 1073.6,
+          "totalValue": 3220.8,
+          "totalCost": 3005.7,
+          "plRub": 215.1,
+          "plPercent": 7.16
+        },
+        {
+          "accountKey": "S_ACC",
+          "accountTitle": "S ACC",
+          "ticker": "AFLT",
+          "name": "Аэрофлот",
+          "type": "stock",
+          "sector": "Транспорт",
+          "industry": "Авиаперевозки",
+          "divPayer": false,
+          "quantity": 20,
+          "buyPrice": 42.39,
+          "currentPrice": 35.64,
+          "totalValue": 712.8,
+          "totalCost": 847.8,
+          "plRub": -135,
+          "plPercent": -15.92
+        },
+        {
+          "accountKey": "S_ACC",
+          "accountTitle": "S ACC",
+          "ticker": "SVCB",
+          "name": "Совкомбанк",
+          "type": "stock",
+          "sector": "Финансовый сектор",
+          "industry": "Банковские услуги и страхование",
+          "divPayer": true,
+          "quantity": 100,
+          "buyPrice": 13.93,
+          "currentPrice": 10.13,
+          "totalValue": 1013,
+          "totalCost": 1393,
+          "plRub": -380,
+          "plPercent": -27.28
+        },
+        {
+          "accountKey": "S_ACC",
+          "accountTitle": "S ACC",
+          "ticker": "RU000A10DS74",
+          "name": "Сбербанк 001Р-SBER51",
+          "type": "bond",
+          "sector": "Финансовый сектор",
+          "industry": "Облигации",
+          "divPayer": true,
+          "quantity": 2,
+          "buyPrice": 1010.9,
+          "currentPrice": 1009,
+          "totalValue": 2018,
+          "totalCost": 2021.8,
+          "plRub": -3.8,
+          "plPercent": -0.19
+        },
+        {
+          "accountKey": "S_ACC",
+          "accountTitle": "S ACC",
+          "ticker": "T",
+          "name": "Т-Технологии",
+          "type": "stock",
+          "sector": "Финансовый сектор",
+          "industry": "Финтех и экосистема",
+          "divPayer": true,
+          "quantity": 4,
+          "buyPrice": 251.06,
+          "currentPrice": 270.72,
+          "totalValue": 1082.88,
+          "totalCost": 1004.24,
+          "plRub": 78.64,
+          "plPercent": 7.83
+        },
+        {
+          "accountKey": "S_ACC",
+          "accountTitle": "S ACC",
+          "ticker": "RU000A10BGJ4",
+          "name": "Аэрофлот П02-БО-01",
+          "type": "bond",
+          "sector": "Транспорт",
+          "industry": "Облигации",
+          "divPayer": true,
+          "quantity": 1,
+          "buyPrice": 1013.8,
+          "currentPrice": 1015.5,
+          "totalValue": 1015.5,
+          "totalCost": 1013.8,
+          "plRub": 1.7,
+          "plPercent": 0.17
+        },
+        {
+          "accountKey": "S_ACC",
+          "accountTitle": "S ACC",
+          "ticker": "SBERP",
+          "name": "Сбербанк - прив.",
+          "type": "stock",
+          "sector": "Финансовый сектор",
+          "industry": "Банки и экосистемы",
+          "divPayer": true,
+          "quantity": 3,
+          "buyPrice": 315.74,
+          "currentPrice": 288.03,
+          "totalValue": 864.09,
+          "totalCost": 947.22,
+          "plRub": -83.13,
+          "plPercent": -8.78
+        },
+        {
+          "accountKey": "S_ACC",
+          "accountTitle": "S ACC",
+          "ticker": "SBER",
+          "name": "Сбербанк",
+          "type": "stock",
+          "sector": "Финансовый сектор",
+          "industry": "Банки и экосистемы",
+          "divPayer": true,
+          "quantity": 15,
+          "buyPrice": 277.25,
+          "currentPrice": 287.31,
+          "totalValue": 4309.65,
+          "totalCost": 4158.75,
+          "plRub": 150.9,
+          "plPercent": 3.63
+        },
+        {
+          "accountKey": "S_ACC",
+          "accountTitle": "S ACC",
+          "ticker": "ROSN",
+          "name": "Роснефть",
+          "type": "stock",
+          "sector": "Нефть и газ",
+          "industry": "Интегрированная нефтегазовая компания",
+          "divPayer": true,
+          "quantity": 3,
+          "buyPrice": 391.7,
+          "currentPrice": 376.75,
+          "totalValue": 1130.25,
+          "totalCost": 1175.1,
+          "plRub": -44.85,
+          "plPercent": -3.82
+        }
+      ]
+    },
+    {
+      "accountKey": "ACC_26K",
+      "accountTitle": "26 тысяч",
+      "totalAssetValue": 17156.21,
+      "totalStockValue": 17156.21,
+      "totalCurrencyValue": 0,
+      "debtRub": -5000,
+      "netAccountBalance": 12156.21,
+      "totalStockCost": 19159.23,
+      "totalPlRub": -2003.02,
+      "totalPlPercent": -10.45,
+      "positions": [
+        {
+          "accountKey": "ACC_26K",
+          "accountTitle": "26 тысяч",
+          "ticker": "LKOH",
+          "name": "ЛУКОЙЛ",
+          "type": "stock",
+          "sector": "Нефть и газ",
+          "industry": "Интегрированная нефтегазовая компания",
+          "divPayer": true,
+          "quantity": 1,
+          "buyPrice": 5342.5,
+          "currentPrice": 6002.5,
+          "totalValue": 6002.5,
+          "totalCost": 5342.5,
+          "plRub": 660,
+          "plPercent": 12.35
+        },
+        {
+          "accountKey": "ACC_26K",
+          "accountTitle": "26 тысяч",
+          "ticker": "NVTK",
+          "name": "НОВАТЭК",
+          "type": "stock",
+          "sector": "Нефть и газ",
+          "industry": "Добыча СПГ и природного газа",
+          "divPayer": true,
+          "quantity": 1,
+          "buyPrice": 1339.4,
+          "currentPrice": 1074.6,
+          "totalValue": 1074.6,
+          "totalCost": 1339.4,
+          "plRub": -264.8,
+          "plPercent": -19.77
+        },
+        {
+          "accountKey": "ACC_26K",
+          "accountTitle": "26 тысяч",
+          "ticker": "PLZL",
+          "name": "Полюс",
+          "type": "stock",
+          "sector": "Металлургия и добыча",
+          "industry": "Добыча золота",
+          "divPayer": true,
+          "quantity": 2,
+          "buyPrice": 1703.1,
+          "currentPrice": 1073.6,
+          "totalValue": 2147.2,
+          "totalCost": 3406.2,
+          "plRub": -1259,
+          "plPercent": -36.96
+        },
+        {
+          "accountKey": "ACC_26K",
+          "accountTitle": "26 тысяч",
+          "ticker": "HNFG",
+          "name": "Хэндерсон",
+          "type": "stock",
+          "sector": "Потребительский сектор",
+          "industry": "Ритейл мужской одежды",
+          "divPayer": true,
+          "quantity": 3,
+          "buyPrice": 320.8,
+          "currentPrice": 288.6,
+          "totalValue": 865.8,
+          "totalCost": 962.4,
+          "plRub": -96.6,
+          "plPercent": -10.04
+        },
+        {
+          "accountKey": "ACC_26K",
+          "accountTitle": "26 тысяч",
+          "ticker": "T",
+          "name": "Т-Технологии",
+          "type": "stock",
+          "sector": "Финансовый сектор",
+          "industry": "Финтех и экосистема",
+          "divPayer": true,
+          "quantity": 5,
+          "buyPrice": 295.92,
+          "currentPrice": 270.72,
+          "totalValue": 1353.6,
+          "totalCost": 1479.6,
+          "plRub": -126,
+          "plPercent": -8.52
+        },
+        {
+          "accountKey": "ACC_26K",
+          "accountTitle": "26 тысяч",
+          "ticker": "TATN",
+          "name": "Татнефть",
+          "type": "stock",
+          "sector": "Нефть и газ",
+          "industry": "Нефтедобыча и нефтехимия",
+          "divPayer": true,
+          "quantity": 1,
+          "buyPrice": 655.4,
+          "currentPrice": 666.3,
+          "totalValue": 666.3,
+          "totalCost": 655.4,
+          "plRub": 10.9,
+          "plPercent": 1.66
+        },
+        {
+          "accountKey": "ACC_26K",
+          "accountTitle": "26 тысяч",
+          "ticker": "VTBR",
+          "name": "Банк ВТБ",
+          "type": "stock",
+          "sector": "Финансовый сектор",
+          "industry": "Банковский сектор",
+          "divPayer": false,
+          "quantity": 10,
+          "buyPrice": 68.22,
+          "currentPrice": 56.47,
+          "totalValue": 564.65,
+          "totalCost": 682.2,
+          "plRub": -117.55,
+          "plPercent": -17.23
+        },
+        {
+          "accountKey": "ACC_26K",
+          "accountTitle": "26 тысяч",
+          "ticker": "NMTP",
+          "name": "НМТП",
+          "type": "stock",
+          "sector": "Транспорт",
+          "industry": "Морские порты и стивидоры",
+          "divPayer": true,
+          "quantity": 100,
+          "buyPrice": 8.36,
+          "currentPrice": 6.9,
+          "totalValue": 689.5,
+          "totalCost": 835.5,
+          "plRub": -146,
+          "plPercent": -17.47
+        },
+        {
+          "accountKey": "ACC_26K",
+          "accountTitle": "26 тысяч",
+          "ticker": "MTSS",
+          "name": "МТС",
+          "type": "stock",
+          "sector": "Телекоммуникации",
+          "industry": "Телеком и цифровая экосистема",
+          "divPayer": true,
+          "quantity": 10,
+          "buyPrice": 221.5,
+          "currentPrice": 173.7,
+          "totalValue": 1737,
+          "totalCost": 2215,
+          "plRub": -478,
+          "plPercent": -21.58
+        },
+        {
+          "accountKey": "ACC_26K",
+          "accountTitle": "26 тысяч",
+          "ticker": "SBER",
+          "name": "Сбербанк",
+          "type": "stock",
+          "sector": "Финансовый сектор",
+          "industry": "Банки и экосистемы",
+          "divPayer": true,
+          "quantity": 1,
+          "buyPrice": 317.49,
+          "currentPrice": 287.31,
+          "totalValue": 287.31,
+          "totalCost": 317.49,
+          "plRub": -30.18,
+          "plPercent": -9.51
+        },
+        {
+          "accountKey": "ACC_26K",
+          "accountTitle": "26 тысяч",
+          "ticker": "TATNP",
+          "name": "Татнефть - прив.",
+          "type": "stock",
+          "sector": "Нефть и газ",
+          "industry": "Нефтедобыча и нефтехимия",
+          "divPayer": true,
+          "quantity": 1,
+          "buyPrice": 510.3,
+          "currentPrice": 637.5,
+          "totalValue": 637.5,
+          "totalCost": 510.3,
+          "plRub": 127.2,
+          "plPercent": 24.93
+        },
+        {
+          "accountKey": "ACC_26K",
+          "accountTitle": "26 тысяч",
+          "ticker": "ROSN",
+          "name": "Роснефть",
+          "type": "stock",
+          "sector": "Нефть и газ",
+          "industry": "Интегрированная нефтегазовая компания",
+          "divPayer": true,
+          "quantity": 3,
+          "buyPrice": 471.08,
+          "currentPrice": 376.75,
+          "totalValue": 1130.25,
+          "totalCost": 1413.24,
+          "plRub": -282.99,
+          "plPercent": -20.02
+        }
+      ]
+    }
+  ],
+  "consolidatedStocks": [
+    {
+      "ticker": "SBER",
+      "name": "Сбербанк",
+      "type": "stock",
+      "sector": "Финансовый сектор",
+      "industry": "Банки и экосистемы",
+      "divPayer": true,
+      "totalQuantity": 46,
+      "totalCost": 12998.64,
+      "totalValue": 13216.26,
+      "currentPrice": 287.31,
+      "accounts": [
+        {
+          "accountKey": "G_ACC",
+          "accountTitle": "G ACC",
+          "quantity": 30,
+          "buyPrice": 284.08,
+          "currentPrice": 287.31,
+          "totalValue": 8619.3,
+          "plRub": 96.9,
+          "plPercent": 1.14
+        },
+        {
+          "accountKey": "S_ACC",
+          "accountTitle": "S ACC",
+          "quantity": 15,
+          "buyPrice": 277.25,
+          "currentPrice": 287.31,
+          "totalValue": 4309.65,
+          "plRub": 150.9,
+          "plPercent": 3.63
+        },
+        {
+          "accountKey": "ACC_26K",
+          "accountTitle": "26 тысяч",
+          "quantity": 1,
+          "buyPrice": 317.49,
+          "currentPrice": 287.31,
+          "totalValue": 287.31,
+          "plRub": -30.18,
+          "plPercent": -9.51
+        }
+      ],
+      "weightedBuyPrice": 282.58,
+      "plRub": 217.62,
+      "plPercent": 1.67,
+      "sharePercent": 19.19,
+      "isSimulated": false
+    },
+    {
+      "ticker": "LKOH",
+      "name": "ЛУКОЙЛ",
+      "type": "stock",
+      "sector": "Нефть и газ",
+      "industry": "Интегрированная нефтегазовая компания",
+      "divPayer": true,
+      "totalQuantity": 2,
+      "totalCost": 10701.5,
+      "totalValue": 12005,
+      "currentPrice": 6002.5,
+      "accounts": [
+        {
+          "accountKey": "S_ACC",
+          "accountTitle": "S ACC",
+          "quantity": 1,
+          "buyPrice": 5359,
+          "currentPrice": 6002.5,
+          "totalValue": 6002.5,
+          "plRub": 643.5,
+          "plPercent": 12.01
+        },
+        {
+          "accountKey": "ACC_26K",
+          "accountTitle": "26 тысяч",
+          "quantity": 1,
+          "buyPrice": 5342.5,
+          "currentPrice": 6002.5,
+          "totalValue": 6002.5,
+          "plRub": 660,
+          "plPercent": 12.35
+        }
+      ],
+      "weightedBuyPrice": 5350.75,
+      "plRub": 1303.5,
+      "plPercent": 12.18,
+      "sharePercent": 17.43,
+      "isSimulated": false
+    },
+    {
+      "ticker": "TATN",
+      "name": "Татнефть",
+      "type": "stock",
+      "sector": "Нефть и газ",
+      "industry": "Нефтедобыча и нефтехимия",
+      "divPayer": true,
+      "totalQuantity": 10,
+      "totalCost": 6350.6,
+      "totalValue": 6663,
+      "currentPrice": 666.3,
+      "accounts": [
+        {
+          "accountKey": "G_ACC",
+          "accountTitle": "G ACC",
+          "quantity": 9,
+          "buyPrice": 632.8,
+          "currentPrice": 666.3,
+          "totalValue": 5996.7,
+          "plRub": 301.5,
+          "plPercent": 5.29
+        },
+        {
+          "accountKey": "ACC_26K",
+          "accountTitle": "26 тысяч",
+          "quantity": 1,
+          "buyPrice": 655.4,
+          "currentPrice": 666.3,
+          "totalValue": 666.3,
+          "plRub": 10.9,
+          "plPercent": 1.66
+        }
+      ],
+      "weightedBuyPrice": 635.06,
+      "plRub": 312.4,
+      "plPercent": 4.92,
+      "sharePercent": 9.67,
+      "isSimulated": false
+    },
+    {
+      "ticker": "PLZL",
+      "name": "Полюс",
+      "type": "stock",
+      "sector": "Металлургия и добыча",
+      "industry": "Добыча золота",
+      "divPayer": true,
+      "totalQuantity": 6,
+      "totalCost": 8267.9,
+      "totalValue": 6441.6,
+      "currentPrice": 1073.6,
+      "accounts": [
+        {
+          "accountKey": "G_ACC",
+          "accountTitle": "G ACC",
+          "quantity": 1,
+          "buyPrice": 1856,
+          "currentPrice": 1073.6,
+          "totalValue": 1073.6,
+          "plRub": -782.4,
+          "plPercent": -42.16
+        },
+        {
+          "accountKey": "S_ACC",
+          "accountTitle": "S ACC",
+          "quantity": 3,
+          "buyPrice": 1001.9,
+          "currentPrice": 1073.6,
+          "totalValue": 3220.8,
+          "plRub": 215.1,
+          "plPercent": 7.16
+        },
+        {
+          "accountKey": "ACC_26K",
+          "accountTitle": "26 тысяч",
+          "quantity": 2,
+          "buyPrice": 1703.1,
+          "currentPrice": 1073.6,
+          "totalValue": 2147.2,
+          "plRub": -1259,
+          "plPercent": -36.96
+        }
+      ],
+      "weightedBuyPrice": 1377.98,
+      "plRub": -1826.3,
+      "plPercent": -22.09,
+      "sharePercent": 9.35,
+      "isSimulated": false
+    },
+    {
+      "ticker": "T",
+      "name": "Т-Технологии",
+      "type": "stock",
+      "sector": "Финансовый сектор",
+      "industry": "Финтех и экосистема",
+      "divPayer": true,
+      "totalQuantity": 14,
+      "totalCost": 3914.74,
+      "totalValue": 3790.08,
+      "currentPrice": 270.72,
+      "accounts": [
+        {
+          "accountKey": "G_ACC",
+          "accountTitle": "G ACC",
+          "quantity": 5,
+          "buyPrice": 286.18,
+          "currentPrice": 270.72,
+          "totalValue": 1353.6,
+          "plRub": -77.3,
+          "plPercent": -5.4
+        },
+        {
+          "accountKey": "S_ACC",
+          "accountTitle": "S ACC",
+          "quantity": 4,
+          "buyPrice": 251.06,
+          "currentPrice": 270.72,
+          "totalValue": 1082.88,
+          "plRub": 78.64,
+          "plPercent": 7.83
+        },
+        {
+          "accountKey": "ACC_26K",
+          "accountTitle": "26 тысяч",
+          "quantity": 5,
+          "buyPrice": 295.92,
+          "currentPrice": 270.72,
+          "totalValue": 1353.6,
+          "plRub": -126,
+          "plPercent": -8.52
+        }
+      ],
+      "weightedBuyPrice": 279.62,
+      "plRub": -124.66,
+      "plPercent": -3.18,
+      "sharePercent": 5.5,
+      "isSimulated": false
+    },
+    {
+      "ticker": "ROSN",
+      "name": "Роснефть",
+      "type": "stock",
+      "sector": "Нефть и газ",
+      "industry": "Интегрированная нефтегазовая компания",
+      "divPayer": true,
+      "totalQuantity": 10,
+      "totalCost": 4247.22,
+      "totalValue": 3767.5,
+      "currentPrice": 376.75,
+      "accounts": [
+        {
+          "accountKey": "G_ACC",
+          "accountTitle": "G ACC",
+          "quantity": 4,
+          "buyPrice": 414.72,
+          "currentPrice": 376.75,
+          "totalValue": 1507,
+          "plRub": -151.88,
+          "plPercent": -9.16
+        },
+        {
+          "accountKey": "S_ACC",
+          "accountTitle": "S ACC",
+          "quantity": 3,
+          "buyPrice": 391.7,
+          "currentPrice": 376.75,
+          "totalValue": 1130.25,
+          "plRub": -44.85,
+          "plPercent": -3.82
+        },
+        {
+          "accountKey": "ACC_26K",
+          "accountTitle": "26 тысяч",
+          "quantity": 3,
+          "buyPrice": 471.08,
+          "currentPrice": 376.75,
+          "totalValue": 1130.25,
+          "plRub": -282.99,
+          "plPercent": -20.02
+        }
+      ],
+      "weightedBuyPrice": 424.72,
+      "plRub": -479.72,
+      "plPercent": -11.29,
+      "sharePercent": 5.47,
+      "isSimulated": false
+    },
+    {
+      "ticker": "TRNFP",
+      "name": "Транснефть - прив.",
+      "type": "stock",
+      "sector": "Нефть и газ",
+      "industry": "Транспортировка нефти",
+      "divPayer": true,
+      "totalQuantity": 3,
+      "totalCost": 3423.6,
+      "totalValue": 3258,
+      "currentPrice": 1086,
+      "accounts": [
+        {
+          "accountKey": "G_ACC",
+          "accountTitle": "G ACC",
+          "quantity": 3,
+          "buyPrice": 1141.2,
+          "currentPrice": 1086,
+          "totalValue": 3258,
+          "plRub": -165.6,
+          "plPercent": -4.84
+        }
+      ],
+      "weightedBuyPrice": 1141.2,
+      "plRub": -165.6,
+      "plPercent": -4.84,
+      "sharePercent": 4.73,
+      "isSimulated": false
+    },
+    {
+      "ticker": "SIBN",
+      "name": "Газпром нефть",
+      "type": "stock",
+      "sector": "Нефть и газ",
+      "industry": "Нефтепереработка и добыча",
+      "divPayer": true,
+      "totalQuantity": 4,
+      "totalCost": 2196,
+      "totalValue": 2433.2,
+      "currentPrice": 608.3,
+      "accounts": [
+        {
+          "accountKey": "G_ACC",
+          "accountTitle": "G ACC",
+          "quantity": 4,
+          "buyPrice": 549,
+          "currentPrice": 608.3,
+          "totalValue": 2433.2,
+          "plRub": 237.2,
+          "plPercent": 10.8
+        }
+      ],
+      "weightedBuyPrice": 549,
+      "plRub": 237.2,
+      "plPercent": 10.8,
+      "sharePercent": 3.53,
+      "isSimulated": false
+    },
+    {
+      "ticker": "NVTK",
+      "name": "НОВАТЭК",
+      "type": "stock",
+      "sector": "Нефть и газ",
+      "industry": "Добыча СПГ и природного газа",
+      "divPayer": true,
+      "totalQuantity": 2,
+      "totalCost": 2427.8,
+      "totalValue": 2149.2,
+      "currentPrice": 1074.6,
+      "accounts": [
+        {
+          "accountKey": "G_ACC",
+          "accountTitle": "G ACC",
+          "quantity": 1,
+          "buyPrice": 1088.4,
+          "currentPrice": 1074.6,
+          "totalValue": 1074.6,
+          "plRub": -13.8,
+          "plPercent": -1.27
+        },
+        {
+          "accountKey": "ACC_26K",
+          "accountTitle": "26 тысяч",
+          "quantity": 1,
+          "buyPrice": 1339.4,
+          "currentPrice": 1074.6,
+          "totalValue": 1074.6,
+          "plRub": -264.8,
+          "plPercent": -19.77
+        }
+      ],
+      "weightedBuyPrice": 1213.9,
+      "plRub": -278.6,
+      "plPercent": -11.48,
+      "sharePercent": 3.12,
+      "isSimulated": false
+    },
+    {
+      "ticker": "RU000A10DS74",
+      "name": "Сбербанк 001Р-SBER51",
+      "type": "bond",
+      "sector": "Финансовый сектор",
+      "industry": "Облигации",
+      "divPayer": true,
+      "totalQuantity": 2,
+      "totalCost": 2021.8,
+      "totalValue": 2018,
+      "currentPrice": 1009,
+      "accounts": [
+        {
+          "accountKey": "S_ACC",
+          "accountTitle": "S ACC",
+          "quantity": 2,
+          "buyPrice": 1010.9,
+          "currentPrice": 1009,
+          "totalValue": 2018,
+          "plRub": -3.8,
+          "plPercent": -0.19
+        }
+      ],
+      "weightedBuyPrice": 1010.9,
+      "plRub": -3.8,
+      "plPercent": -0.19,
+      "sharePercent": 2.93,
+      "isSimulated": false
+    },
+    {
+      "ticker": "MTSS",
+      "name": "МТС",
+      "type": "stock",
+      "sector": "Телекоммуникации",
+      "industry": "Телеком и цифровая экосистема",
+      "divPayer": true,
+      "totalQuantity": 10,
+      "totalCost": 2215,
+      "totalValue": 1737,
+      "currentPrice": 173.7,
+      "accounts": [
+        {
+          "accountKey": "ACC_26K",
+          "accountTitle": "26 тысяч",
+          "quantity": 10,
+          "buyPrice": 221.5,
+          "currentPrice": 173.7,
+          "totalValue": 1737,
+          "plRub": -478,
+          "plPercent": -21.58
+        }
+      ],
+      "weightedBuyPrice": 221.5,
+      "plRub": -478,
+      "plPercent": -21.58,
+      "sharePercent": 2.52,
+      "isSimulated": false
+    },
+    {
+      "ticker": "SNGS",
+      "name": "Сургутнефтегаз",
+      "type": "stock",
+      "sector": "Нефть и газ",
+      "industry": "Добыча нефти и газа",
+      "divPayer": true,
+      "totalQuantity": 100,
+      "totalCost": 2195,
+      "totalValue": 1648,
+      "currentPrice": 16.48,
+      "accounts": [
+        {
+          "accountKey": "G_ACC",
+          "accountTitle": "G ACC",
+          "quantity": 100,
+          "buyPrice": 21.95,
+          "currentPrice": 16.48,
+          "totalValue": 1648,
+          "plRub": -547,
+          "plPercent": -24.92
+        }
+      ],
+      "weightedBuyPrice": 21.95,
+      "plRub": -547,
+      "plPercent": -24.92,
+      "sharePercent": 2.39,
+      "isSimulated": false
+    },
+    {
+      "ticker": "TATNP",
+      "name": "Татнефть - прив.",
+      "type": "stock",
+      "sector": "Нефть и газ",
+      "industry": "Нефтедобыча и нефтехимия",
+      "divPayer": true,
+      "totalQuantity": 2,
+      "totalCost": 1030.8,
+      "totalValue": 1275,
+      "currentPrice": 637.5,
+      "accounts": [
+        {
+          "accountKey": "G_ACC",
+          "accountTitle": "G ACC",
+          "quantity": 1,
+          "buyPrice": 520.5,
+          "currentPrice": 637.5,
+          "totalValue": 637.5,
+          "plRub": 117,
+          "plPercent": 22.48
+        },
+        {
+          "accountKey": "ACC_26K",
+          "accountTitle": "26 тысяч",
+          "quantity": 1,
+          "buyPrice": 510.3,
+          "currentPrice": 637.5,
+          "totalValue": 637.5,
+          "plRub": 127.2,
+          "plPercent": 24.93
+        }
+      ],
+      "weightedBuyPrice": 515.4,
+      "plRub": 244.2,
+      "plPercent": 23.69,
+      "sharePercent": 1.85,
+      "isSimulated": false
+    },
+    {
+      "ticker": "RU000A10BGJ4",
+      "name": "Аэрофлот П02-БО-01",
+      "type": "bond",
+      "sector": "Транспорт",
+      "industry": "Облигации",
+      "divPayer": true,
+      "totalQuantity": 1,
+      "totalCost": 1013.8,
+      "totalValue": 1015.5,
+      "currentPrice": 1015.5,
+      "accounts": [
+        {
+          "accountKey": "S_ACC",
+          "accountTitle": "S ACC",
+          "quantity": 1,
+          "buyPrice": 1013.8,
+          "currentPrice": 1015.5,
+          "totalValue": 1015.5,
+          "plRub": 1.7,
+          "plPercent": 0.17
+        }
+      ],
+      "weightedBuyPrice": 1013.8,
+      "plRub": 1.7,
+      "plPercent": 0.17,
+      "sharePercent": 1.47,
+      "isSimulated": false
+    },
+    {
+      "ticker": "SVCB",
+      "name": "Совкомбанк",
+      "type": "stock",
+      "sector": "Финансовый сектор",
+      "industry": "Банковские услуги и страхование",
+      "divPayer": true,
+      "totalQuantity": 100,
+      "totalCost": 1393,
+      "totalValue": 1013,
+      "currentPrice": 10.13,
+      "accounts": [
+        {
+          "accountKey": "S_ACC",
+          "accountTitle": "S ACC",
+          "quantity": 100,
+          "buyPrice": 13.93,
+          "currentPrice": 10.13,
+          "totalValue": 1013,
+          "plRub": -380,
+          "plPercent": -27.28
+        }
+      ],
+      "weightedBuyPrice": 13.93,
+      "plRub": -380,
+      "plPercent": -27.28,
+      "sharePercent": 1.47,
+      "isSimulated": false
+    },
+    {
+      "ticker": "OZPH",
+      "name": "Озон Фармацевтика",
+      "type": "stock",
+      "sector": "Здравоохранение",
+      "industry": "Фармацевтика и дженерики",
+      "divPayer": true,
+      "totalQuantity": 20,
+      "totalCost": 938.4,
+      "totalValue": 924.6,
+      "currentPrice": 46.23,
+      "accounts": [
+        {
+          "accountKey": "G_ACC",
+          "accountTitle": "G ACC",
+          "quantity": 20,
+          "buyPrice": 46.92,
+          "currentPrice": 46.23,
+          "totalValue": 924.6,
+          "plRub": -13.8,
+          "plPercent": -1.47
+        }
+      ],
+      "weightedBuyPrice": 46.92,
+      "plRub": -13.8,
+      "plPercent": -1.47,
+      "sharePercent": 1.34,
+      "isSimulated": false
+    },
+    {
+      "ticker": "HNFG",
+      "name": "Хэндерсон",
+      "type": "stock",
+      "sector": "Потребительский сектор",
+      "industry": "Ритейл мужской одежды",
+      "divPayer": true,
+      "totalQuantity": 3,
+      "totalCost": 962.4,
+      "totalValue": 865.8,
+      "currentPrice": 288.6,
+      "accounts": [
+        {
+          "accountKey": "ACC_26K",
+          "accountTitle": "26 тысяч",
+          "quantity": 3,
+          "buyPrice": 320.8,
+          "currentPrice": 288.6,
+          "totalValue": 865.8,
+          "plRub": -96.6,
+          "plPercent": -10.04
+        }
+      ],
+      "weightedBuyPrice": 320.8,
+      "plRub": -96.6,
+      "plPercent": -10.04,
+      "sharePercent": 1.26,
+      "isSimulated": false
+    },
+    {
+      "ticker": "SBERP",
+      "name": "Сбербанк - прив.",
+      "type": "stock",
+      "sector": "Финансовый сектор",
+      "industry": "Банки и экосистемы",
+      "divPayer": true,
+      "totalQuantity": 3,
+      "totalCost": 947.22,
+      "totalValue": 864.09,
+      "currentPrice": 288.03,
+      "accounts": [
+        {
+          "accountKey": "S_ACC",
+          "accountTitle": "S ACC",
+          "quantity": 3,
+          "buyPrice": 315.74,
+          "currentPrice": 288.03,
+          "totalValue": 864.09,
+          "plRub": -83.13,
+          "plPercent": -8.78
+        }
+      ],
+      "weightedBuyPrice": 315.74,
+      "plRub": -83.13,
+      "plPercent": -8.78,
+      "sharePercent": 1.25,
+      "isSimulated": false
+    },
+    {
+      "ticker": "SNGSP",
+      "name": "Сургутнефтегаз - прив.",
+      "type": "stock",
+      "sector": "Нефть и газ",
+      "industry": "Добыча нефти / валютная кубышка",
+      "divPayer": true,
+      "totalQuantity": 20,
+      "totalCost": 984.66,
+      "totalValue": 823.2,
+      "currentPrice": 41.16,
+      "accounts": [
+        {
+          "accountKey": "G_ACC",
+          "accountTitle": "G ACC",
+          "quantity": 20,
+          "buyPrice": 49.23,
+          "currentPrice": 41.16,
+          "totalValue": 823.2,
+          "plRub": -161.46,
+          "plPercent": -16.4
+        }
+      ],
+      "weightedBuyPrice": 49.23,
+      "plRub": -161.46,
+      "plPercent": -16.4,
+      "sharePercent": 1.2,
+      "isSimulated": false
+    },
+    {
+      "ticker": "AFLT",
+      "name": "Аэрофлот",
+      "type": "stock",
+      "sector": "Транспорт",
+      "industry": "Авиаперевозки",
+      "divPayer": false,
+      "totalQuantity": 20,
+      "totalCost": 847.8,
+      "totalValue": 712.8,
+      "currentPrice": 35.64,
+      "accounts": [
+        {
+          "accountKey": "S_ACC",
+          "accountTitle": "S ACC",
+          "quantity": 20,
+          "buyPrice": 42.39,
+          "currentPrice": 35.64,
+          "totalValue": 712.8,
+          "plRub": -135,
+          "plPercent": -15.92
+        }
+      ],
+      "weightedBuyPrice": 42.39,
+      "plRub": -135,
+      "plPercent": -15.92,
+      "sharePercent": 1.03,
+      "isSimulated": false
+    },
+    {
+      "ticker": "NMTP",
+      "name": "НМТП",
+      "type": "stock",
+      "sector": "Транспорт",
+      "industry": "Морские порты и стивидоры",
+      "divPayer": true,
+      "totalQuantity": 100,
+      "totalCost": 835.5,
+      "totalValue": 689.5,
+      "currentPrice": 6.9,
+      "accounts": [
+        {
+          "accountKey": "ACC_26K",
+          "accountTitle": "26 тысяч",
+          "quantity": 100,
+          "buyPrice": 8.36,
+          "currentPrice": 6.9,
+          "totalValue": 689.5,
+          "plRub": -146,
+          "plPercent": -17.47
+        }
+      ],
+      "weightedBuyPrice": 8.36,
+      "plRub": -146,
+      "plPercent": -17.47,
+      "sharePercent": 1,
+      "isSimulated": false
+    },
+    {
+      "ticker": "AQUA",
+      "name": "ИНАРКТИКА",
+      "type": "stock",
+      "sector": "Потребительский сектор",
+      "industry": "Аквакультура (лосось/форель)",
+      "divPayer": true,
+      "totalQuantity": 2,
+      "totalCost": 1210,
+      "totalValue": 649.2,
+      "currentPrice": 324.6,
+      "accounts": [
+        {
+          "accountKey": "G_ACC",
+          "accountTitle": "G ACC",
+          "quantity": 2,
+          "buyPrice": 605,
+          "currentPrice": 324.6,
+          "totalValue": 649.2,
+          "plRub": -560.8,
+          "plPercent": -46.35
+        }
+      ],
+      "weightedBuyPrice": 605,
+      "plRub": -560.8,
+      "plPercent": -46.35,
+      "sharePercent": 0.94,
+      "isSimulated": false
+    },
+    {
+      "ticker": "VTBR",
+      "name": "Банк ВТБ",
+      "type": "stock",
+      "sector": "Финансовый сектор",
+      "industry": "Банковский сектор",
+      "divPayer": false,
+      "totalQuantity": 10,
+      "totalCost": 682.2,
+      "totalValue": 564.65,
+      "currentPrice": 56.47,
+      "accounts": [
+        {
+          "accountKey": "ACC_26K",
+          "accountTitle": "26 тысяч",
+          "quantity": 10,
+          "buyPrice": 68.22,
+          "currentPrice": 56.47,
+          "totalValue": 564.65,
+          "plRub": -117.55,
+          "plPercent": -17.23
+        }
+      ],
+      "weightedBuyPrice": 68.22,
+      "plRub": -117.55,
+      "plPercent": -17.23,
+      "sharePercent": 0.82,
+      "isSimulated": false
+    },
+    {
+      "ticker": "DATA",
+      "name": "Группа Аренадата",
+      "type": "stock",
+      "sector": "IT и технологии",
+      "industry": "Корпоративное ПО и СУБД",
+      "divPayer": true,
+      "totalQuantity": 1,
+      "totalCost": 92.62,
+      "totalValue": 98.28,
+      "currentPrice": 98.28,
+      "accounts": [
+        {
+          "accountKey": "G_ACC",
+          "accountTitle": "G ACC",
+          "quantity": 1,
+          "buyPrice": 92.62,
+          "currentPrice": 98.28,
+          "totalValue": 98.28,
+          "plRub": 5.66,
+          "plPercent": 6.11
+        }
+      ],
+      "weightedBuyPrice": 92.62,
+      "plRub": 5.66,
+      "plPercent": 6.11,
+      "sharePercent": 0.14,
+      "isSimulated": false
+    }
+  ],
+  "sectorBreakdown": [
+    {
+      "sector": "Нефть и газ",
+      "totalValue": 34022.1,
+      "count": 9,
+      "tickers": [
+        "LKOH",
+        "TATN",
+        "ROSN",
+        "TRNFP",
+        "SIBN",
+        "NVTK",
+        "SNGS",
+        "TATNP",
+        "SNGSP"
+      ],
+      "sharePercent": 49.4
+    },
+    {
+      "sector": "Финансовый сектор",
+      "totalValue": 21466.08,
+      "count": 6,
+      "tickers": [
+        "SBER",
+        "T",
+        "RU000A10DS74",
+        "SVCB",
+        "SBERP",
+        "VTBR"
+      ],
+      "sharePercent": 31.17
+    },
+    {
+      "sector": "Металлургия и добыча",
+      "totalValue": 6441.6,
+      "count": 1,
+      "tickers": [
+        "PLZL"
+      ],
+      "sharePercent": 9.35
+    },
+    {
+      "sector": "Транспорт",
+      "totalValue": 2417.8,
+      "count": 3,
+      "tickers": [
+        "RU000A10BGJ4",
+        "AFLT",
+        "NMTP"
+      ],
+      "sharePercent": 3.51
+    },
+    {
+      "sector": "Телекоммуникации",
+      "totalValue": 1737,
+      "count": 1,
+      "tickers": [
+        "MTSS"
+      ],
+      "sharePercent": 2.52
+    },
+    {
+      "sector": "Потребительский сектор",
+      "totalValue": 1515,
+      "count": 2,
+      "tickers": [
+        "HNFG",
+        "AQUA"
+      ],
+      "sharePercent": 2.2
+    },
+    {
+      "sector": "Здравоохранение",
+      "totalValue": 924.6,
+      "count": 1,
+      "tickers": [
+        "OZPH"
+      ],
+      "sharePercent": 1.34
+    },
+    {
+      "sector": "IT и технологии",
+      "totalValue": 98.28,
+      "count": 1,
+      "tickers": [
+        "DATA"
+      ],
+      "sharePercent": 0.14
+    }
+  ],
+  "crossAccountDuplicates": [
+    {
+      "ticker": "SBER",
+      "name": "Сбербанк",
+      "sector": "Финансовый сектор",
+      "accountCount": 3,
+      "totalQuantity": 46,
+      "weightedBuyPrice": 282.58,
+      "currentPrice": 287.31,
+      "totalValue": 13216.26,
+      "totalCost": 12998.64,
+      "plRub": 217.62,
+      "plPercent": 1.67,
+      "items": [
+        {
+          "accountKey": "G_ACC",
+          "accountTitle": "G ACC",
+          "quantity": 30,
+          "buyPrice": 284.08,
+          "currentPrice": 287.31,
+          "totalValue": 8619.3,
+          "plRub": 96.9,
+          "plPercent": 1.14
+        },
+        {
+          "accountKey": "S_ACC",
+          "accountTitle": "S ACC",
+          "quantity": 15,
+          "buyPrice": 277.25,
+          "currentPrice": 287.31,
+          "totalValue": 4309.65,
+          "plRub": 150.9,
+          "plPercent": 3.63
+        },
+        {
+          "accountKey": "ACC_26K",
+          "accountTitle": "26 тысяч",
+          "quantity": 1,
+          "buyPrice": 317.49,
+          "currentPrice": 287.31,
+          "totalValue": 287.31,
+          "plRub": -30.18,
+          "plPercent": -9.51
+        }
+      ]
+    },
+    {
+      "ticker": "LKOH",
+      "name": "ЛУКОЙЛ",
+      "sector": "Нефть и газ",
+      "accountCount": 2,
+      "totalQuantity": 2,
+      "weightedBuyPrice": 5350.75,
+      "currentPrice": 6002.5,
+      "totalValue": 12005,
+      "totalCost": 10701.5,
+      "plRub": 1303.5,
+      "plPercent": 12.18,
+      "items": [
+        {
+          "accountKey": "S_ACC",
+          "accountTitle": "S ACC",
+          "quantity": 1,
+          "buyPrice": 5359,
+          "currentPrice": 6002.5,
+          "totalValue": 6002.5,
+          "plRub": 643.5,
+          "plPercent": 12.01
+        },
+        {
+          "accountKey": "ACC_26K",
+          "accountTitle": "26 тысяч",
+          "quantity": 1,
+          "buyPrice": 5342.5,
+          "currentPrice": 6002.5,
+          "totalValue": 6002.5,
+          "plRub": 660,
+          "plPercent": 12.35
+        }
+      ]
+    },
+    {
+      "ticker": "TATN",
+      "name": "Татнефть",
+      "sector": "Нефть и газ",
+      "accountCount": 2,
+      "totalQuantity": 10,
+      "weightedBuyPrice": 635.06,
+      "currentPrice": 666.3,
+      "totalValue": 6663,
+      "totalCost": 6350.6,
+      "plRub": 312.4,
+      "plPercent": 4.92,
+      "items": [
+        {
+          "accountKey": "G_ACC",
+          "accountTitle": "G ACC",
+          "quantity": 9,
+          "buyPrice": 632.8,
+          "currentPrice": 666.3,
+          "totalValue": 5996.7,
+          "plRub": 301.5,
+          "plPercent": 5.29
+        },
+        {
+          "accountKey": "ACC_26K",
+          "accountTitle": "26 тысяч",
+          "quantity": 1,
+          "buyPrice": 655.4,
+          "currentPrice": 666.3,
+          "totalValue": 666.3,
+          "plRub": 10.9,
+          "plPercent": 1.66
+        }
+      ]
+    },
+    {
+      "ticker": "PLZL",
+      "name": "Полюс",
+      "sector": "Металлургия и добыча",
+      "accountCount": 3,
+      "totalQuantity": 6,
+      "weightedBuyPrice": 1377.98,
+      "currentPrice": 1073.6,
+      "totalValue": 6441.6,
+      "totalCost": 8267.9,
+      "plRub": -1826.3,
+      "plPercent": -22.09,
+      "items": [
+        {
+          "accountKey": "G_ACC",
+          "accountTitle": "G ACC",
+          "quantity": 1,
+          "buyPrice": 1856,
+          "currentPrice": 1073.6,
+          "totalValue": 1073.6,
+          "plRub": -782.4,
+          "plPercent": -42.16
+        },
+        {
+          "accountKey": "S_ACC",
+          "accountTitle": "S ACC",
+          "quantity": 3,
+          "buyPrice": 1001.9,
+          "currentPrice": 1073.6,
+          "totalValue": 3220.8,
+          "plRub": 215.1,
+          "plPercent": 7.16
+        },
+        {
+          "accountKey": "ACC_26K",
+          "accountTitle": "26 тысяч",
+          "quantity": 2,
+          "buyPrice": 1703.1,
+          "currentPrice": 1073.6,
+          "totalValue": 2147.2,
+          "plRub": -1259,
+          "plPercent": -36.96
+        }
+      ]
+    },
+    {
+      "ticker": "T",
+      "name": "Т-Технологии",
+      "sector": "Финансовый сектор",
+      "accountCount": 3,
+      "totalQuantity": 14,
+      "weightedBuyPrice": 279.62,
+      "currentPrice": 270.72,
+      "totalValue": 3790.08,
+      "totalCost": 3914.74,
+      "plRub": -124.66,
+      "plPercent": -3.18,
+      "items": [
+        {
+          "accountKey": "G_ACC",
+          "accountTitle": "G ACC",
+          "quantity": 5,
+          "buyPrice": 286.18,
+          "currentPrice": 270.72,
+          "totalValue": 1353.6,
+          "plRub": -77.3,
+          "plPercent": -5.4
+        },
+        {
+          "accountKey": "S_ACC",
+          "accountTitle": "S ACC",
+          "quantity": 4,
+          "buyPrice": 251.06,
+          "currentPrice": 270.72,
+          "totalValue": 1082.88,
+          "plRub": 78.64,
+          "plPercent": 7.83
+        },
+        {
+          "accountKey": "ACC_26K",
+          "accountTitle": "26 тысяч",
+          "quantity": 5,
+          "buyPrice": 295.92,
+          "currentPrice": 270.72,
+          "totalValue": 1353.6,
+          "plRub": -126,
+          "plPercent": -8.52
+        }
+      ]
+    },
+    {
+      "ticker": "ROSN",
+      "name": "Роснефть",
+      "sector": "Нефть и газ",
+      "accountCount": 3,
+      "totalQuantity": 10,
+      "weightedBuyPrice": 424.72,
+      "currentPrice": 376.75,
+      "totalValue": 3767.5,
+      "totalCost": 4247.22,
+      "plRub": -479.72,
+      "plPercent": -11.29,
+      "items": [
+        {
+          "accountKey": "G_ACC",
+          "accountTitle": "G ACC",
+          "quantity": 4,
+          "buyPrice": 414.72,
+          "currentPrice": 376.75,
+          "totalValue": 1507,
+          "plRub": -151.88,
+          "plPercent": -9.16
+        },
+        {
+          "accountKey": "S_ACC",
+          "accountTitle": "S ACC",
+          "quantity": 3,
+          "buyPrice": 391.7,
+          "currentPrice": 376.75,
+          "totalValue": 1130.25,
+          "plRub": -44.85,
+          "plPercent": -3.82
+        },
+        {
+          "accountKey": "ACC_26K",
+          "accountTitle": "26 тысяч",
+          "quantity": 3,
+          "buyPrice": 471.08,
+          "currentPrice": 376.75,
+          "totalValue": 1130.25,
+          "plRub": -282.99,
+          "plPercent": -20.02
+        }
+      ]
+    },
+    {
+      "ticker": "NVTK",
+      "name": "НОВАТЭК",
+      "sector": "Нефть и газ",
+      "accountCount": 2,
+      "totalQuantity": 2,
+      "weightedBuyPrice": 1213.9,
+      "currentPrice": 1074.6,
+      "totalValue": 2149.2,
+      "totalCost": 2427.8,
+      "plRub": -278.6,
+      "plPercent": -11.48,
+      "items": [
+        {
+          "accountKey": "G_ACC",
+          "accountTitle": "G ACC",
+          "quantity": 1,
+          "buyPrice": 1088.4,
+          "currentPrice": 1074.6,
+          "totalValue": 1074.6,
+          "plRub": -13.8,
+          "plPercent": -1.27
+        },
+        {
+          "accountKey": "ACC_26K",
+          "accountTitle": "26 тысяч",
+          "quantity": 1,
+          "buyPrice": 1339.4,
+          "currentPrice": 1074.6,
+          "totalValue": 1074.6,
+          "plRub": -264.8,
+          "plPercent": -19.77
+        }
+      ]
+    },
+    {
+      "ticker": "TATNP",
+      "name": "Татнефть - прив.",
+      "sector": "Нефть и газ",
+      "accountCount": 2,
+      "totalQuantity": 2,
+      "weightedBuyPrice": 515.4,
+      "currentPrice": 637.5,
+      "totalValue": 1275,
+      "totalCost": 1030.8,
+      "plRub": 244.2,
+      "plPercent": 23.69,
+      "items": [
+        {
+          "accountKey": "G_ACC",
+          "accountTitle": "G ACC",
+          "quantity": 1,
+          "buyPrice": 520.5,
+          "currentPrice": 637.5,
+          "totalValue": 637.5,
+          "plRub": 117,
+          "plPercent": 22.48
+        },
+        {
+          "accountKey": "ACC_26K",
+          "accountTitle": "26 тысяч",
+          "quantity": 1,
+          "buyPrice": 510.3,
+          "currentPrice": 637.5,
+          "totalValue": 637.5,
+          "plRub": 127.2,
+          "plPercent": 24.93
+        }
+      ]
+    }
+  ],
+  "concentration": {
+    "top1Ticker": "SBER",
+    "top1Percent": 19.19,
+    "top3Percent": 46.29,
+    "top1": {
+      "ticker": "SBER",
+      "name": "Сбербанк",
+      "value": 13216.26,
+      "share": 19.19
+    },
+    "top3": {
+      "names": [
+        "Сбербанк",
+        "ЛУКОЙЛ",
+        "Татнефть"
+      ],
+      "value": 31884.260000000002,
+      "share": 46.29
+    },
+    "top5": {
+      "names": [
+        "Сбербанк",
+        "ЛУКОЙЛ",
+        "Татнефть",
+        "Полюс",
+        "Т-Технологии"
+      ],
+      "value": 42115.94,
+      "share": 61.14
+    }
+  },
+  "topGainers": [
+    {
+      "ticker": "TATNP",
+      "name": "Татнефть - прив.",
+      "type": "stock",
+      "sector": "Нефть и газ",
+      "industry": "Нефтедобыча и нефтехимия",
+      "divPayer": true,
+      "totalQuantity": 2,
+      "totalCost": 1030.8,
+      "totalValue": 1275,
+      "currentPrice": 637.5,
+      "accounts": [
+        {
+          "accountKey": "G_ACC",
+          "accountTitle": "G ACC",
+          "quantity": 1,
+          "buyPrice": 520.5,
+          "currentPrice": 637.5,
+          "totalValue": 637.5,
+          "plRub": 117,
+          "plPercent": 22.48
+        },
+        {
+          "accountKey": "ACC_26K",
+          "accountTitle": "26 тысяч",
+          "quantity": 1,
+          "buyPrice": 510.3,
+          "currentPrice": 637.5,
+          "totalValue": 637.5,
+          "plRub": 127.2,
+          "plPercent": 24.93
+        }
+      ],
+      "weightedBuyPrice": 515.4,
+      "plRub": 244.2,
+      "plPercent": 23.69,
+      "sharePercent": 1.85,
+      "isSimulated": false
+    },
+    {
+      "ticker": "LKOH",
+      "name": "ЛУКОЙЛ",
+      "type": "stock",
+      "sector": "Нефть и газ",
+      "industry": "Интегрированная нефтегазовая компания",
+      "divPayer": true,
+      "totalQuantity": 2,
+      "totalCost": 10701.5,
+      "totalValue": 12005,
+      "currentPrice": 6002.5,
+      "accounts": [
+        {
+          "accountKey": "S_ACC",
+          "accountTitle": "S ACC",
+          "quantity": 1,
+          "buyPrice": 5359,
+          "currentPrice": 6002.5,
+          "totalValue": 6002.5,
+          "plRub": 643.5,
+          "plPercent": 12.01
+        },
+        {
+          "accountKey": "ACC_26K",
+          "accountTitle": "26 тысяч",
+          "quantity": 1,
+          "buyPrice": 5342.5,
+          "currentPrice": 6002.5,
+          "totalValue": 6002.5,
+          "plRub": 660,
+          "plPercent": 12.35
+        }
+      ],
+      "weightedBuyPrice": 5350.75,
+      "plRub": 1303.5,
+      "plPercent": 12.18,
+      "sharePercent": 17.43,
+      "isSimulated": false
+    },
+    {
+      "ticker": "SIBN",
+      "name": "Газпром нефть",
+      "type": "stock",
+      "sector": "Нефть и газ",
+      "industry": "Нефтепереработка и добыча",
+      "divPayer": true,
+      "totalQuantity": 4,
+      "totalCost": 2196,
+      "totalValue": 2433.2,
+      "currentPrice": 608.3,
+      "accounts": [
+        {
+          "accountKey": "G_ACC",
+          "accountTitle": "G ACC",
+          "quantity": 4,
+          "buyPrice": 549,
+          "currentPrice": 608.3,
+          "totalValue": 2433.2,
+          "plRub": 237.2,
+          "plPercent": 10.8
+        }
+      ],
+      "weightedBuyPrice": 549,
+      "plRub": 237.2,
+      "plPercent": 10.8,
+      "sharePercent": 3.53,
+      "isSimulated": false
+    },
+    {
+      "ticker": "DATA",
+      "name": "Группа Аренадата",
+      "type": "stock",
+      "sector": "IT и технологии",
+      "industry": "Корпоративное ПО и СУБД",
+      "divPayer": true,
+      "totalQuantity": 1,
+      "totalCost": 92.62,
+      "totalValue": 98.28,
+      "currentPrice": 98.28,
+      "accounts": [
+        {
+          "accountKey": "G_ACC",
+          "accountTitle": "G ACC",
+          "quantity": 1,
+          "buyPrice": 92.62,
+          "currentPrice": 98.28,
+          "totalValue": 98.28,
+          "plRub": 5.66,
+          "plPercent": 6.11
+        }
+      ],
+      "weightedBuyPrice": 92.62,
+      "plRub": 5.66,
+      "plPercent": 6.11,
+      "sharePercent": 0.14,
+      "isSimulated": false
+    },
+    {
+      "ticker": "TATN",
+      "name": "Татнефть",
+      "type": "stock",
+      "sector": "Нефть и газ",
+      "industry": "Нефтедобыча и нефтехимия",
+      "divPayer": true,
+      "totalQuantity": 10,
+      "totalCost": 6350.6,
+      "totalValue": 6663,
+      "currentPrice": 666.3,
+      "accounts": [
+        {
+          "accountKey": "G_ACC",
+          "accountTitle": "G ACC",
+          "quantity": 9,
+          "buyPrice": 632.8,
+          "currentPrice": 666.3,
+          "totalValue": 5996.7,
+          "plRub": 301.5,
+          "plPercent": 5.29
+        },
+        {
+          "accountKey": "ACC_26K",
+          "accountTitle": "26 тысяч",
+          "quantity": 1,
+          "buyPrice": 655.4,
+          "currentPrice": 666.3,
+          "totalValue": 666.3,
+          "plRub": 10.9,
+          "plPercent": 1.66
+        }
+      ],
+      "weightedBuyPrice": 635.06,
+      "plRub": 312.4,
+      "plPercent": 4.92,
+      "sharePercent": 9.67,
+      "isSimulated": false
+    }
+  ],
+  "topLosers": [
+    {
+      "ticker": "AQUA",
+      "name": "ИНАРКТИКА",
+      "type": "stock",
+      "sector": "Потребительский сектор",
+      "industry": "Аквакультура (лосось/форель)",
+      "divPayer": true,
+      "totalQuantity": 2,
+      "totalCost": 1210,
+      "totalValue": 649.2,
+      "currentPrice": 324.6,
+      "accounts": [
+        {
+          "accountKey": "G_ACC",
+          "accountTitle": "G ACC",
+          "quantity": 2,
+          "buyPrice": 605,
+          "currentPrice": 324.6,
+          "totalValue": 649.2,
+          "plRub": -560.8,
+          "plPercent": -46.35
+        }
+      ],
+      "weightedBuyPrice": 605,
+      "plRub": -560.8,
+      "plPercent": -46.35,
+      "sharePercent": 0.94,
+      "isSimulated": false
+    },
+    {
+      "ticker": "SVCB",
+      "name": "Совкомбанк",
+      "type": "stock",
+      "sector": "Финансовый сектор",
+      "industry": "Банковские услуги и страхование",
+      "divPayer": true,
+      "totalQuantity": 100,
+      "totalCost": 1393,
+      "totalValue": 1013,
+      "currentPrice": 10.13,
+      "accounts": [
+        {
+          "accountKey": "S_ACC",
+          "accountTitle": "S ACC",
+          "quantity": 100,
+          "buyPrice": 13.93,
+          "currentPrice": 10.13,
+          "totalValue": 1013,
+          "plRub": -380,
+          "plPercent": -27.28
+        }
+      ],
+      "weightedBuyPrice": 13.93,
+      "plRub": -380,
+      "plPercent": -27.28,
+      "sharePercent": 1.47,
+      "isSimulated": false
+    },
+    {
+      "ticker": "SNGS",
+      "name": "Сургутнефтегаз",
+      "type": "stock",
+      "sector": "Нефть и газ",
+      "industry": "Добыча нефти и газа",
+      "divPayer": true,
+      "totalQuantity": 100,
+      "totalCost": 2195,
+      "totalValue": 1648,
+      "currentPrice": 16.48,
+      "accounts": [
+        {
+          "accountKey": "G_ACC",
+          "accountTitle": "G ACC",
+          "quantity": 100,
+          "buyPrice": 21.95,
+          "currentPrice": 16.48,
+          "totalValue": 1648,
+          "plRub": -547,
+          "plPercent": -24.92
+        }
+      ],
+      "weightedBuyPrice": 21.95,
+      "plRub": -547,
+      "plPercent": -24.92,
+      "sharePercent": 2.39,
+      "isSimulated": false
+    },
+    {
+      "ticker": "PLZL",
+      "name": "Полюс",
+      "type": "stock",
+      "sector": "Металлургия и добыча",
+      "industry": "Добыча золота",
+      "divPayer": true,
+      "totalQuantity": 6,
+      "totalCost": 8267.9,
+      "totalValue": 6441.6,
+      "currentPrice": 1073.6,
+      "accounts": [
+        {
+          "accountKey": "G_ACC",
+          "accountTitle": "G ACC",
+          "quantity": 1,
+          "buyPrice": 1856,
+          "currentPrice": 1073.6,
+          "totalValue": 1073.6,
+          "plRub": -782.4,
+          "plPercent": -42.16
+        },
+        {
+          "accountKey": "S_ACC",
+          "accountTitle": "S ACC",
+          "quantity": 3,
+          "buyPrice": 1001.9,
+          "currentPrice": 1073.6,
+          "totalValue": 3220.8,
+          "plRub": 215.1,
+          "plPercent": 7.16
+        },
+        {
+          "accountKey": "ACC_26K",
+          "accountTitle": "26 тысяч",
+          "quantity": 2,
+          "buyPrice": 1703.1,
+          "currentPrice": 1073.6,
+          "totalValue": 2147.2,
+          "plRub": -1259,
+          "plPercent": -36.96
+        }
+      ],
+      "weightedBuyPrice": 1377.98,
+      "plRub": -1826.3,
+      "plPercent": -22.09,
+      "sharePercent": 9.35,
+      "isSimulated": false
+    },
+    {
+      "ticker": "MTSS",
+      "name": "МТС",
+      "type": "stock",
+      "sector": "Телекоммуникации",
+      "industry": "Телеком и цифровая экосистема",
+      "divPayer": true,
+      "totalQuantity": 10,
+      "totalCost": 2215,
+      "totalValue": 1737,
+      "currentPrice": 173.7,
+      "accounts": [
+        {
+          "accountKey": "ACC_26K",
+          "accountTitle": "26 тысяч",
+          "quantity": 10,
+          "buyPrice": 221.5,
+          "currentPrice": 173.7,
+          "totalValue": 1737,
+          "plRub": -478,
+          "plPercent": -21.58
+        }
+      ],
+      "weightedBuyPrice": 221.5,
+      "plRub": -478,
+      "plPercent": -21.58,
+      "sharePercent": 2.52,
+      "isSimulated": false
+    }
+  ],
+  "dividendShare": {
+    "count": 22,
+    "totalValue": 67345.01,
+    "sharePercent": 97.78
+  }
+}

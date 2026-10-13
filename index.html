@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <script src="https://telegram.org/js/telegram-web-app.js" defer></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>T-Investments Portfolio Analytics | Аналитика Портфеля</title>
@@ -196,6 +196,29 @@
 
       <!-- Controls: Theme Toggle, Language Switcher, Account Switcher & Margin Debt Toggle -->
       <div class="flex flex-wrap items-center gap-2.5">
+        <!-- Live T-Bank Online Status & Refresh Button -->
+        <div class="bg-slate-100 dark:bg-slate-900 px-3 py-1.5 rounded-xl border border-slate-200 dark:border-slate-800 flex items-center gap-2.5 shadow-sm text-xs">
+          <div class="flex items-center gap-1.5">
+            <span class="relative flex h-2.5 w-2.5">
+              <span v-if="!isSyncing" class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2.5 w-2.5" :class="isSyncing ? 'bg-amber-400' : 'bg-emerald-500'"></span>
+            </span>
+            <span class="font-semibold text-slate-800 dark:text-slate-200">
+              {{ isSyncing ? t('liveUpdating') : t('liveOnline') }}
+            </span>
+          </div>
+          <span class="text-slate-400 dark:text-slate-500 font-mono text-[11px] hidden sm:inline" v-if="lastSyncTime">
+            {{ lastSyncTime }}
+          </span>
+          <button 
+            @click="syncLive" 
+            :disabled="isSyncing"
+            class="px-2 py-1 rounded-lg font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700/60 shadow-xs flex items-center gap-1 transition disabled:opacity-50 cursor-pointer"
+            :title="t('liveRefreshBtn')">
+            <span :class="{'animate-spin inline-block': isSyncing}">🔄</span>
+            <span class="hidden md:inline">{{ isSyncing ? t('liveUpdating') : t('liveRefreshBtn') }}</span>
+          </button>
+        </div>
         <!-- Day / Night Toggle Switch (☀️ День / 🌙 Ночь) -->
         <div class="bg-slate-100 dark:bg-slate-900 p-1 rounded-xl border border-slate-200 dark:border-slate-800 flex items-center shadow-sm">
           <button 
@@ -344,12 +367,12 @@
         <div class="flex justify-between items-start">
           <span class="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">{{ t('kpiDivBase') }}</span>
           <span class="text-xs font-mono px-2 py-0.5 rounded bg-emerald-50 text-emerald-800 border border-emerald-200 dark:bg-emerald-950/50 dark:text-emerald-300 dark:border-emerald-800 font-semibold">
-            {{ rawData.dividendShare.count }} {{ t('kpiIssuersUnit') }}
+            {{ (rawData.dividendShare?.count ?? (rawData.consolidatedStocks ? rawData.consolidatedStocks.filter(s => s.divPayer).length : 0)) }} {{ t('kpiIssuersUnit') }}
           </span>
         </div>
         <div class="mt-3">
           <div class="text-3xl font-extrabold font-mono text-emerald-600 dark:text-emerald-400 tracking-tight">
-            {{ rawData.dividendShare.sharePercent.toFixed(1) }}%
+            {{ ((rawData.dividendShare?.sharePercent ?? (typeof rawData.dividendShare === 'number' ? rawData.dividendShare : 0)) || 0).toFixed(1) }}%
           </div>
           <div class="text-xs text-slate-500 dark:text-slate-400 mt-1">
             {{ t('kpiDivShareSub') }}
@@ -738,27 +761,27 @@
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div class="bg-slate-50 dark:bg-slate-900/80 p-4 rounded-xl border border-slate-200 dark:border-slate-800">
-            <span class="text-xs text-slate-500 dark:text-slate-400 block">{{ t('concTop1', { name: tCompanyName(rawData.concentration?.top1) }) }}</span>
+            <span class="text-xs text-slate-500 dark:text-slate-400 block">{{ t('concTop1', { name: tCompanyName(rawData.concentration?.top1?.ticker || rawData.concentration?.top1) }) }}</span>
             <div class="text-2xl font-bold font-mono text-amber-600 dark:text-amber-400 mt-1">
-              {{ rawData.concentration.top1.share.toFixed(1) }}%
+              {{ (rawData.concentration?.top1?.share ?? rawData.concentration?.top1Percent ?? 0).toFixed(1) }}%
             </div>
-            <span class="text-xs text-slate-500 dark:text-slate-400 mt-1 block">{{ formatMoney(rawData.concentration.top1.value) }}</span>
+            <span class="text-xs text-slate-500 dark:text-slate-400 mt-1 block">{{ formatMoney(rawData.concentration?.top1?.value ?? 0) }}</span>
           </div>
 
           <div class="bg-slate-50 dark:bg-slate-900/80 p-4 rounded-xl border border-slate-200 dark:border-slate-800">
             <span class="text-xs text-slate-500 dark:text-slate-400 block">{{ t('concTop3', { names: (rawData.concentration?.top3?.names || []).map(n => tCompanyName(n)).join(', ') }) }}</span>
             <div class="text-2xl font-bold font-mono text-amber-600 dark:text-amber-400 mt-1">
-              {{ rawData.concentration.top3.share.toFixed(1) }}%
+              {{ (rawData.concentration?.top3?.share ?? rawData.concentration?.top3Percent ?? 0).toFixed(1) }}%
             </div>
-            <span class="text-xs text-slate-500 dark:text-slate-400 mt-1 block">{{ formatMoney(rawData.concentration.top3.value) }}</span>
+            <span class="text-xs text-slate-500 dark:text-slate-400 mt-1 block">{{ formatMoney(rawData.concentration?.top3?.value ?? 0) }}</span>
           </div>
 
           <div class="bg-slate-50 dark:bg-slate-900/80 p-4 rounded-xl border border-slate-200 dark:border-slate-800">
             <span class="text-xs text-slate-500 dark:text-slate-400 block">{{ t('concTop5') }}</span>
             <div class="text-2xl font-bold font-mono text-amber-600 dark:text-amber-400 mt-1">
-              {{ rawData.concentration.top5.share.toFixed(1) }}%
+              {{ (rawData.concentration?.top5?.share ?? 0).toFixed(1) }}%
             </div>
-            <span class="text-xs text-slate-500 dark:text-slate-400 mt-1 block">{{ formatMoney(rawData.concentration.top5.value) }}</span>
+            <span class="text-xs text-slate-500 dark:text-slate-400 mt-1 block">{{ formatMoney(rawData.concentration?.top5?.value ?? 0) }}</span>
           </div>
         </div>
       </div>
@@ -1050,11 +1073,16 @@
   </div>
 
   <script>
-    const { createApp, ref, computed, onMounted, watch, nextTick } = Vue;
+    const { createApp, ref, computed, onMounted, onUnmounted, watch, nextTick } = Vue;
 
     // High Quality i18n Dictionary (🇷🇺 RU, 🇬🇧 EN, 🇹🇼 繁中)
     const I18N = {
       ru: {
+        liveOnline: "Т‑Банк Онлайн",
+        liveUpdating: "Обновление...",
+        liveUpdated: "Обновлено",
+        liveRefreshBtn: "Обновить",
+        liveError: "Ошибка API",
                 headerTitle: "Т‑Инвестиции",
         subAccountsBadge: "",
         headerSubtitle: "Единый инвестиционный портфель, отраслевая структура и оценка рисков",
@@ -1193,6 +1221,11 @@
         simBtnReset: "Сбросить симуляцию"
       },
       en: {
+        liveOnline: "T‑Bank Live",
+        liveUpdating: "Updating...",
+        liveUpdated: "Updated",
+        liveRefreshBtn: "Refresh",
+        liveError: "API Error",
         docTitle: "T-Investments Portfolio Analytics | Portfolio Overview",
         headerTitle: "T-Bank Investment Portfolio",
         subAccountsBadge: "3 sub-accounts",
@@ -1314,6 +1347,11 @@
         simBtnReset: "Reset Simulation"
       },
       zh: {
+        liveOnline: "T‑Bank 即時連線",
+        liveUpdating: "更新中...",
+        liveUpdated: "已更新",
+        liveRefreshBtn: "重新整理",
+        liveError: "API 連線失敗",
                 headerTitle: "T-Investments 投資組合",
         subAccountsBadge: "",
         headerSubtitle: "統一投資組合分析、產業結構配置與風險評估",
@@ -2114,6 +2152,50 @@
         const rawDataBase = ref(window.PORTFOLIO_DATA);
         const activeSimulation = ref(null);
 
+        // Live T-Bank Sync Reactive State
+        const isSyncing = ref(false);
+        const lastSyncTime = ref(new Date().toLocaleTimeString('ru-RU'));
+        const syncError = ref(null);
+
+        async function syncLive() {
+          if (isSyncing.value) return;
+          isSyncing.value = true;
+          syncError.value = null;
+          try {
+            const res = await fetch('/api/sync-tinkoff');
+            if (!res.ok) throw new Error('HTTP ' + res.status);
+            const json = await res.json();
+            if (json.ok && json.data) {
+              rawDataBase.value = json.data;
+              lastSyncTime.value = new Date().toLocaleTimeString('ru-RU');
+              nextTick(() => {
+                initCharts();
+              });
+            } else {
+              throw new Error(json.error || 'Sync failed');
+            }
+          } catch (err) {
+            console.warn('Backend sync failed, trying fallback to static portfolio_data.json...', err);
+            try {
+              const res = await fetch('portfolio_data.json?t=' + Date.now());
+              if (res.ok) {
+                const json = await res.json();
+                if (json && json.consolidatedStocks) {
+                  rawDataBase.value = json;
+                  lastSyncTime.value = new Date().toLocaleTimeString('ru-RU');
+                  nextTick(() => {
+                    initCharts();
+                  });
+                }
+              }
+            } catch (e2) {
+              syncError.value = err.message;
+            }
+          } finally {
+            isSyncing.value = false;
+          }
+        }
+
         // Language state with localStorage persistence (default: 'ru')
         const currentLang = ref(localStorage.getItem('portfolio_lang') || 'ru');
 
@@ -2226,12 +2308,71 @@
           });
         }
 
+        function normalizePortfolioData(data) {
+          if (!data) return data;
+          
+          let divShare = data.dividendShare;
+          if (typeof divShare === 'number') {
+            const divPayers = (data.consolidatedStocks || []).filter(s => s.divPayer);
+            const divVal = divPayers.reduce((sum, s) => sum + (s.totalValue || 0), 0);
+            divShare = {
+              count: divPayers.length,
+              totalValue: divVal,
+              sharePercent: divShare
+            };
+          } else if (!divShare) {
+            const divPayers = (data.consolidatedStocks || []).filter(s => s.divPayer);
+            const divVal = divPayers.reduce((sum, s) => sum + (s.totalValue || 0), 0);
+            const grandTotal = data.grandTotalAssetValue || 1;
+            divShare = {
+              count: divPayers.length,
+              totalValue: divVal,
+              sharePercent: (divVal / grandTotal) * 100
+            };
+          }
+
+          let conc = data.concentration;
+          const sortedStocks = [...(data.consolidatedStocks || [])].sort((a, b) => (b.totalValue || 0) - (a.totalValue || 0));
+          const grandTotal = data.grandTotalAssetValue || 1;
+          
+          if (!conc || !conc.top1 || !conc.top3 || !conc.top5) {
+            const s0 = sortedStocks[0];
+            const top1 = {
+              ticker: s0?.ticker || conc?.top1Ticker || '',
+              name: s0?.name || '',
+              value: s0?.totalValue || 0,
+              share: conc?.top1Percent ?? (s0 ? (s0.totalValue / grandTotal) * 100 : 0)
+            };
+            const top3Stocks = sortedStocks.slice(0, 3);
+            const top3Val = top3Stocks.reduce((sum, s) => sum + (s.totalValue || 0), 0);
+            const top3 = {
+              value: top3Val,
+              share: conc?.top3Percent ?? (grandTotal > 0 ? (top3Val / grandTotal) * 100 : 0),
+              names: top3Stocks.map(s => s.name)
+            };
+            const top5Stocks = sortedStocks.slice(0, 5);
+            const top5Val = top5Stocks.reduce((sum, s) => sum + (s.totalValue || 0), 0);
+            const top5 = {
+              value: top5Val,
+              share: grandTotal > 0 ? (top5Val / grandTotal) * 100 : 0,
+              names: top5Stocks.map(s => s.name)
+            };
+            conc = { top1, top3, top5 };
+          }
+
+          return {
+            ...data,
+            dividendShare: divShare,
+            concentration: conc
+          };
+        }
+
         // Reactive simulated or base portfolio
         const portfolioData = computed(() => {
           if (!activeSimulation.value) {
-            return rawDataBase.value;
+            return normalizePortfolioData(rawDataBase.value);
           }
-          return calculateSimulatedPortfolio(rawDataBase.value, activeSimulation.value);
+          return normalizePortfolioData(calculateSimulatedPortfolio(rawDataBase.value, activeSimulation.value));
         });
 
         const theme = ref(localStorage.getItem('portfolio_theme') || 'light');
@@ -2577,6 +2718,7 @@
           }
         }
 
+        let autoSyncInterval = null;
         onMounted(() => {
           applyTheme(theme.value);
           const initialLang = currentLang.value;
@@ -2588,6 +2730,19 @@
               closeCompanyModal();
             }
           });
+          // Auto-sync every 60s when viewing locally
+          if (isLocalHost) {
+            setTimeout(syncLive, 500);
+          }
+          autoSyncInterval = setInterval(() => {
+            if (isLocalHost && document.visibilityState === 'visible') {
+              syncLive();
+            }
+          }, 60000);
+        });
+
+        onUnmounted(() => {
+          if (autoSyncInterval) clearInterval(autoSyncInterval);
         });
 
         watch(activeTab, (newTab) => {
@@ -2603,6 +2758,10 @@
         });
 
         return {
+          isSyncing,
+          lastSyncTime,
+          syncError,
+          syncLive,
           currentLang,
           tCompanyName,
           getCompanyBadgeClass,

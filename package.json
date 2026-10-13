@@ -1,0 +1,9 @@
+{
+  "name": "t-invest-portfolio",
+  "version": "1.0.0",
+  "description": "T-Bank Investments Portfolio Analytics & Telegram Web App",
+  "main": "sync_tinkoff.js",
+  "scripts": {
+    "sync": "node sync_tinkoff.js"
+  }
+}
