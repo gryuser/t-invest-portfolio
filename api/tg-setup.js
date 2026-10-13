@@ -1,10 +1,10 @@
 const BOT_TOKEN = '8892862279:AAE47Ux4Y9WrYKBrrLEDHKGk5RU9HjJPuFc';
 const USER_ID = '919927871';
-const WEB_APP_URL = 'https://weather-telegram-bot-beta.vercel.app';
 
 module.exports = async (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
-  const results = {};
+  const targetUrl = req.query?.url || 'https://t-invest-portfolio.vercel.app';
+  const results = { targetUrl };
 
   // 1. setChatMenuButton (default menu button for all users)
   try {
@@ -16,7 +16,7 @@ module.exports = async (req, res) => {
           type: 'web_app',
           text: 'Портфель Т-Банк',
           web_app: {
-            url: WEB_APP_URL
+            url: targetUrl
           }
         }
       })
@@ -37,7 +37,7 @@ module.exports = async (req, res) => {
           type: 'web_app',
           text: 'Портфель Т-Банк',
           web_app: {
-            url: WEB_APP_URL
+            url: targetUrl
           }
         }
       })
@@ -54,15 +54,15 @@ module.exports = async (req, res) => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         chat_id: USER_ID,
-        text: '🚀 <b>Инвестиционный портфель Т-Банка успешно обновлён!</b>\n\n✅ Ошибка 404 устранена\n✅ Дашборд Т-Инвестиций развернут на Vercel\n✅ Доступна синхронизация с Т-Банком в реальном времени\n\nНажмите кнопку ниже или используйте Меню в левом нижнем углу:',
+        text: '🚀 <b>Инвестиционный портфель Т-Банка полностью отделен и готов!</b>\n\n✅ Отдельный репозиторий: <code>Mrlee1121/t-invest-portfolio</code>\n✅ Независимый проект Vercel: <code>' + targetUrl + '</code>\n✅ Синхронизация с OpenAPI Т-Банка в реальном времени\n\nНажмите кнопку ниже или используйте Меню в левом нижнем углу для открытия дашборда:',
         parse_mode: 'HTML',
         reply_markup: {
           inline_keyboard: [
             [
               {
-                text: '📊 Открыть Портфель Т-Инвестиции',
+                text: '📊 Открыть Т-Инвестиции',
                 web_app: {
-                  url: WEB_APP_URL
+                  url: targetUrl
                 }
               }
             ]
