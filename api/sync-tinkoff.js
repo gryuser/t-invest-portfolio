@@ -1,6 +1,10 @@
 const https = require('https');
 
-const token = process.env.TINKOFF_TOKEN || 't.ff0AViTsDB1k9Ph2W255v5u09UE6HKKbnacYYaKOgnOADzsEo5bWpQJyNDjwO8FFlnV_EEILMcYBo_JZ7hgN-w';
+const token = process.env.TINKOFF_TOKEN;
+if (!token) {
+  module.exports = async (req, res) => { res.status(500).json({ ok: false, error: 'TINKOFF_TOKEN not configured' }); };
+  return;
+}
 
 function money(obj) {
   if (!obj) return 0;

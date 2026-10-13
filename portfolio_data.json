@@ -1,26 +1,26 @@
 {
-  "updatedAt": "13.10.2026 13:19:27",
+  "updatedAt": "13.10.2026 16:35:57",
   "depositRate": 15.5,
   "freeMarginTotal": 15000,
   "annualMarginEarned": 2325,
   "monthlyMarginEarned": 193.75,
-  "grandTotalAssetValue": 68872.46,
-  "grandTotalNetBalance": 53872.46,
+  "grandTotalAssetValue": 69055.61,
+  "grandTotalNetBalance": 54055.61,
   "grandTotalCost": 71898.2,
-  "grandTotalPlRub": -3025.74,
-  "grandTotalPlPercent": -4.21,
+  "grandTotalPlRub": -2842.59,
+  "grandTotalPlPercent": -3.95,
   "accounts": [
     {
       "accountKey": "G_ACC",
       "accountTitle": "G ACC",
-      "totalAssetValue": 30346.78,
-      "totalStockValue": 30096.78,
-      "totalCurrencyValue": 250,
+      "totalAssetValue": 30355.52,
+      "totalStockValue": 30105.62,
+      "totalCurrencyValue": 249.9,
       "debtRub": -5000,
-      "netAccountBalance": 25346.78,
+      "netAccountBalance": 25355.52,
       "totalStockCost": 31812.56,
-      "totalPlRub": -1715.78,
-      "totalPlPercent": -5.39,
+      "totalPlRub": -1706.94,
+      "totalPlPercent": -5.37,
       "positions": [
         {
           "accountKey": "G_ACC",
@@ -33,11 +33,11 @@
           "divPayer": true,
           "quantity": 1,
           "buyPrice": 92.62,
-          "currentPrice": 98.28,
-          "totalValue": 98.28,
+          "currentPrice": 99.32,
+          "totalValue": 99.32,
           "totalCost": 92.62,
-          "plRub": 5.66,
-          "plPercent": 6.11
+          "plRub": 6.7,
+          "plPercent": 7.23
         },
         {
           "accountKey": "G_ACC",
@@ -50,11 +50,11 @@
           "divPayer": true,
           "quantity": 1,
           "buyPrice": 1088.4,
-          "currentPrice": 1074.6,
-          "totalValue": 1074.6,
+          "currentPrice": 1077.5,
+          "totalValue": 1077.5,
           "totalCost": 1088.4,
-          "plRub": -13.8,
-          "plPercent": -1.27
+          "plRub": -10.9,
+          "plPercent": -1
         },
         {
           "accountKey": "G_ACC",
@@ -67,11 +67,11 @@
           "divPayer": true,
           "quantity": 1,
           "buyPrice": 1856,
-          "currentPrice": 1073.6,
-          "totalValue": 1073.6,
+          "currentPrice": 1088.8,
+          "totalValue": 1088.8,
           "totalCost": 1856,
-          "plRub": -782.4,
-          "plPercent": -42.16
+          "plRub": -767.2,
+          "plPercent": -41.34
         },
         {
           "accountKey": "G_ACC",
@@ -84,11 +84,11 @@
           "divPayer": true,
           "quantity": 100,
           "buyPrice": 21.95,
-          "currentPrice": 16.48,
-          "totalValue": 1648,
+          "currentPrice": 16.5,
+          "totalValue": 1650,
           "totalCost": 2195,
-          "plRub": -547,
-          "plPercent": -24.92
+          "plRub": -545,
+          "plPercent": -24.83
         },
         {
           "accountKey": "G_ACC",
@@ -101,11 +101,11 @@
           "divPayer": true,
           "quantity": 3,
           "buyPrice": 1141.2,
-          "currentPrice": 1086,
-          "totalValue": 3258,
+          "currentPrice": 1085.4,
+          "totalValue": 3256.2,
           "totalCost": 3423.6,
-          "plRub": -165.6,
-          "plPercent": -4.84
+          "plRub": -167.4,
+          "plPercent": -4.89
         },
         {
           "accountKey": "G_ACC",
@@ -118,11 +118,11 @@
           "divPayer": true,
           "quantity": 5,
           "buyPrice": 286.18,
-          "currentPrice": 270.72,
-          "totalValue": 1353.6,
+          "currentPrice": 271.54,
+          "totalValue": 1357.7,
           "totalCost": 1430.9,
-          "plRub": -77.3,
-          "plPercent": -5.4
+          "plRub": -73.2,
+          "plPercent": -5.12
         },
         {
           "accountKey": "G_ACC",
@@ -135,11 +135,11 @@
           "divPayer": true,
           "quantity": 9,
           "buyPrice": 632.8,
-          "currentPrice": 666.3,
-          "totalValue": 5996.7,
+          "currentPrice": 665,
+          "totalValue": 5985,
           "totalCost": 5695.2,
-          "plRub": 301.5,
-          "plPercent": 5.29
+          "plRub": 289.8,
+          "plPercent": 5.09
         },
         {
           "accountKey": "G_ACC",
@@ -152,11 +152,11 @@
           "divPayer": true,
           "quantity": 4,
           "buyPrice": 549,
-          "currentPrice": 608.3,
-          "totalValue": 2433.2,
+          "currentPrice": 605.45,
+          "totalValue": 2421.8,
           "totalCost": 2196,
-          "plRub": 237.2,
-          "plPercent": 10.8
+          "plRub": 225.8,
+          "plPercent": 10.28
         },
         {
           "accountKey": "G_ACC",
@@ -169,11 +169,11 @@
           "divPayer": true,
           "quantity": 20,
           "buyPrice": 49.23,
-          "currentPrice": 41.16,
-          "totalValue": 823.2,
+          "currentPrice": 41.09,
+          "totalValue": 821.7,
           "totalCost": 984.66,
-          "plRub": -161.46,
-          "plPercent": -16.4
+          "plRub": -162.96,
+          "plPercent": -16.55
         },
         {
           "accountKey": "G_ACC",
@@ -186,11 +186,11 @@
           "divPayer": true,
           "quantity": 20,
           "buyPrice": 46.92,
-          "currentPrice": 46.23,
-          "totalValue": 924.6,
+          "currentPrice": 46.24,
+          "totalValue": 924.8,
           "totalCost": 938.4,
-          "plRub": -13.8,
-          "plPercent": -1.47
+          "plRub": -13.6,
+          "plPercent": -1.45
         },
         {
           "accountKey": "G_ACC",
@@ -203,11 +203,11 @@
           "divPayer": true,
           "quantity": 2,
           "buyPrice": 605,
-          "currentPrice": 324.6,
-          "totalValue": 649.2,
+          "currentPrice": 325.1,
+          "totalValue": 650.2,
           "totalCost": 1210,
-          "plRub": -560.8,
-          "plPercent": -46.35
+          "plRub": -559.8,
+          "plPercent": -46.26
         },
         {
           "accountKey": "G_ACC",
@@ -220,11 +220,11 @@
           "divPayer": true,
           "quantity": 30,
           "buyPrice": 284.08,
-          "currentPrice": 287.31,
-          "totalValue": 8619.3,
+          "currentPrice": 287.3,
+          "totalValue": 8619,
           "totalCost": 8522.4,
-          "plRub": 96.9,
-          "plPercent": 1.14
+          "plRub": 96.6,
+          "plPercent": 1.13
         },
         {
           "accountKey": "G_ACC",
@@ -237,11 +237,11 @@
           "divPayer": true,
           "quantity": 1,
           "buyPrice": 520.5,
-          "currentPrice": 637.5,
-          "totalValue": 637.5,
+          "currentPrice": 636.6,
+          "totalValue": 636.6,
           "totalCost": 520.5,
-          "plRub": 117,
-          "plPercent": 22.48
+          "plRub": 116.1,
+          "plPercent": 22.31
         },
         {
           "accountKey": "G_ACC",
@@ -254,25 +254,25 @@
           "divPayer": true,
           "quantity": 4,
           "buyPrice": 414.72,
-          "currentPrice": 376.75,
-          "totalValue": 1507,
+          "currentPrice": 379.25,
+          "totalValue": 1517,
           "totalCost": 1658.88,
-          "plRub": -151.88,
-          "plPercent": -9.16
+          "plRub": -141.88,
+          "plPercent": -8.55
         }
       ]
     },
     {
       "accountKey": "S_ACC",
       "accountTitle": "S ACC",
-      "totalAssetValue": 21369.47,
-      "totalStockValue": 21369.47,
+      "totalAssetValue": 21465.39,
+      "totalStockValue": 21465.39,
       "totalCurrencyValue": 0,
       "debtRub": -5000,
-      "netAccountBalance": 16369.47,
+      "netAccountBalance": 16465.39,
       "totalStockCost": 20926.41,
-      "totalPlRub": 443.06,
-      "totalPlPercent": 2.12,
+      "totalPlRub": 538.98,
+      "totalPlPercent": 2.58,
       "positions": [
         {
           "accountKey": "S_ACC",
@@ -285,11 +285,11 @@
           "divPayer": true,
           "quantity": 1,
           "buyPrice": 5359,
-          "currentPrice": 6002.5,
-          "totalValue": 6002.5,
+          "currentPrice": 6046.5,
+          "totalValue": 6046.5,
           "totalCost": 5359,
-          "plRub": 643.5,
-          "plPercent": 12.01
+          "plRub": 687.5,
+          "plPercent": 12.83
         },
         {
           "accountKey": "S_ACC",
@@ -302,11 +302,11 @@
           "divPayer": true,
           "quantity": 3,
           "buyPrice": 1001.9,
-          "currentPrice": 1073.6,
-          "totalValue": 3220.8,
+          "currentPrice": 1088.8,
+          "totalValue": 3266.4,
           "totalCost": 3005.7,
-          "plRub": 215.1,
-          "plPercent": 7.16
+          "plRub": 260.7,
+          "plPercent": 8.67
         },
         {
           "accountKey": "S_ACC",
@@ -319,11 +319,11 @@
           "divPayer": false,
           "quantity": 20,
           "buyPrice": 42.39,
-          "currentPrice": 35.64,
-          "totalValue": 712.8,
+          "currentPrice": 35.55,
+          "totalValue": 711,
           "totalCost": 847.8,
-          "plRub": -135,
-          "plPercent": -15.92
+          "plRub": -136.8,
+          "plPercent": -16.14
         },
         {
           "accountKey": "S_ACC",
@@ -336,11 +336,11 @@
           "divPayer": true,
           "quantity": 100,
           "buyPrice": 13.93,
-          "currentPrice": 10.13,
-          "totalValue": 1013,
+          "currentPrice": 10.11,
+          "totalValue": 1011,
           "totalCost": 1393,
-          "plRub": -380,
-          "plPercent": -27.28
+          "plRub": -382,
+          "plPercent": -27.42
         },
         {
           "accountKey": "S_ACC",
@@ -370,11 +370,11 @@
           "divPayer": true,
           "quantity": 4,
           "buyPrice": 251.06,
-          "currentPrice": 270.72,
-          "totalValue": 1082.88,
+          "currentPrice": 271.54,
+          "totalValue": 1086.16,
           "totalCost": 1004.24,
-          "plRub": 78.64,
-          "plPercent": 7.83
+          "plRub": 81.92,
+          "plPercent": 8.16
         },
         {
           "accountKey": "S_ACC",
@@ -387,11 +387,11 @@
           "divPayer": true,
           "quantity": 1,
           "buyPrice": 1013.8,
-          "currentPrice": 1015.5,
-          "totalValue": 1015.5,
+          "currentPrice": 1015.8,
+          "totalValue": 1015.8,
           "totalCost": 1013.8,
-          "plRub": 1.7,
-          "plPercent": 0.17
+          "plRub": 2,
+          "plPercent": 0.2
         },
         {
           "accountKey": "S_ACC",
@@ -404,11 +404,11 @@
           "divPayer": true,
           "quantity": 3,
           "buyPrice": 315.74,
-          "currentPrice": 288.03,
-          "totalValue": 864.09,
+          "currentPrice": 287.76,
+          "totalValue": 863.28,
           "totalCost": 947.22,
-          "plRub": -83.13,
-          "plPercent": -8.78
+          "plRub": -83.94,
+          "plPercent": -8.86
         },
         {
           "accountKey": "S_ACC",
@@ -421,11 +421,11 @@
           "divPayer": true,
           "quantity": 15,
           "buyPrice": 277.25,
-          "currentPrice": 287.31,
-          "totalValue": 4309.65,
+          "currentPrice": 287.3,
+          "totalValue": 4309.5,
           "totalCost": 4158.75,
-          "plRub": 150.9,
-          "plPercent": 3.63
+          "plRub": 150.75,
+          "plPercent": 3.62
         },
         {
           "accountKey": "S_ACC",
@@ -438,25 +438,25 @@
           "divPayer": true,
           "quantity": 3,
           "buyPrice": 391.7,
-          "currentPrice": 376.75,
-          "totalValue": 1130.25,
+          "currentPrice": 379.25,
+          "totalValue": 1137.75,
           "totalCost": 1175.1,
-          "plRub": -44.85,
-          "plPercent": -3.82
+          "plRub": -37.35,
+          "plPercent": -3.18
         }
       ]
     },
     {
       "accountKey": "ACC_26K",
       "accountTitle": "26 тысяч",
-      "totalAssetValue": 17156.21,
-      "totalStockValue": 17156.21,
+      "totalAssetValue": 17234.7,
+      "totalStockValue": 17234.7,
       "totalCurrencyValue": 0,
       "debtRub": -5000,
-      "netAccountBalance": 12156.21,
+      "netAccountBalance": 12234.7,
       "totalStockCost": 19159.23,
-      "totalPlRub": -2003.02,
-      "totalPlPercent": -10.45,
+      "totalPlRub": -1924.53,
+      "totalPlPercent": -10.04,
       "positions": [
         {
           "accountKey": "ACC_26K",
@@ -469,11 +469,11 @@
           "divPayer": true,
           "quantity": 1,
           "buyPrice": 5342.5,
-          "currentPrice": 6002.5,
-          "totalValue": 6002.5,
+          "currentPrice": 6046.5,
+          "totalValue": 6046.5,
           "totalCost": 5342.5,
-          "plRub": 660,
-          "plPercent": 12.35
+          "plRub": 704,
+          "plPercent": 13.18
         },
         {
           "accountKey": "ACC_26K",
@@ -486,11 +486,11 @@
           "divPayer": true,
           "quantity": 1,
           "buyPrice": 1339.4,
-          "currentPrice": 1074.6,
-          "totalValue": 1074.6,
+          "currentPrice": 1077.5,
+          "totalValue": 1077.5,
           "totalCost": 1339.4,
-          "plRub": -264.8,
-          "plPercent": -19.77
+          "plRub": -261.9,
+          "plPercent": -19.55
         },
         {
           "accountKey": "ACC_26K",
@@ -503,11 +503,11 @@
           "divPayer": true,
           "quantity": 2,
           "buyPrice": 1703.1,
-          "currentPrice": 1073.6,
-          "totalValue": 2147.2,
+          "currentPrice": 1088.8,
+          "totalValue": 2177.6,
           "totalCost": 3406.2,
-          "plRub": -1259,
-          "plPercent": -36.96
+          "plRub": -1228.6,
+          "plPercent": -36.07
         },
         {
           "accountKey": "ACC_26K",
@@ -520,11 +520,11 @@
           "divPayer": true,
           "quantity": 3,
           "buyPrice": 320.8,
-          "currentPrice": 288.6,
-          "totalValue": 865.8,
+          "currentPrice": 288.2,
+          "totalValue": 864.6,
           "totalCost": 962.4,
-          "plRub": -96.6,
-          "plPercent": -10.04
+          "plRub": -97.8,
+          "plPercent": -10.16
         },
         {
           "accountKey": "ACC_26K",
@@ -537,11 +537,11 @@
           "divPayer": true,
           "quantity": 5,
           "buyPrice": 295.92,
-          "currentPrice": 270.72,
-          "totalValue": 1353.6,
+          "currentPrice": 271.54,
+          "totalValue": 1357.7,
           "totalCost": 1479.6,
-          "plRub": -126,
-          "plPercent": -8.52
+          "plRub": -121.9,
+          "plPercent": -8.24
         },
         {
           "accountKey": "ACC_26K",
@@ -554,11 +554,11 @@
           "divPayer": true,
           "quantity": 1,
           "buyPrice": 655.4,
-          "currentPrice": 666.3,
-          "totalValue": 666.3,
+          "currentPrice": 665,
+          "totalValue": 665,
           "totalCost": 655.4,
-          "plRub": 10.9,
-          "plPercent": 1.66
+          "plRub": 9.6,
+          "plPercent": 1.46
         },
         {
           "accountKey": "ACC_26K",
@@ -571,11 +571,11 @@
           "divPayer": false,
           "quantity": 10,
           "buyPrice": 68.22,
-          "currentPrice": 56.47,
-          "totalValue": 564.65,
+          "currentPrice": 56.07,
+          "totalValue": 560.65,
           "totalCost": 682.2,
-          "plRub": -117.55,
-          "plPercent": -17.23
+          "plRub": -121.55,
+          "plPercent": -17.82
         },
         {
           "accountKey": "ACC_26K",
@@ -588,11 +588,11 @@
           "divPayer": true,
           "quantity": 100,
           "buyPrice": 8.36,
-          "currentPrice": 6.9,
-          "totalValue": 689.5,
+          "currentPrice": 6.87,
+          "totalValue": 686.5,
           "totalCost": 835.5,
-          "plRub": -146,
-          "plPercent": -17.47
+          "plRub": -149,
+          "plPercent": -17.83
         },
         {
           "accountKey": "ACC_26K",
@@ -622,10 +622,10 @@
           "divPayer": true,
           "quantity": 1,
           "buyPrice": 317.49,
-          "currentPrice": 287.31,
-          "totalValue": 287.31,
+          "currentPrice": 287.3,
+          "totalValue": 287.3,
           "totalCost": 317.49,
-          "plRub": -30.18,
+          "plRub": -30.19,
           "plPercent": -9.51
         },
         {
@@ -639,11 +639,11 @@
           "divPayer": true,
           "quantity": 1,
           "buyPrice": 510.3,
-          "currentPrice": 637.5,
-          "totalValue": 637.5,
+          "currentPrice": 636.6,
+          "totalValue": 636.6,
           "totalCost": 510.3,
-          "plRub": 127.2,
-          "plPercent": 24.93
+          "plRub": 126.3,
+          "plPercent": 24.75
         },
         {
           "accountKey": "ACC_26K",
@@ -656,11 +656,11 @@
           "divPayer": true,
           "quantity": 3,
           "buyPrice": 471.08,
-          "currentPrice": 376.75,
-          "totalValue": 1130.25,
+          "currentPrice": 379.25,
+          "totalValue": 1137.75,
           "totalCost": 1413.24,
-          "plRub": -282.99,
-          "plPercent": -20.02
+          "plRub": -275.49,
+          "plPercent": -19.49
         }
       ]
     }
@@ -675,44 +675,44 @@
       "divPayer": true,
       "totalQuantity": 46,
       "totalCost": 12998.64,
-      "totalValue": 13216.26,
-      "currentPrice": 287.31,
+      "totalValue": 13215.8,
+      "currentPrice": 287.3,
       "accounts": [
         {
           "accountKey": "G_ACC",
           "accountTitle": "G ACC",
           "quantity": 30,
           "buyPrice": 284.08,
-          "currentPrice": 287.31,
-          "totalValue": 8619.3,
-          "plRub": 96.9,
-          "plPercent": 1.14
+          "currentPrice": 287.3,
+          "totalValue": 8619,
+          "plRub": 96.6,
+          "plPercent": 1.13
         },
         {
           "accountKey": "S_ACC",
           "accountTitle": "S ACC",
           "quantity": 15,
           "buyPrice": 277.25,
-          "currentPrice": 287.31,
-          "totalValue": 4309.65,
-          "plRub": 150.9,
-          "plPercent": 3.63
+          "currentPrice": 287.3,
+          "totalValue": 4309.5,
+          "plRub": 150.75,
+          "plPercent": 3.62
         },
         {
           "accountKey": "ACC_26K",
           "accountTitle": "26 тысяч",
           "quantity": 1,
           "buyPrice": 317.49,
-          "currentPrice": 287.31,
-          "totalValue": 287.31,
-          "plRub": -30.18,
+          "currentPrice": 287.3,
+          "totalValue": 287.3,
+          "plRub": -30.19,
           "plPercent": -9.51
         }
       ],
       "weightedBuyPrice": 282.58,
-      "plRub": 217.62,
+      "plRub": 217.16,
       "plPercent": 1.67,
-      "sharePercent": 19.19,
+      "sharePercent": 19.14,
       "isSimulated": false
     },
     {
@@ -724,34 +724,34 @@
       "divPayer": true,
       "totalQuantity": 2,
       "totalCost": 10701.5,
-      "totalValue": 12005,
-      "currentPrice": 6002.5,
+      "totalValue": 12093,
+      "currentPrice": 6046.5,
       "accounts": [
         {
           "accountKey": "S_ACC",
           "accountTitle": "S ACC",
           "quantity": 1,
           "buyPrice": 5359,
-          "currentPrice": 6002.5,
-          "totalValue": 6002.5,
-          "plRub": 643.5,
-          "plPercent": 12.01
+          "currentPrice": 6046.5,
+          "totalValue": 6046.5,
+          "plRub": 687.5,
+          "plPercent": 12.83
         },
         {
           "accountKey": "ACC_26K",
           "accountTitle": "26 тысяч",
           "quantity": 1,
           "buyPrice": 5342.5,
-          "currentPrice": 6002.5,
-          "totalValue": 6002.5,
-          "plRub": 660,
-          "plPercent": 12.35
+          "currentPrice": 6046.5,
+          "totalValue": 6046.5,
+          "plRub": 704,
+          "plPercent": 13.18
         }
       ],
       "weightedBuyPrice": 5350.75,
-      "plRub": 1303.5,
-      "plPercent": 12.18,
-      "sharePercent": 17.43,
+      "plRub": 1391.5,
+      "plPercent": 13,
+      "sharePercent": 17.51,
       "isSimulated": false
     },
     {
@@ -763,34 +763,34 @@
       "divPayer": true,
       "totalQuantity": 10,
       "totalCost": 6350.6,
-      "totalValue": 6663,
-      "currentPrice": 666.3,
+      "totalValue": 6650,
+      "currentPrice": 665,
       "accounts": [
         {
           "accountKey": "G_ACC",
           "accountTitle": "G ACC",
           "quantity": 9,
           "buyPrice": 632.8,
-          "currentPrice": 666.3,
-          "totalValue": 5996.7,
-          "plRub": 301.5,
-          "plPercent": 5.29
+          "currentPrice": 665,
+          "totalValue": 5985,
+          "plRub": 289.8,
+          "plPercent": 5.09
         },
         {
           "accountKey": "ACC_26K",
           "accountTitle": "26 тысяч",
           "quantity": 1,
           "buyPrice": 655.4,
-          "currentPrice": 666.3,
-          "totalValue": 666.3,
-          "plRub": 10.9,
-          "plPercent": 1.66
+          "currentPrice": 665,
+          "totalValue": 665,
+          "plRub": 9.6,
+          "plPercent": 1.46
         }
       ],
       "weightedBuyPrice": 635.06,
-      "plRub": 312.4,
-      "plPercent": 4.92,
-      "sharePercent": 9.67,
+      "plRub": 299.4,
+      "plPercent": 4.71,
+      "sharePercent": 9.63,
       "isSimulated": false
     },
     {
@@ -802,44 +802,44 @@
       "divPayer": true,
       "totalQuantity": 6,
       "totalCost": 8267.9,
-      "totalValue": 6441.6,
-      "currentPrice": 1073.6,
+      "totalValue": 6532.8,
+      "currentPrice": 1088.8,
       "accounts": [
         {
           "accountKey": "G_ACC",
           "accountTitle": "G ACC",
           "quantity": 1,
           "buyPrice": 1856,
-          "currentPrice": 1073.6,
-          "totalValue": 1073.6,
-          "plRub": -782.4,
-          "plPercent": -42.16
+          "currentPrice": 1088.8,
+          "totalValue": 1088.8,
+          "plRub": -767.2,
+          "plPercent": -41.34
         },
         {
           "accountKey": "S_ACC",
           "accountTitle": "S ACC",
           "quantity": 3,
           "buyPrice": 1001.9,
-          "currentPrice": 1073.6,
-          "totalValue": 3220.8,
-          "plRub": 215.1,
-          "plPercent": 7.16
+          "currentPrice": 1088.8,
+          "totalValue": 3266.4,
+          "plRub": 260.7,
+          "plPercent": 8.67
         },
         {
           "accountKey": "ACC_26K",
           "accountTitle": "26 тысяч",
           "quantity": 2,
           "buyPrice": 1703.1,
-          "currentPrice": 1073.6,
-          "totalValue": 2147.2,
-          "plRub": -1259,
-          "plPercent": -36.96
+          "currentPrice": 1088.8,
+          "totalValue": 2177.6,
+          "plRub": -1228.6,
+          "plPercent": -36.07
         }
       ],
       "weightedBuyPrice": 1377.98,
-      "plRub": -1826.3,
-      "plPercent": -22.09,
-      "sharePercent": 9.35,
+      "plRub": -1735.1,
+      "plPercent": -20.99,
+      "sharePercent": 9.46,
       "isSimulated": false
     },
     {
@@ -851,44 +851,44 @@
       "divPayer": true,
       "totalQuantity": 14,
       "totalCost": 3914.74,
-      "totalValue": 3790.08,
-      "currentPrice": 270.72,
+      "totalValue": 3801.56,
+      "currentPrice": 271.54,
       "accounts": [
         {
           "accountKey": "G_ACC",
           "accountTitle": "G ACC",
           "quantity": 5,
           "buyPrice": 286.18,
-          "currentPrice": 270.72,
-          "totalValue": 1353.6,
-          "plRub": -77.3,
-          "plPercent": -5.4
+          "currentPrice": 271.54,
+          "totalValue": 1357.7,
+          "plRub": -73.2,
+          "plPercent": -5.12
         },
         {
           "accountKey": "S_ACC",
           "accountTitle": "S ACC",
           "quantity": 4,
           "buyPrice": 251.06,
-          "currentPrice": 270.72,
-          "totalValue": 1082.88,
-          "plRub": 78.64,
-          "plPercent": 7.83
+          "currentPrice": 271.54,
+          "totalValue": 1086.16,
+          "plRub": 81.92,
+          "plPercent": 8.16
         },
         {
           "accountKey": "ACC_26K",
           "accountTitle": "26 тысяч",
           "quantity": 5,
           "buyPrice": 295.92,
-          "currentPrice": 270.72,
-          "totalValue": 1353.6,
-          "plRub": -126,
-          "plPercent": -8.52
+          "currentPrice": 271.54,
+          "totalValue": 1357.7,
+          "plRub": -121.9,
+          "plPercent": -8.24
         }
       ],
       "weightedBuyPrice": 279.62,
-      "plRub": -124.66,
-      "plPercent": -3.18,
-      "sharePercent": 5.5,
+      "plRub": -113.18,
+      "plPercent": -2.89,
+      "sharePercent": 5.51,
       "isSimulated": false
     },
     {
@@ -900,44 +900,44 @@
       "divPayer": true,
       "totalQuantity": 10,
       "totalCost": 4247.22,
-      "totalValue": 3767.5,
-      "currentPrice": 376.75,
+      "totalValue": 3792.5,
+      "currentPrice": 379.25,
       "accounts": [
         {
           "accountKey": "G_ACC",
           "accountTitle": "G ACC",
           "quantity": 4,
           "buyPrice": 414.72,
-          "currentPrice": 376.75,
-          "totalValue": 1507,
-          "plRub": -151.88,
-          "plPercent": -9.16
+          "currentPrice": 379.25,
+          "totalValue": 1517,
+          "plRub": -141.88,
+          "plPercent": -8.55
         },
         {
           "accountKey": "S_ACC",
           "accountTitle": "S ACC",
           "quantity": 3,
           "buyPrice": 391.7,
-          "currentPrice": 376.75,
-          "totalValue": 1130.25,
-          "plRub": -44.85,
-          "plPercent": -3.82
+          "currentPrice": 379.25,
+          "totalValue": 1137.75,
+          "plRub": -37.35,
+          "plPercent": -3.18
         },
         {
           "accountKey": "ACC_26K",
           "accountTitle": "26 тысяч",
           "quantity": 3,
           "buyPrice": 471.08,
-          "currentPrice": 376.75,
-          "totalValue": 1130.25,
-          "plRub": -282.99,
-          "plPercent": -20.02
+          "currentPrice": 379.25,
+          "totalValue": 1137.75,
+          "plRub": -275.49,
+          "plPercent": -19.49
         }
       ],
       "weightedBuyPrice": 424.72,
-      "plRub": -479.72,
-      "plPercent": -11.29,
-      "sharePercent": 5.47,
+      "plRub": -454.72,
+      "plPercent": -10.71,
+      "sharePercent": 5.49,
       "isSimulated": false
     },
     {
@@ -949,24 +949,24 @@
       "divPayer": true,
       "totalQuantity": 3,
       "totalCost": 3423.6,
-      "totalValue": 3258,
-      "currentPrice": 1086,
+      "totalValue": 3256.2,
+      "currentPrice": 1085.4,
       "accounts": [
         {
           "accountKey": "G_ACC",
           "accountTitle": "G ACC",
           "quantity": 3,
           "buyPrice": 1141.2,
-          "currentPrice": 1086,
-          "totalValue": 3258,
-          "plRub": -165.6,
-          "plPercent": -4.84
+          "currentPrice": 1085.4,
+          "totalValue": 3256.2,
+          "plRub": -167.4,
+          "plPercent": -4.89
         }
       ],
       "weightedBuyPrice": 1141.2,
-      "plRub": -165.6,
-      "plPercent": -4.84,
-      "sharePercent": 4.73,
+      "plRub": -167.4,
+      "plPercent": -4.89,
+      "sharePercent": 4.72,
       "isSimulated": false
     },
     {
@@ -978,24 +978,24 @@
       "divPayer": true,
       "totalQuantity": 4,
       "totalCost": 2196,
-      "totalValue": 2433.2,
-      "currentPrice": 608.3,
+      "totalValue": 2421.8,
+      "currentPrice": 605.45,
       "accounts": [
         {
           "accountKey": "G_ACC",
           "accountTitle": "G ACC",
           "quantity": 4,
           "buyPrice": 549,
-          "currentPrice": 608.3,
-          "totalValue": 2433.2,
-          "plRub": 237.2,
-          "plPercent": 10.8
+          "currentPrice": 605.45,
+          "totalValue": 2421.8,
+          "plRub": 225.8,
+          "plPercent": 10.28
         }
       ],
       "weightedBuyPrice": 549,
-      "plRub": 237.2,
-      "plPercent": 10.8,
-      "sharePercent": 3.53,
+      "plRub": 225.8,
+      "plPercent": 10.28,
+      "sharePercent": 3.51,
       "isSimulated": false
     },
     {
@@ -1007,33 +1007,33 @@
       "divPayer": true,
       "totalQuantity": 2,
       "totalCost": 2427.8,
-      "totalValue": 2149.2,
-      "currentPrice": 1074.6,
+      "totalValue": 2155,
+      "currentPrice": 1077.5,
       "accounts": [
         {
           "accountKey": "G_ACC",
           "accountTitle": "G ACC",
           "quantity": 1,
           "buyPrice": 1088.4,
-          "currentPrice": 1074.6,
-          "totalValue": 1074.6,
-          "plRub": -13.8,
-          "plPercent": -1.27
+          "currentPrice": 1077.5,
+          "totalValue": 1077.5,
+          "plRub": -10.9,
+          "plPercent": -1
         },
         {
           "accountKey": "ACC_26K",
           "accountTitle": "26 тысяч",
           "quantity": 1,
           "buyPrice": 1339.4,
-          "currentPrice": 1074.6,
-          "totalValue": 1074.6,
-          "plRub": -264.8,
-          "plPercent": -19.77
+          "currentPrice": 1077.5,
+          "totalValue": 1077.5,
+          "plRub": -261.9,
+          "plPercent": -19.55
         }
       ],
       "weightedBuyPrice": 1213.9,
-      "plRub": -278.6,
-      "plPercent": -11.48,
+      "plRub": -272.8,
+      "plPercent": -11.24,
       "sharePercent": 3.12,
       "isSimulated": false
     },
@@ -1063,7 +1063,7 @@
       "weightedBuyPrice": 1010.9,
       "plRub": -3.8,
       "plPercent": -0.19,
-      "sharePercent": 2.93,
+      "sharePercent": 2.92,
       "isSimulated": false
     },
     {
@@ -1104,23 +1104,23 @@
       "divPayer": true,
       "totalQuantity": 100,
       "totalCost": 2195,
-      "totalValue": 1648,
-      "currentPrice": 16.48,
+      "totalValue": 1650,
+      "currentPrice": 16.5,
       "accounts": [
         {
           "accountKey": "G_ACC",
           "accountTitle": "G ACC",
           "quantity": 100,
           "buyPrice": 21.95,
-          "currentPrice": 16.48,
-          "totalValue": 1648,
-          "plRub": -547,
-          "plPercent": -24.92
+          "currentPrice": 16.5,
+          "totalValue": 1650,
+          "plRub": -545,
+          "plPercent": -24.83
         }
       ],
       "weightedBuyPrice": 21.95,
-      "plRub": -547,
-      "plPercent": -24.92,
+      "plRub": -545,
+      "plPercent": -24.83,
       "sharePercent": 2.39,
       "isSimulated": false
     },
@@ -1133,34 +1133,34 @@
       "divPayer": true,
       "totalQuantity": 2,
       "totalCost": 1030.8,
-      "totalValue": 1275,
-      "currentPrice": 637.5,
+      "totalValue": 1273.2,
+      "currentPrice": 636.6,
       "accounts": [
         {
           "accountKey": "G_ACC",
           "accountTitle": "G ACC",
           "quantity": 1,
           "buyPrice": 520.5,
-          "currentPrice": 637.5,
-          "totalValue": 637.5,
-          "plRub": 117,
-          "plPercent": 22.48
+          "currentPrice": 636.6,
+          "totalValue": 636.6,
+          "plRub": 116.1,
+          "plPercent": 22.31
         },
         {
           "accountKey": "ACC_26K",
           "accountTitle": "26 тысяч",
           "quantity": 1,
           "buyPrice": 510.3,
-          "currentPrice": 637.5,
-          "totalValue": 637.5,
-          "plRub": 127.2,
-          "plPercent": 24.93
+          "currentPrice": 636.6,
+          "totalValue": 636.6,
+          "plRub": 126.3,
+          "plPercent": 24.75
         }
       ],
       "weightedBuyPrice": 515.4,
-      "plRub": 244.2,
-      "plPercent": 23.69,
-      "sharePercent": 1.85,
+      "plRub": 242.4,
+      "plPercent": 23.52,
+      "sharePercent": 1.84,
       "isSimulated": false
     },
     {
@@ -1172,23 +1172,23 @@
       "divPayer": true,
       "totalQuantity": 1,
       "totalCost": 1013.8,
-      "totalValue": 1015.5,
-      "currentPrice": 1015.5,
+      "totalValue": 1015.8,
+      "currentPrice": 1015.8,
       "accounts": [
         {
           "accountKey": "S_ACC",
           "accountTitle": "S ACC",
           "quantity": 1,
           "buyPrice": 1013.8,
-          "currentPrice": 1015.5,
-          "totalValue": 1015.5,
-          "plRub": 1.7,
-          "plPercent": 0.17
+          "currentPrice": 1015.8,
+          "totalValue": 1015.8,
+          "plRub": 2,
+          "plPercent": 0.2
         }
       ],
       "weightedBuyPrice": 1013.8,
-      "plRub": 1.7,
-      "plPercent": 0.17,
+      "plRub": 2,
+      "plPercent": 0.2,
       "sharePercent": 1.47,
       "isSimulated": false
     },
@@ -1201,24 +1201,24 @@
       "divPayer": true,
       "totalQuantity": 100,
       "totalCost": 1393,
-      "totalValue": 1013,
-      "currentPrice": 10.13,
+      "totalValue": 1011,
+      "currentPrice": 10.11,
       "accounts": [
         {
           "accountKey": "S_ACC",
           "accountTitle": "S ACC",
           "quantity": 100,
           "buyPrice": 13.93,
-          "currentPrice": 10.13,
-          "totalValue": 1013,
-          "plRub": -380,
-          "plPercent": -27.28
+          "currentPrice": 10.11,
+          "totalValue": 1011,
+          "plRub": -382,
+          "plPercent": -27.42
         }
       ],
       "weightedBuyPrice": 13.93,
-      "plRub": -380,
-      "plPercent": -27.28,
-      "sharePercent": 1.47,
+      "plRub": -382,
+      "plPercent": -27.42,
+      "sharePercent": 1.46,
       "isSimulated": false
     },
     {
@@ -1230,23 +1230,23 @@
       "divPayer": true,
       "totalQuantity": 20,
       "totalCost": 938.4,
-      "totalValue": 924.6,
-      "currentPrice": 46.23,
+      "totalValue": 924.8,
+      "currentPrice": 46.24,
       "accounts": [
         {
           "accountKey": "G_ACC",
           "accountTitle": "G ACC",
           "quantity": 20,
           "buyPrice": 46.92,
-          "currentPrice": 46.23,
-          "totalValue": 924.6,
-          "plRub": -13.8,
-          "plPercent": -1.47
+          "currentPrice": 46.24,
+          "totalValue": 924.8,
+          "plRub": -13.6,
+          "plPercent": -1.45
         }
       ],
       "weightedBuyPrice": 46.92,
-      "plRub": -13.8,
-      "plPercent": -1.47,
+      "plRub": -13.6,
+      "plPercent": -1.45,
       "sharePercent": 1.34,
       "isSimulated": false
     },
@@ -1259,24 +1259,24 @@
       "divPayer": true,
       "totalQuantity": 3,
       "totalCost": 962.4,
-      "totalValue": 865.8,
-      "currentPrice": 288.6,
+      "totalValue": 864.6,
+      "currentPrice": 288.2,
       "accounts": [
         {
           "accountKey": "ACC_26K",
           "accountTitle": "26 тысяч",
           "quantity": 3,
           "buyPrice": 320.8,
-          "currentPrice": 288.6,
-          "totalValue": 865.8,
-          "plRub": -96.6,
-          "plPercent": -10.04
+          "currentPrice": 288.2,
+          "totalValue": 864.6,
+          "plRub": -97.8,
+          "plPercent": -10.16
         }
       ],
       "weightedBuyPrice": 320.8,
-      "plRub": -96.6,
-      "plPercent": -10.04,
-      "sharePercent": 1.26,
+      "plRub": -97.8,
+      "plPercent": -10.16,
+      "sharePercent": 1.25,
       "isSimulated": false
     },
     {
@@ -1288,23 +1288,23 @@
       "divPayer": true,
       "totalQuantity": 3,
       "totalCost": 947.22,
-      "totalValue": 864.09,
-      "currentPrice": 288.03,
+      "totalValue": 863.28,
+      "currentPrice": 287.76,
       "accounts": [
         {
           "accountKey": "S_ACC",
           "accountTitle": "S ACC",
           "quantity": 3,
           "buyPrice": 315.74,
-          "currentPrice": 288.03,
-          "totalValue": 864.09,
-          "plRub": -83.13,
-          "plPercent": -8.78
+          "currentPrice": 287.76,
+          "totalValue": 863.28,
+          "plRub": -83.94,
+          "plPercent": -8.86
         }
       ],
       "weightedBuyPrice": 315.74,
-      "plRub": -83.13,
-      "plPercent": -8.78,
+      "plRub": -83.94,
+      "plPercent": -8.86,
       "sharePercent": 1.25,
       "isSimulated": false
     },
@@ -1317,24 +1317,24 @@
       "divPayer": true,
       "totalQuantity": 20,
       "totalCost": 984.66,
-      "totalValue": 823.2,
-      "currentPrice": 41.16,
+      "totalValue": 821.7,
+      "currentPrice": 41.09,
       "accounts": [
         {
           "accountKey": "G_ACC",
           "accountTitle": "G ACC",
           "quantity": 20,
           "buyPrice": 49.23,
-          "currentPrice": 41.16,
-          "totalValue": 823.2,
-          "plRub": -161.46,
-          "plPercent": -16.4
+          "currentPrice": 41.09,
+          "totalValue": 821.7,
+          "plRub": -162.96,
+          "plPercent": -16.55
         }
       ],
       "weightedBuyPrice": 49.23,
-      "plRub": -161.46,
-      "plPercent": -16.4,
-      "sharePercent": 1.2,
+      "plRub": -162.96,
+      "plPercent": -16.55,
+      "sharePercent": 1.19,
       "isSimulated": false
     },
     {
@@ -1346,23 +1346,23 @@
       "divPayer": false,
       "totalQuantity": 20,
       "totalCost": 847.8,
-      "totalValue": 712.8,
-      "currentPrice": 35.64,
+      "totalValue": 711,
+      "currentPrice": 35.55,
       "accounts": [
         {
           "accountKey": "S_ACC",
           "accountTitle": "S ACC",
           "quantity": 20,
           "buyPrice": 42.39,
-          "currentPrice": 35.64,
-          "totalValue": 712.8,
-          "plRub": -135,
-          "plPercent": -15.92
+          "currentPrice": 35.55,
+          "totalValue": 711,
+          "plRub": -136.8,
+          "plPercent": -16.14
         }
       ],
       "weightedBuyPrice": 42.39,
-      "plRub": -135,
-      "plPercent": -15.92,
+      "plRub": -136.8,
+      "plPercent": -16.14,
       "sharePercent": 1.03,
       "isSimulated": false
     },
@@ -1375,24 +1375,24 @@
       "divPayer": true,
       "totalQuantity": 100,
       "totalCost": 835.5,
-      "totalValue": 689.5,
-      "currentPrice": 6.9,
+      "totalValue": 686.5,
+      "currentPrice": 6.87,
       "accounts": [
         {
           "accountKey": "ACC_26K",
           "accountTitle": "26 тысяч",
           "quantity": 100,
           "buyPrice": 8.36,
-          "currentPrice": 6.9,
-          "totalValue": 689.5,
-          "plRub": -146,
-          "plPercent": -17.47
+          "currentPrice": 6.87,
+          "totalValue": 686.5,
+          "plRub": -149,
+          "plPercent": -17.83
         }
       ],
       "weightedBuyPrice": 8.36,
-      "plRub": -146,
-      "plPercent": -17.47,
-      "sharePercent": 1,
+      "plRub": -149,
+      "plPercent": -17.83,
+      "sharePercent": 0.99,
       "isSimulated": false
     },
     {
@@ -1404,23 +1404,23 @@
       "divPayer": true,
       "totalQuantity": 2,
       "totalCost": 1210,
-      "totalValue": 649.2,
-      "currentPrice": 324.6,
+      "totalValue": 650.2,
+      "currentPrice": 325.1,
       "accounts": [
         {
           "accountKey": "G_ACC",
           "accountTitle": "G ACC",
           "quantity": 2,
           "buyPrice": 605,
-          "currentPrice": 324.6,
-          "totalValue": 649.2,
-          "plRub": -560.8,
-          "plPercent": -46.35
+          "currentPrice": 325.1,
+          "totalValue": 650.2,
+          "plRub": -559.8,
+          "plPercent": -46.26
         }
       ],
       "weightedBuyPrice": 605,
-      "plRub": -560.8,
-      "plPercent": -46.35,
+      "plRub": -559.8,
+      "plPercent": -46.26,
       "sharePercent": 0.94,
       "isSimulated": false
     },
@@ -1433,24 +1433,24 @@
       "divPayer": false,
       "totalQuantity": 10,
       "totalCost": 682.2,
-      "totalValue": 564.65,
-      "currentPrice": 56.47,
+      "totalValue": 560.65,
+      "currentPrice": 56.07,
       "accounts": [
         {
           "accountKey": "ACC_26K",
           "accountTitle": "26 тысяч",
           "quantity": 10,
           "buyPrice": 68.22,
-          "currentPrice": 56.47,
-          "totalValue": 564.65,
-          "plRub": -117.55,
-          "plPercent": -17.23
+          "currentPrice": 56.07,
+          "totalValue": 560.65,
+          "plRub": -121.55,
+          "plPercent": -17.82
         }
       ],
       "weightedBuyPrice": 68.22,
-      "plRub": -117.55,
-      "plPercent": -17.23,
-      "sharePercent": 0.82,
+      "plRub": -121.55,
+      "plPercent": -17.82,
+      "sharePercent": 0.81,
       "isSimulated": false
     },
     {
@@ -1462,23 +1462,23 @@
       "divPayer": true,
       "totalQuantity": 1,
       "totalCost": 92.62,
-      "totalValue": 98.28,
-      "currentPrice": 98.28,
+      "totalValue": 99.32,
+      "currentPrice": 99.32,
       "accounts": [
         {
           "accountKey": "G_ACC",
           "accountTitle": "G ACC",
           "quantity": 1,
           "buyPrice": 92.62,
-          "currentPrice": 98.28,
-          "totalValue": 98.28,
-          "plRub": 5.66,
-          "plPercent": 6.11
+          "currentPrice": 99.32,
+          "totalValue": 99.32,
+          "plRub": 6.7,
+          "plPercent": 7.23
         }
       ],
       "weightedBuyPrice": 92.62,
-      "plRub": 5.66,
-      "plPercent": 6.11,
+      "plRub": 6.7,
+      "plPercent": 7.23,
       "sharePercent": 0.14,
       "isSimulated": false
     }
@@ -1486,7 +1486,7 @@
   "sectorBreakdown": [
     {
       "sector": "Нефть и газ",
-      "totalValue": 34022.1,
+      "totalValue": 34113.4,
       "count": 9,
       "tickers": [
         "LKOH",
@@ -1503,7 +1503,7 @@
     },
     {
       "sector": "Финансовый сектор",
-      "totalValue": 21466.08,
+      "totalValue": 21470.29,
       "count": 6,
       "tickers": [
         "SBER",
@@ -1513,27 +1513,27 @@
         "SBERP",
         "VTBR"
       ],
-      "sharePercent": 31.17
+      "sharePercent": 31.09
     },
     {
       "sector": "Металлургия и добыча",
-      "totalValue": 6441.6,
+      "totalValue": 6532.8,
       "count": 1,
       "tickers": [
         "PLZL"
       ],
-      "sharePercent": 9.35
+      "sharePercent": 9.46
     },
     {
       "sector": "Транспорт",
-      "totalValue": 2417.8,
+      "totalValue": 2413.3,
       "count": 3,
       "tickers": [
         "RU000A10BGJ4",
         "AFLT",
         "NMTP"
       ],
-      "sharePercent": 3.51
+      "sharePercent": 3.49
     },
     {
       "sector": "Телекоммуникации",
@@ -1546,17 +1546,17 @@
     },
     {
       "sector": "Потребительский сектор",
-      "totalValue": 1515,
+      "totalValue": 1514.8,
       "count": 2,
       "tickers": [
         "HNFG",
         "AQUA"
       ],
-      "sharePercent": 2.2
+      "sharePercent": 2.19
     },
     {
       "sector": "Здравоохранение",
-      "totalValue": 924.6,
+      "totalValue": 924.8,
       "count": 1,
       "tickers": [
         "OZPH"
@@ -1565,7 +1565,7 @@
     },
     {
       "sector": "IT и технологии",
-      "totalValue": 98.28,
+      "totalValue": 99.32,
       "count": 1,
       "tickers": [
         "DATA"
@@ -1581,10 +1581,10 @@
       "accountCount": 3,
       "totalQuantity": 46,
       "weightedBuyPrice": 282.58,
-      "currentPrice": 287.31,
-      "totalValue": 13216.26,
+      "currentPrice": 287.3,
+      "totalValue": 13215.8,
       "totalCost": 12998.64,
-      "plRub": 217.62,
+      "plRub": 217.16,
       "plPercent": 1.67,
       "items": [
         {
@@ -1592,29 +1592,29 @@
           "accountTitle": "G ACC",
           "quantity": 30,
           "buyPrice": 284.08,
-          "currentPrice": 287.31,
-          "totalValue": 8619.3,
-          "plRub": 96.9,
-          "plPercent": 1.14
+          "currentPrice": 287.3,
+          "totalValue": 8619,
+          "plRub": 96.6,
+          "plPercent": 1.13
         },
         {
           "accountKey": "S_ACC",
           "accountTitle": "S ACC",
           "quantity": 15,
           "buyPrice": 277.25,
-          "currentPrice": 287.31,
-          "totalValue": 4309.65,
-          "plRub": 150.9,
-          "plPercent": 3.63
+          "currentPrice": 287.3,
+          "totalValue": 4309.5,
+          "plRub": 150.75,
+          "plPercent": 3.62
         },
         {
           "accountKey": "ACC_26K",
           "accountTitle": "26 тысяч",
           "quantity": 1,
           "buyPrice": 317.49,
-          "currentPrice": 287.31,
-          "totalValue": 287.31,
-          "plRub": -30.18,
+          "currentPrice": 287.3,
+          "totalValue": 287.3,
+          "plRub": -30.19,
           "plPercent": -9.51
         }
       ]
@@ -1626,31 +1626,31 @@
       "accountCount": 2,
       "totalQuantity": 2,
       "weightedBuyPrice": 5350.75,
-      "currentPrice": 6002.5,
-      "totalValue": 12005,
+      "currentPrice": 6046.5,
+      "totalValue": 12093,
       "totalCost": 10701.5,
-      "plRub": 1303.5,
-      "plPercent": 12.18,
+      "plRub": 1391.5,
+      "plPercent": 13,
       "items": [
         {
           "accountKey": "S_ACC",
           "accountTitle": "S ACC",
           "quantity": 1,
           "buyPrice": 5359,
-          "currentPrice": 6002.5,
-          "totalValue": 6002.5,
-          "plRub": 643.5,
-          "plPercent": 12.01
+          "currentPrice": 6046.5,
+          "totalValue": 6046.5,
+          "plRub": 687.5,
+          "plPercent": 12.83
         },
         {
           "accountKey": "ACC_26K",
           "accountTitle": "26 тысяч",
           "quantity": 1,
           "buyPrice": 5342.5,
-          "currentPrice": 6002.5,
-          "totalValue": 6002.5,
-          "plRub": 660,
-          "plPercent": 12.35
+          "currentPrice": 6046.5,
+          "totalValue": 6046.5,
+          "plRub": 704,
+          "plPercent": 13.18
         }
       ]
     },
@@ -1661,31 +1661,31 @@
       "accountCount": 2,
       "totalQuantity": 10,
       "weightedBuyPrice": 635.06,
-      "currentPrice": 666.3,
-      "totalValue": 6663,
+      "currentPrice": 665,
+      "totalValue": 6650,
       "totalCost": 6350.6,
-      "plRub": 312.4,
-      "plPercent": 4.92,
+      "plRub": 299.4,
+      "plPercent": 4.71,
       "items": [
         {
           "accountKey": "G_ACC",
           "accountTitle": "G ACC",
           "quantity": 9,
           "buyPrice": 632.8,
-          "currentPrice": 666.3,
-          "totalValue": 5996.7,
-          "plRub": 301.5,
-          "plPercent": 5.29
+          "currentPrice": 665,
+          "totalValue": 5985,
+          "plRub": 289.8,
+          "plPercent": 5.09
         },
         {
           "accountKey": "ACC_26K",
           "accountTitle": "26 тысяч",
           "quantity": 1,
           "buyPrice": 655.4,
-          "currentPrice": 666.3,
-          "totalValue": 666.3,
-          "plRub": 10.9,
-          "plPercent": 1.66
+          "currentPrice": 665,
+          "totalValue": 665,
+          "plRub": 9.6,
+          "plPercent": 1.46
         }
       ]
     },
@@ -1696,41 +1696,41 @@
       "accountCount": 3,
       "totalQuantity": 6,
       "weightedBuyPrice": 1377.98,
-      "currentPrice": 1073.6,
-      "totalValue": 6441.6,
+      "currentPrice": 1088.8,
+      "totalValue": 6532.8,
       "totalCost": 8267.9,
-      "plRub": -1826.3,
-      "plPercent": -22.09,
+      "plRub": -1735.1,
+      "plPercent": -20.99,
       "items": [
         {
           "accountKey": "G_ACC",
           "accountTitle": "G ACC",
           "quantity": 1,
           "buyPrice": 1856,
-          "currentPrice": 1073.6,
-          "totalValue": 1073.6,
-          "plRub": -782.4,
-          "plPercent": -42.16
+          "currentPrice": 1088.8,
+          "totalValue": 1088.8,
+          "plRub": -767.2,
+          "plPercent": -41.34
         },
         {
           "accountKey": "S_ACC",
           "accountTitle": "S ACC",
           "quantity": 3,
           "buyPrice": 1001.9,
-          "currentPrice": 1073.6,
-          "totalValue": 3220.8,
-          "plRub": 215.1,
-          "plPercent": 7.16
+          "currentPrice": 1088.8,
+          "totalValue": 3266.4,
+          "plRub": 260.7,
+          "plPercent": 8.67
         },
         {
           "accountKey": "ACC_26K",
           "accountTitle": "26 тысяч",
           "quantity": 2,
           "buyPrice": 1703.1,
-          "currentPrice": 1073.6,
-          "totalValue": 2147.2,
-          "plRub": -1259,
-          "plPercent": -36.96
+          "currentPrice": 1088.8,
+          "totalValue": 2177.6,
+          "plRub": -1228.6,
+          "plPercent": -36.07
         }
       ]
     },
@@ -1741,41 +1741,41 @@
       "accountCount": 3,
       "totalQuantity": 14,
       "weightedBuyPrice": 279.62,
-      "currentPrice": 270.72,
-      "totalValue": 3790.08,
+      "currentPrice": 271.54,
+      "totalValue": 3801.56,
       "totalCost": 3914.74,
-      "plRub": -124.66,
-      "plPercent": -3.18,
+      "plRub": -113.18,
+      "plPercent": -2.89,
       "items": [
         {
           "accountKey": "G_ACC",
           "accountTitle": "G ACC",
           "quantity": 5,
           "buyPrice": 286.18,
-          "currentPrice": 270.72,
-          "totalValue": 1353.6,
-          "plRub": -77.3,
-          "plPercent": -5.4
+          "currentPrice": 271.54,
+          "totalValue": 1357.7,
+          "plRub": -73.2,
+          "plPercent": -5.12
         },
         {
           "accountKey": "S_ACC",
           "accountTitle": "S ACC",
           "quantity": 4,
           "buyPrice": 251.06,
-          "currentPrice": 270.72,
-          "totalValue": 1082.88,
-          "plRub": 78.64,
-          "plPercent": 7.83
+          "currentPrice": 271.54,
+          "totalValue": 1086.16,
+          "plRub": 81.92,
+          "plPercent": 8.16
         },
         {
           "accountKey": "ACC_26K",
           "accountTitle": "26 тысяч",
           "quantity": 5,
           "buyPrice": 295.92,
-          "currentPrice": 270.72,
-          "totalValue": 1353.6,
-          "plRub": -126,
-          "plPercent": -8.52
+          "currentPrice": 271.54,
+          "totalValue": 1357.7,
+          "plRub": -121.9,
+          "plPercent": -8.24
         }
       ]
     },
@@ -1786,41 +1786,41 @@
       "accountCount": 3,
       "totalQuantity": 10,
       "weightedBuyPrice": 424.72,
-      "currentPrice": 376.75,
-      "totalValue": 3767.5,
+      "currentPrice": 379.25,
+      "totalValue": 3792.5,
       "totalCost": 4247.22,
-      "plRub": -479.72,
-      "plPercent": -11.29,
+      "plRub": -454.72,
+      "plPercent": -10.71,
       "items": [
         {
           "accountKey": "G_ACC",
           "accountTitle": "G ACC",
           "quantity": 4,
           "buyPrice": 414.72,
-          "currentPrice": 376.75,
-          "totalValue": 1507,
-          "plRub": -151.88,
-          "plPercent": -9.16
+          "currentPrice": 379.25,
+          "totalValue": 1517,
+          "plRub": -141.88,
+          "plPercent": -8.55
         },
         {
           "accountKey": "S_ACC",
           "accountTitle": "S ACC",
           "quantity": 3,
           "buyPrice": 391.7,
-          "currentPrice": 376.75,
-          "totalValue": 1130.25,
-          "plRub": -44.85,
-          "plPercent": -3.82
+          "currentPrice": 379.25,
+          "totalValue": 1137.75,
+          "plRub": -37.35,
+          "plPercent": -3.18
         },
         {
           "accountKey": "ACC_26K",
           "accountTitle": "26 тысяч",
           "quantity": 3,
           "buyPrice": 471.08,
-          "currentPrice": 376.75,
-          "totalValue": 1130.25,
-          "plRub": -282.99,
-          "plPercent": -20.02
+          "currentPrice": 379.25,
+          "totalValue": 1137.75,
+          "plRub": -275.49,
+          "plPercent": -19.49
         }
       ]
     },
@@ -1831,31 +1831,31 @@
       "accountCount": 2,
       "totalQuantity": 2,
       "weightedBuyPrice": 1213.9,
-      "currentPrice": 1074.6,
-      "totalValue": 2149.2,
+      "currentPrice": 1077.5,
+      "totalValue": 2155,
       "totalCost": 2427.8,
-      "plRub": -278.6,
-      "plPercent": -11.48,
+      "plRub": -272.8,
+      "plPercent": -11.24,
       "items": [
         {
           "accountKey": "G_ACC",
           "accountTitle": "G ACC",
           "quantity": 1,
           "buyPrice": 1088.4,
-          "currentPrice": 1074.6,
-          "totalValue": 1074.6,
-          "plRub": -13.8,
-          "plPercent": -1.27
+          "currentPrice": 1077.5,
+          "totalValue": 1077.5,
+          "plRub": -10.9,
+          "plPercent": -1
         },
         {
           "accountKey": "ACC_26K",
           "accountTitle": "26 тысяч",
           "quantity": 1,
           "buyPrice": 1339.4,
-          "currentPrice": 1074.6,
-          "totalValue": 1074.6,
-          "plRub": -264.8,
-          "plPercent": -19.77
+          "currentPrice": 1077.5,
+          "totalValue": 1077.5,
+          "plRub": -261.9,
+          "plPercent": -19.55
         }
       ]
     },
@@ -1866,44 +1866,44 @@
       "accountCount": 2,
       "totalQuantity": 2,
       "weightedBuyPrice": 515.4,
-      "currentPrice": 637.5,
-      "totalValue": 1275,
+      "currentPrice": 636.6,
+      "totalValue": 1273.2,
       "totalCost": 1030.8,
-      "plRub": 244.2,
-      "plPercent": 23.69,
+      "plRub": 242.4,
+      "plPercent": 23.52,
       "items": [
         {
           "accountKey": "G_ACC",
           "accountTitle": "G ACC",
           "quantity": 1,
           "buyPrice": 520.5,
-          "currentPrice": 637.5,
-          "totalValue": 637.5,
-          "plRub": 117,
-          "plPercent": 22.48
+          "currentPrice": 636.6,
+          "totalValue": 636.6,
+          "plRub": 116.1,
+          "plPercent": 22.31
         },
         {
           "accountKey": "ACC_26K",
           "accountTitle": "26 тысяч",
           "quantity": 1,
           "buyPrice": 510.3,
-          "currentPrice": 637.5,
-          "totalValue": 637.5,
-          "plRub": 127.2,
-          "plPercent": 24.93
+          "currentPrice": 636.6,
+          "totalValue": 636.6,
+          "plRub": 126.3,
+          "plPercent": 24.75
         }
       ]
     }
   ],
   "concentration": {
     "top1Ticker": "SBER",
-    "top1Percent": 19.19,
-    "top3Percent": 46.29,
+    "top1Percent": 19.14,
+    "top3Percent": 46.28,
     "top1": {
       "ticker": "SBER",
       "name": "Сбербанк",
-      "value": 13216.26,
-      "share": 19.19
+      "value": 13215.8,
+      "share": 19.14
     },
     "top3": {
       "names": [
@@ -1911,8 +1911,8 @@
         "ЛУКОЙЛ",
         "Татнефть"
       ],
-      "value": 31884.260000000002,
-      "share": 46.29
+      "value": 31958.8,
+      "share": 46.28
     },
     "top5": {
       "names": [
@@ -1922,8 +1922,8 @@
         "Полюс",
         "Т-Технологии"
       ],
-      "value": 42115.94,
-      "share": 61.14
+      "value": 42293.159999999996,
+      "share": 61.25
     }
   },
   "topGainers": [
@@ -1936,34 +1936,34 @@
       "divPayer": true,
       "totalQuantity": 2,
       "totalCost": 1030.8,
-      "totalValue": 1275,
-      "currentPrice": 637.5,
+      "totalValue": 1273.2,
+      "currentPrice": 636.6,
       "accounts": [
         {
           "accountKey": "G_ACC",
           "accountTitle": "G ACC",
           "quantity": 1,
           "buyPrice": 520.5,
-          "currentPrice": 637.5,
-          "totalValue": 637.5,
-          "plRub": 117,
-          "plPercent": 22.48
+          "currentPrice": 636.6,
+          "totalValue": 636.6,
+          "plRub": 116.1,
+          "plPercent": 22.31
         },
         {
           "accountKey": "ACC_26K",
           "accountTitle": "26 тысяч",
           "quantity": 1,
           "buyPrice": 510.3,
-          "currentPrice": 637.5,
-          "totalValue": 637.5,
-          "plRub": 127.2,
-          "plPercent": 24.93
+          "currentPrice": 636.6,
+          "totalValue": 636.6,
+          "plRub": 126.3,
+          "plPercent": 24.75
         }
       ],
       "weightedBuyPrice": 515.4,
-      "plRub": 244.2,
-      "plPercent": 23.69,
-      "sharePercent": 1.85,
+      "plRub": 242.4,
+      "plPercent": 23.52,
+      "sharePercent": 1.84,
       "isSimulated": false
     },
     {
@@ -1975,34 +1975,34 @@
       "divPayer": true,
       "totalQuantity": 2,
       "totalCost": 10701.5,
-      "totalValue": 12005,
-      "currentPrice": 6002.5,
+      "totalValue": 12093,
+      "currentPrice": 6046.5,
       "accounts": [
         {
           "accountKey": "S_ACC",
           "accountTitle": "S ACC",
           "quantity": 1,
           "buyPrice": 5359,
-          "currentPrice": 6002.5,
-          "totalValue": 6002.5,
-          "plRub": 643.5,
-          "plPercent": 12.01
+          "currentPrice": 6046.5,
+          "totalValue": 6046.5,
+          "plRub": 687.5,
+          "plPercent": 12.83
         },
         {
           "accountKey": "ACC_26K",
           "accountTitle": "26 тысяч",
           "quantity": 1,
           "buyPrice": 5342.5,
-          "currentPrice": 6002.5,
-          "totalValue": 6002.5,
-          "plRub": 660,
-          "plPercent": 12.35
+          "currentPrice": 6046.5,
+          "totalValue": 6046.5,
+          "plRub": 704,
+          "plPercent": 13.18
         }
       ],
       "weightedBuyPrice": 5350.75,
-      "plRub": 1303.5,
-      "plPercent": 12.18,
-      "sharePercent": 17.43,
+      "plRub": 1391.5,
+      "plPercent": 13,
+      "sharePercent": 17.51,
       "isSimulated": false
     },
     {
@@ -2014,24 +2014,24 @@
       "divPayer": true,
       "totalQuantity": 4,
       "totalCost": 2196,
-      "totalValue": 2433.2,
-      "currentPrice": 608.3,
+      "totalValue": 2421.8,
+      "currentPrice": 605.45,
       "accounts": [
         {
           "accountKey": "G_ACC",
           "accountTitle": "G ACC",
           "quantity": 4,
           "buyPrice": 549,
-          "currentPrice": 608.3,
-          "totalValue": 2433.2,
-          "plRub": 237.2,
-          "plPercent": 10.8
+          "currentPrice": 605.45,
+          "totalValue": 2421.8,
+          "plRub": 225.8,
+          "plPercent": 10.28
         }
       ],
       "weightedBuyPrice": 549,
-      "plRub": 237.2,
-      "plPercent": 10.8,
-      "sharePercent": 3.53,
+      "plRub": 225.8,
+      "plPercent": 10.28,
+      "sharePercent": 3.51,
       "isSimulated": false
     },
     {
@@ -2043,23 +2043,23 @@
       "divPayer": true,
       "totalQuantity": 1,
       "totalCost": 92.62,
-      "totalValue": 98.28,
-      "currentPrice": 98.28,
+      "totalValue": 99.32,
+      "currentPrice": 99.32,
       "accounts": [
         {
           "accountKey": "G_ACC",
           "accountTitle": "G ACC",
           "quantity": 1,
           "buyPrice": 92.62,
-          "currentPrice": 98.28,
-          "totalValue": 98.28,
-          "plRub": 5.66,
-          "plPercent": 6.11
+          "currentPrice": 99.32,
+          "totalValue": 99.32,
+          "plRub": 6.7,
+          "plPercent": 7.23
         }
       ],
       "weightedBuyPrice": 92.62,
-      "plRub": 5.66,
-      "plPercent": 6.11,
+      "plRub": 6.7,
+      "plPercent": 7.23,
       "sharePercent": 0.14,
       "isSimulated": false
     },
@@ -2072,34 +2072,34 @@
       "divPayer": true,
       "totalQuantity": 10,
       "totalCost": 6350.6,
-      "totalValue": 6663,
-      "currentPrice": 666.3,
+      "totalValue": 6650,
+      "currentPrice": 665,
       "accounts": [
         {
           "accountKey": "G_ACC",
           "accountTitle": "G ACC",
           "quantity": 9,
           "buyPrice": 632.8,
-          "currentPrice": 666.3,
-          "totalValue": 5996.7,
-          "plRub": 301.5,
-          "plPercent": 5.29
+          "currentPrice": 665,
+          "totalValue": 5985,
+          "plRub": 289.8,
+          "plPercent": 5.09
         },
         {
           "accountKey": "ACC_26K",
           "accountTitle": "26 тысяч",
           "quantity": 1,
           "buyPrice": 655.4,
-          "currentPrice": 666.3,
-          "totalValue": 666.3,
-          "plRub": 10.9,
-          "plPercent": 1.66
+          "currentPrice": 665,
+          "totalValue": 665,
+          "plRub": 9.6,
+          "plPercent": 1.46
         }
       ],
       "weightedBuyPrice": 635.06,
-      "plRub": 312.4,
-      "plPercent": 4.92,
-      "sharePercent": 9.67,
+      "plRub": 299.4,
+      "plPercent": 4.71,
+      "sharePercent": 9.63,
       "isSimulated": false
     }
   ],
@@ -2113,23 +2113,23 @@
       "divPayer": true,
       "totalQuantity": 2,
       "totalCost": 1210,
-      "totalValue": 649.2,
-      "currentPrice": 324.6,
+      "totalValue": 650.2,
+      "currentPrice": 325.1,
       "accounts": [
         {
           "accountKey": "G_ACC",
           "accountTitle": "G ACC",
           "quantity": 2,
           "buyPrice": 605,
-          "currentPrice": 324.6,
-          "totalValue": 649.2,
-          "plRub": -560.8,
-          "plPercent": -46.35
+          "currentPrice": 325.1,
+          "totalValue": 650.2,
+          "plRub": -559.8,
+          "plPercent": -46.26
         }
       ],
       "weightedBuyPrice": 605,
-      "plRub": -560.8,
-      "plPercent": -46.35,
+      "plRub": -559.8,
+      "plPercent": -46.26,
       "sharePercent": 0.94,
       "isSimulated": false
     },
@@ -2142,24 +2142,24 @@
       "divPayer": true,
       "totalQuantity": 100,
       "totalCost": 1393,
-      "totalValue": 1013,
-      "currentPrice": 10.13,
+      "totalValue": 1011,
+      "currentPrice": 10.11,
       "accounts": [
         {
           "accountKey": "S_ACC",
           "accountTitle": "S ACC",
           "quantity": 100,
           "buyPrice": 13.93,
-          "currentPrice": 10.13,
-          "totalValue": 1013,
-          "plRub": -380,
-          "plPercent": -27.28
+          "currentPrice": 10.11,
+          "totalValue": 1011,
+          "plRub": -382,
+          "plPercent": -27.42
         }
       ],
       "weightedBuyPrice": 13.93,
-      "plRub": -380,
-      "plPercent": -27.28,
-      "sharePercent": 1.47,
+      "plRub": -382,
+      "plPercent": -27.42,
+      "sharePercent": 1.46,
       "isSimulated": false
     },
     {
@@ -2171,73 +2171,24 @@
       "divPayer": true,
       "totalQuantity": 100,
       "totalCost": 2195,
-      "totalValue": 1648,
-      "currentPrice": 16.48,
+      "totalValue": 1650,
+      "currentPrice": 16.5,
       "accounts": [
         {
           "accountKey": "G_ACC",
           "accountTitle": "G ACC",
           "quantity": 100,
           "buyPrice": 21.95,
-          "currentPrice": 16.48,
-          "totalValue": 1648,
-          "plRub": -547,
-          "plPercent": -24.92
+          "currentPrice": 16.5,
+          "totalValue": 1650,
+          "plRub": -545,
+          "plPercent": -24.83
         }
       ],
       "weightedBuyPrice": 21.95,
-      "plRub": -547,
-      "plPercent": -24.92,
+      "plRub": -545,
+      "plPercent": -24.83,
       "sharePercent": 2.39,
-      "isSimulated": false
-    },
-    {
-      "ticker": "PLZL",
-      "name": "Полюс",
-      "type": "stock",
-      "sector": "Металлургия и добыча",
-      "industry": "Добыча золота",
-      "divPayer": true,
-      "totalQuantity": 6,
-      "totalCost": 8267.9,
-      "totalValue": 6441.6,
-      "currentPrice": 1073.6,
-      "accounts": [
-        {
-          "accountKey": "G_ACC",
-          "accountTitle": "G ACC",
-          "quantity": 1,
-          "buyPrice": 1856,
-          "currentPrice": 1073.6,
-          "totalValue": 1073.6,
-          "plRub": -782.4,
-          "plPercent": -42.16
-        },
-        {
-          "accountKey": "S_ACC",
-          "accountTitle": "S ACC",
-          "quantity": 3,
-          "buyPrice": 1001.9,
-          "currentPrice": 1073.6,
-          "totalValue": 3220.8,
-          "plRub": 215.1,
-          "plPercent": 7.16
-        },
-        {
-          "accountKey": "ACC_26K",
-          "accountTitle": "26 тысяч",
-          "quantity": 2,
-          "buyPrice": 1703.1,
-          "currentPrice": 1073.6,
-          "totalValue": 2147.2,
-          "plRub": -1259,
-          "plPercent": -36.96
-        }
-      ],
-      "weightedBuyPrice": 1377.98,
-      "plRub": -1826.3,
-      "plPercent": -22.09,
-      "sharePercent": 9.35,
       "isSimulated": false
     },
     {
@@ -2268,11 +2219,60 @@
       "plPercent": -21.58,
       "sharePercent": 2.52,
       "isSimulated": false
+    },
+    {
+      "ticker": "PLZL",
+      "name": "Полюс",
+      "type": "stock",
+      "sector": "Металлургия и добыча",
+      "industry": "Добыча золота",
+      "divPayer": true,
+      "totalQuantity": 6,
+      "totalCost": 8267.9,
+      "totalValue": 6532.8,
+      "currentPrice": 1088.8,
+      "accounts": [
+        {
+          "accountKey": "G_ACC",
+          "accountTitle": "G ACC",
+          "quantity": 1,
+          "buyPrice": 1856,
+          "currentPrice": 1088.8,
+          "totalValue": 1088.8,
+          "plRub": -767.2,
+          "plPercent": -41.34
+        },
+        {
+          "accountKey": "S_ACC",
+          "accountTitle": "S ACC",
+          "quantity": 3,
+          "buyPrice": 1001.9,
+          "currentPrice": 1088.8,
+          "totalValue": 3266.4,
+          "plRub": 260.7,
+          "plPercent": 8.67
+        },
+        {
+          "accountKey": "ACC_26K",
+          "accountTitle": "26 тысяч",
+          "quantity": 2,
+          "buyPrice": 1703.1,
+          "currentPrice": 1088.8,
+          "totalValue": 2177.6,
+          "plRub": -1228.6,
+          "plPercent": -36.07
+        }
+      ],
+      "weightedBuyPrice": 1377.98,
+      "plRub": -1735.1,
+      "plPercent": -20.99,
+      "sharePercent": 9.46,
+      "isSimulated": false
     }
   ],
   "dividendShare": {
     "count": 22,
-    "totalValue": 67345.01,
-    "sharePercent": 97.78
+    "totalValue": 67534.06,
+    "sharePercent": 97.8
   }
 }

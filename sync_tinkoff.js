@@ -20,7 +20,11 @@ try {
   }
 } catch (e) {}
 
-const token = process.env.TINKOFF_TOKEN || 't.ff0AViTsDB1k9Ph2W255v5u09UE6HKKbnacYYaKOgnOADzsEo5bWpQJyNDjwO8FFlnV_EEILMcYBo_JZ7hgN-w';
+const token = process.env.TINKOFF_TOKEN;
+if (!token) {
+  console.error('❌ TINKOFF_TOKEN не найден! Укажите переменную окружения TINKOFF_TOKEN в файле .env');
+  process.exit(1);
+}
 
 function money(obj) {
   if (!obj) return 0;
